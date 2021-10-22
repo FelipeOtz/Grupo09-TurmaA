@@ -7,6 +7,8 @@ public class jogo {
 		System.out.println("MELQUI VIEIRA");
 		TESTE TESTE
 		
+		System.out.println("jubsz jubsz juba");
+		
 	}
 
 }
