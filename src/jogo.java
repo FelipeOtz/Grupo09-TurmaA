@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class jogo {
 
@@ -5,49 +6,44 @@ public class jogo {
 
 		Scanner entrada = new Scanner(System.in);
 
-        int numeroMenu;
+		int numeroMenu;
 
-        boolean rodar = true;
-        
-        System.out.println("Escolha uma das opções abaixo:\n\n"
-                            +"1- Instruções\n"
-                            +"2- Jogar\n"
-                            +"3- Créditos\n"
-                            +"4- Sair");
+		boolean rodar = true;
 
-        do {
+		System.out.println(
+				"Escolha uma das opções abaixo:\n\n" + "1- Instruções\n" + "2- Jogar\n" + "3- Créditos\n" + "4- Sair");
 
-            numeroMenu = entrada.nextInt();
+		do {
 
-            switch (numeroMenu) {
+			numeroMenu = entrada.nextInt();
 
-            case 1:
-                System.out.println("Aguardando instruções...");
-                break;
+			switch (numeroMenu) {
 
-            case 2:
-                System.out.println("Aguardando o jogo iniciar...");
-                break;
+			case 1:
+				System.out.println("Aguardando instruções...");
+				break;
 
-            case 3:
-                System.out.println("Aguardando créditos...");
-                break;
+			case 2:
+				System.out.println("Aguardando o jogo iniciar...");
+				break;
 
-            case 4:
-                System.out.println("Encerrando o menu... até mais!");
-                rodar = false;
-                break;
+			case 3:
+				System.out.println("Aguardando créditos...");
+				break;
 
-            default:
-                System.out.println("Valor inválido.");
-                break;
-            }
+			case 4:
+				System.out.println("Encerrando o menu... até mais!");
+				rodar = false;
+				break;
 
-        } while (rodar);
+			default:
+				System.out.println("Valor inválido.");
+				break;
+			}
 
-        entrada.close();
-    }
-	
+		} while (rodar);
+
+		entrada.close();
 	}
 
 }
