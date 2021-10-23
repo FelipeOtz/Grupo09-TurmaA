@@ -11,7 +11,10 @@ public class jogo {
 		boolean rodar = true;
 
 		System.out.println(
-				"Escolha uma das opções abaixo:\n\n" + "1- Instruções\n" + "2- Jogar\n" + "3- Créditos\n" + "4- Sair");
+				"Escolha uma das opções abaixo:\n\n" + "1- Instruções\n" + 
+														"2- Jogar\n" + 
+														"3- Créditos\n" + 
+														"4- Sair");
 
 		do {
 
