@@ -45,6 +45,8 @@ public class jogo {
 			}
 
 		} while (rodar);
+		
+		System.out.println("teste rafa");
 
 		entrada.close();
 	}
