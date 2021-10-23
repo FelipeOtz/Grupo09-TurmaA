@@ -7,6 +7,10 @@ public class jogo {
 		System.out.println("MELQUI VIEIRA");
 
 		System.out.println("Roberto");
+
+		System.out.println("Julia");
+
+		System.out.println("Rafael");
 	}
 
 }
