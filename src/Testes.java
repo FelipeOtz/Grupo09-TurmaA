@@ -9,7 +9,22 @@ public class Testes {
 
 		    System.out.println("Qual o comando faltante na primeira linha: ");
 
-		    System.out.println("Qual o comando faltante na segunda linha: ");
+		    System.out.println("Qual o comando faltante na segunda linha:                              __\r\n"
+		    		+ "                     /\\    .-\" /\r\n"
+		    		+ "                    /  ; .'  .' \r\n"
+		    		+ "                   :   :/  .'   \r\n"
+		    		+ "                    \\  ;-.'     \r\n"
+		    		+ "       .--\"\"\"\"--..__/     `.    \r\n"
+		    		+ "     .'           .'    `o  \\   \r\n"
+		    		+ "    /                    `   ;  \r\n"
+		    		+ "   :                  \\      :  \r\n"
+		    		+ " .-;        -.         `.__.-'  \r\n"
+		    		+ ":  ;          \\     ,   ;       \r\n"
+		    		+ "'._:           ;   :   (        \r\n"
+		    		+ "    \\/  .__    ;    \\   `-.     \r\n"
+		    		+ " bug ;     \"-,/_..--\"`-..__)    \r\n"
+		    		+ "     '\"\"--.._:\r\n"
+		    		+ "");
 
 
 
