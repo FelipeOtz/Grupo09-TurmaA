@@ -31,7 +31,7 @@ public class jogo {
 				break;
 
 			case 3:
-				System.out.println("Este jogo foi feito por: Felipe ortiz, Julia mangabeira, melqui vieira, Rafael Ramos, Roberto José."
+				System.out.println("Este jogo foi feito por: Felipe Ortiz, Julia Mangabeira, Melqui Vieira, Rafael Ramos, Roberto José."
 						+ "\n agradecimentos ao takeo por nos proporcionar essa experiência incrivel em fazer um jogo rpg textual." );
 				break;
 
