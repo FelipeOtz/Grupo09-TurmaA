@@ -61,10 +61,10 @@ public class Testes {
 
 		if (contA > contB) {
 			System.out.println("VC GANHOU");
-			System.out.println("\nVocê fez " + contA + "pontos");
+			System.out.println("\nVocê fez " + contA + " pontos");
 		} else {
 			System.out.println("VC PERDEU");
-			System.out.println("\nMorpheus fez" + contB + "pontos");
+			System.out.println("\nMorpheus fez " + contB + " pontos");
 		}
 
 		leitor.close();
