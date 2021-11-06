@@ -54,8 +54,8 @@ public class Testes {
 				contB++;
 			}
 
-			System.out.println("Você fez " + contA + "pontos");
-			System.out.println("Morpheus fez" + contB + "pontos");
+			System.out.println("Você fez " + contA + " pontos");
+			System.out.println("Morpheus fez " + contB + " pontos");
 
 		} while (contA < 3 && contB < 3);
 
