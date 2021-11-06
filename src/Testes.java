@@ -54,12 +54,17 @@ public class Testes {
 				contB++;
 			}
 
+			System.out.println("Você fez " + contA + "pontos");
+			System.out.println("Morpheus fez" + contB + "pontos");
+
 		} while (contA < 3 && contB < 3);
 
 		if (contA > contB) {
 			System.out.println("VC GANHOU");
+			System.out.println("Você fez " + contA + "pontos");
 		} else {
 			System.out.println("VC PERDEU");
+			System.out.println("Morpheus fez" + contB + "pontos");
 		}
 
 		leitor.close();
