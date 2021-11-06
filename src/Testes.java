@@ -42,40 +42,39 @@ public class Testes {
 		System.out.println("Pra qual lado você irá esquivar:\n1 - Esquerda\n2 - Direita");
 		num = leitor.nextInt();
 			if (num == numberLuta[n]) {
-				System.out.println("\nVocê Foi Atingido, Ponto para Morpheu");
-				contB++;
-			}else {
 				System.out.println("\nMorpheu não conseguiu te atingir, Ponto pra Vc");
-				contA++;
+				++contA;
+			}else {
+				System.out.println("\nVocê Foi Atingido, Ponto para Morpheu");
+				++contB;
 			}
 			++n;
-			
 			
 			System.out.println("\nPontuação:\nNomeDoJogador: " + contA + "\nMorpheu: " + contB);
 		// DEFENDER	
 		System.out.println("Sua Vez: Escolha um lado para atingir Morpheu: \n1 - Esquerda\n2 - Direita");
 		num = leitor.nextInt();	
 		if (num == numberLuta[n]) {
-			System.out.println("\nVocê Errou, Ponto para Morpheu");
-			contB++;
-		}else {
 			System.out.println("\nVocÊ atingiu, Ponto pra Vc");
-			contA++;
+			++contA;
+			
+		}else {
+			System.out.println("\nVocê Errou, Ponto para Morpheu");
+			++contB;
 		}
+			n++;
+		
+		
+		
 		System.out.println("Pontuação:\nNomeDoJogador: " + contA + "\nMorpheu: " + contB + "\n");
+				
+		} while (contB != 3 || contA != 3);		
 		
-		
-		
-		} while (contA != 2 || contB !=2);		
-		
-			if (contA != 2 ) {
+			if (contA == 3 ) {
 				System.out.println("VC GANHOU");
 			}else {
 				System.out.println("VC PERDEU");
 			}
-		
-		
-		
 		
 		
 		leitor.close();
