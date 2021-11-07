@@ -67,6 +67,8 @@ public class Testes {
 			System.out.println("\nMorpheus fez " + contB + " pontos");
 		}
 
+		System.out.println("lsdfhjiosdfhodigiuwjahgfjioaioujfhaiopudhaiojshdoa8iushdoauisyhdoiaujhdui");
+		System.out.println("lsdfhjiosdfhodigiuwjahgfjioaioujfhaiopudhaiojshdoa8iushdoauisyhdoiaujhdui");
 		leitor.close();
 
 	}
