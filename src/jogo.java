@@ -3,7 +3,7 @@ import java.util.concurrent.TimeUnit;
 
 public class jogo {
 
-	static int temp_dialog = 60;
+	static int timer = 60;
 
 	static int leia() {
 		Scanner entrada = new Scanner(System.in);
@@ -18,22 +18,26 @@ public class jogo {
 		}
 	}
 
+	// Função para jogar
 	static void jogar() throws InterruptedException {
 
-		escreva("Jogando", TimeUnit.MILLISECONDS, temp_dialog);
+		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
 	}
 
+	// Função para mostrar
 	static void instrucao() throws InterruptedException {
-		escreva("Instruções", TimeUnit.MILLISECONDS, temp_dialog);
+		escreva("Instruções", TimeUnit.MILLISECONDS, timer);
 
 	}
 
+	// Função para mostrar créditos
 	static void creditos() throws InterruptedException {
-		escreva("Créditos", TimeUnit.MILLISECONDS, temp_dialog);
+		escreva("Créditos", TimeUnit.MILLISECONDS, timer);
 	}
 
+	// Função para mostrar sobre
 	static void sobreMatrix() throws InterruptedException {
-		escreva("Sobre", TimeUnit.MILLISECONDS, temp_dialog);
+		escreva("Sobre", TimeUnit.MILLISECONDS, timer);
 	}
 
 	public static void main(String[] args) throws InterruptedException {
@@ -65,12 +69,12 @@ public class jogo {
 				creditos();
 				break;
 			case 5:
-				escreva("Encerrando o jogo... até mais!", TimeUnit.MILLISECONDS, temp_dialog);
+				escreva("Encerrando o jogo... até mais!", TimeUnit.MILLISECONDS, timer);
 				rodar = false;
 				break;
 
 			default:
-				escreva("Valor inválido!!", TimeUnit.MILLISECONDS, temp_dialog);
+				escreva("Valor inválido!!", TimeUnit.MILLISECONDS, timer);
 				break;
 			}
 
