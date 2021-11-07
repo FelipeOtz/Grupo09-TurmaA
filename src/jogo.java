@@ -1,55 +1,81 @@
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class jogo {
 
-	public static void main(String[] args) {
+	static int temp_dialog = 60;
 
+	static int leia() {
 		Scanner entrada = new Scanner(System.in);
+		int escolha = entrada.nextInt();
+		return escolha;
+	}
 
-		int numeroMenu;
+	static void escreva(String texto, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
+		for (char caractere : texto.toCharArray()) {
+			System.out.print(caractere);
+			unit.sleep(tempo_mensagem);
+		}
+	}
+
+	static void jogar() throws InterruptedException {
+
+		escreva("Jogando", TimeUnit.MILLISECONDS, temp_dialog);
+	}
+
+	static void instrucao() throws InterruptedException {
+		escreva("Instruções", TimeUnit.MILLISECONDS, temp_dialog);
+
+	}
+
+	static void creditos() throws InterruptedException {
+		escreva("Créditos", TimeUnit.MILLISECONDS, temp_dialog);
+	}
+
+	static void sobreMatrix() throws InterruptedException {
+		escreva("Sobre", TimeUnit.MILLISECONDS, temp_dialog);
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+		// Menu
 
 		boolean rodar = true;
 
-		System.out.println(
-				"Escolha uma das opções abaixo:\n\n" + "1- Instruções\n" + 
-														"2- Jogar\n" + 
-														"3- Créditos\n" + 
-														"4- Sair");
-
+		// Menu - Estrutura
 		do {
+			escreva("Bem vindo(a) a Inside The Matrix \n\nEscolha uma das opções abaixo:\n" + "1 - Jogar\n"
+					+ "2 - Instruções/Regras\n" + "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair",
+					TimeUnit.MILLISECONDS, 0);
 
-			numeroMenu = entrada.nextInt();
-
-			switch (numeroMenu) {
+			switch (leia()) {
 
 			case 1:
-				System.out.println("Faça os desafios, e a cada erro os desafios chagá um agente e se chegar a 5 é game over.");
+				jogar();
 				break;
 
 			case 2:
-				System.out.println("Aguardando o jogo iniciar...");
+				instrucao();
 				break;
 
 			case 3:
-				System.out.println("Este jogo foi feito por: Felipe Ortiz, Julia Mangabeira, Melqui Vieira, Rafael Ramos, Roberto José."
-						+ "\n agradecimentos ao takeo por nos proporcionar essa experiência incrivel em fazer um jogo rpg textual." );
+				sobreMatrix();
 				break;
 
 			case 4:
-				System.out.println("Encerrando o jogo... até mais!");
+				creditos();
+				break;
+			case 5:
+				escreva("Encerrando o jogo... até mais!", TimeUnit.MILLISECONDS, temp_dialog);
 				rodar = false;
 				break;
 
 			default:
-				System.out.println("Valor inválido.");
+				escreva("Valor inválido!!", TimeUnit.MILLISECONDS, temp_dialog);
 				break;
 			}
 
 		} while (rodar);
-		
-	
 
-		entrada.close();
 	}
 
 }
