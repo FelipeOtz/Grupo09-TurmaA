@@ -47,8 +47,7 @@ public class jogo {
 
 		} while (rodar);
 		
-		System.out.println("teste rafa");
-		System.out.println("TESTE 04/11");
+	
 
 		entrada.close();
 	}
