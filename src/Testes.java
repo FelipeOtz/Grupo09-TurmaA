@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Testes {
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
+		System.out.println("uoifhoufyhiaustyiuoastyfitguasiuhgads8tasy8tday89ustdg89ay");
 		int x;
 		int contador = 0;
 		int num = 0;
@@ -67,8 +68,6 @@ public class Testes {
 			System.out.println("\nMorpheus fez " + contB + " pontos");
 		}
 
-		System.out.println("lsdfhjiosdfhodigiuwjahgfjioaioujfhaiopudhaiojshdoa8iushdoauisyhdoiaujhdui");
-		System.out.println("lsdfhjiosdfhodigiuwjahgfjioaioujfhaiopudhaiojshdoa8iushdoauisyhdoiaujhdui");
 		leitor.close();
 
 	}
