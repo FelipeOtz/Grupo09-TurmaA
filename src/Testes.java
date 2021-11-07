@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Testes {
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
-		System.out.println("uoifhoufyhiaustyiuoastyfitguasiuhgads8tasy8tday89ustdg89ay");
+		System.out.println("uoifhoufyhiaustyiuoastyfitguasiuhgads8tasy8tda");
 		int x;
 		int contador = 0;
 		int num = 0;
