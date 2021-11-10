@@ -40,8 +40,7 @@ public class jogo {
 	// Função para mostrar créditos
 	static void creditos() throws InterruptedException {
 		escreva("Créditos", TimeUnit.MILLISECONDS, timer);
-		escreva("O jogo foi feito pelos integrantes do Grupo 9 da Turma A, de TADS Senac, Os integrantes são: Felipe Ortiz,"
-				+ "Julia Mangabeira, Melqui Vieira, Rafael Ramos e Roberto José.",TimeUnit.MILLISECONDS, timer);
+		escreva("O jogo foi feito pelos integrantes do Grupo 9 da Turma A, de TADS Senac, Os integrantes são: Felipe Ortiz, Julia Mangabeira, Melqui Vieira, Rafael Ramos e Roberto José.",TimeUnit.MILLISECONDS, timer);
 	}
 
 	// Função para mostrar sobre
