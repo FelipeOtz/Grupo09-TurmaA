@@ -56,7 +56,7 @@ public class jogo {
 		// Menu - Estrutura
 		do {
 			escreva("Bem vindo(a) a Inside The Matrix \n\nEscolha uma das opções abaixo:\n" + "1 - Jogar\n"
-					+ "2 - Instruções/Regras\n" + "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair",
+					+ "2 - Instruções/Regras\n" + "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair\n",
 					TimeUnit.MILLISECONDS, 0);
 
 			switch (leia()) {
