@@ -28,7 +28,6 @@ public class jogo {
 		dialog.setAlwaysOnTop(true);
 		ImageIcon teste  = new ImageIcon("images/coelho.png");
 		JOptionPane.showMessageDialog(dialog, " Siga o coelho branco","WARNING!", JOptionPane.WARNING_MESSAGE, teste);
-
 		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
 	}
 
@@ -57,7 +56,7 @@ public class jogo {
 		do {
 			escreva("Bem vindo(a) a Inside The Matrix \n\nEscolha uma das opções abaixo:\n" + "1 - Jogar\n"
 					+ "2 - Instruções/Regras\n" + "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair\n",
-					TimeUnit.MILLISECONDS, 0);
+					TimeUnit.MILLISECONDS, 60);
 
 			switch (leia()) {
 
