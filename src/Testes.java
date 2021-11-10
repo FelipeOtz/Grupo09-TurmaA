@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import
+
 public class Testes {
 	public static void main(String[] args) {
 		Scanner leitor = new Scanner(System.in);
@@ -7,7 +9,7 @@ public class Testes {
 		int x;
 		int contador = 0;
 		int num = 0;
-
+		
 		int cc = 0;
 //
 //		int[] numberLuta = new int[6];
@@ -37,7 +39,7 @@ public class Testes {
 		// ATACAR
 		int contA = 0, contB = 0;
 		do {
-
+			System.out.println(" ") ;
 			int morpheusEscolhe = 1 + (int) (Math.random() * 2);
 			int escolhaJogador = 0;
 
