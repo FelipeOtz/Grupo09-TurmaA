@@ -8,9 +8,10 @@ import javax.swing.JOptionPane;
 public class jogo {
 
 	static int timer = 15;
+	static Scanner entrada = new Scanner(System.in);
 
 	static int leia() {
-		Scanner entrada = new Scanner(System.in);
+		
 		int escolha = entrada.nextInt();
 		return escolha;
 	}
