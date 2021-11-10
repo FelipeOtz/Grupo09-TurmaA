@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 
 public class jogo {
 
-	static int timer = 60;
+	static int timer = 15;
 
 	static int leia() {
 		Scanner entrada = new Scanner(System.in);
@@ -39,8 +39,8 @@ public class jogo {
 
 	// Função para mostrar créditos
 	static void creditos() throws InterruptedException {
-		escreva("Créditos", TimeUnit.MILLISECONDS, timer);
-		escreva("O jogo foi feito pelos integrantes do Grupo 9 da Turma A, de TADS Senac, Os integrantes são: Felipe Ortiz, Julia Mangabeira, Melqui Vieira, Rafael Ramos e Roberto José.",TimeUnit.MILLISECONDS, timer);
+		escreva("\nCréditos\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("O jogo foi feito pelos integrantes do Grupo 9 da Turma A, de TADS Senac, \nOs integrantes são: \nFelipe Ortiz, \nJulia Mangabeira, \nMelqui Vieira, \nRafael Ramos e Roberto José.\n\n",TimeUnit.MILLISECONDS, timer);
 	}
 
 	// Função para mostrar sobre
@@ -57,7 +57,7 @@ public class jogo {
 		do {
 			escreva("Bem vindo(a) a Inside The Matrix \n\nEscolha uma das opções abaixo:\n" + "1 - Jogar\n"
 					+ "2 - Instruções/Regras\n" + "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair\n",
-					TimeUnit.MILLISECONDS, 60);
+					TimeUnit.MILLISECONDS, 15);
 
 			switch (leia()) {
 
