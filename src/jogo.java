@@ -1,6 +1,10 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
+import javax.swing.ImageIcon;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 public class jogo {
 
 	static int timer = 60;
@@ -20,6 +24,10 @@ public class jogo {
 
 	// Função para jogar
 	static void jogar() throws InterruptedException {
+		final JDialog dialog = new JDialog();
+		dialog.setAlwaysOnTop(true);
+		ImageIcon teste  = new ImageIcon("images/coelho.png");
+		JOptionPane.showMessageDialog(dialog, " Siga o coelho branco","WARNING!", JOptionPane.WARNING_MESSAGE, teste);
 
 		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
 	}
