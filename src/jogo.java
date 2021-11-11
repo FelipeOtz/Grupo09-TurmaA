@@ -23,29 +23,110 @@ public class jogo {
 		}
 	}
 
-	// Fun��o para jogar
+	// Função para jogar
 	static void jogar() throws InterruptedException {
 		final JDialog dialog = new JDialog();
 		dialog.setAlwaysOnTop(true);
 		ImageIcon teste  = new ImageIcon("images/coelho.png");
 		JOptionPane.showMessageDialog(dialog, " Siga o coelho branco","WARNING!", JOptionPane.WARNING_MESSAGE, teste);
 		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("", TimeUnit.MILLISECONDS, timer);
+		escreva("*Você se levanta e segue ela* \n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n*você se depara com uma mansão antiga e luxuosa* \n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nAo entrar na mansão, você segue a trinity até a porta do salão "
+				+ "principal (A porta está fechada)\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nTrinity: Vou te dar só uma dica, seja sincero.\r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n*trinity abre a porta*\r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n*Ao adentrar a sala, você percebe que tem mais alguém na sala "
+				+ "com você, porém essa pessoa está virada de costas para você,\r\n"
+				+ "aos poucos você começa a se aproximar e percebe "
+				+ "caracteristcas da pessoa, se trata de um homem negro, calvo, "
+				+ "alto, usando óculos escuro.* \r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n*Ele então vira e se apresenta a você*\r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nPersonagem desconhecido: Finalmente!!! Você não "
+				+ "precisa se apresentar, eu já sei tudo sobre você.\r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nPersonagem desconhecido: Primeiramente meu nome "
+				+ "é Morpheus, por favor, sente-se aqui, agora você tem "
+				+ "uma decisão a fazer.\r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: você deve estar se sentindo como a Aline, "
+				+ "escorregando pela toca do coelho. você é um homem que aceita o que vê, pois pensa estar\n sonhando, "
+				+ "ironicamente você está longe da verdade. Você acredita em destino?\r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n(nome do jogador): não aceita a ideia de não estar "
+				+ "no controle das coisas. \n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: sei que dentro de você, você sente que há "
+				+ "algo de errado no mundo, e de fato há, vivemos em uma matrix.\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nvocê a vê em todos os lugares e em tudo que você faz, "
+				+ "é o mundo que impede que você veja a verdade.\r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n(Nome do Jogador): Que verdade ?\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: que você é um escravo da matrix, como todo "
+				+ "mundo você nasceu em uma prisão que não pode sentir, "
+				+ "ver ou tocar. infelizmente não posso \nexplicar o que "
+				+ "realmente é matrix. é preciso que veja por si mesmo:\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n*morpheus fecha as suas mãos e ergue seu braço em sua "
+				+ "direção(aparentando estar segurando algo)*\r\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: você tem sua última escolha, em minha mão tenho"
+				+ " duas pílulas, se você tomar a pílula azul você vai voltar a sua vida normal"
+				+ "\n e esquecerá de tudo isso. \n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: Antes de continuar, preciso que você "
+				+ "resolva o seguinte desafio, para saber se você está pronto para decidir "
+				+ "o rumo da sua vida.", TimeUnit.MILLISECONDS, timer);
+		//DESAFIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO 3 
+		
+		
+		escreva("\nse escolher a pílula vermelha você vai para o país das maravilhas "
+				+ "e vou te mostrar até onde vai a toca do coelho.\n", TimeUnit.MILLISECONDS, timer);
+		
+		//Escolha do jogador pilula azul e vermelha, E game over
+		
+		
+		escreva("\nDe repente você acorda e sente o seu corpo todo dolorido, como se nunca tivesse usado ele,"
+				+ " então nota que em seu corpo há vários cabos que estão conectados "
+				+ "a uma máquina, ao olhar ao redor vê outras\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\ncápsulas igual a sua, há inúmeros humanos conectados a "
+				+ "ela, se assusta com tudo que está vendo e cai de sua cápsula.\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n*Você desmaia novamente*\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nNo dia seguinte acorda em uma uma estrutura "
+				+ "metálica estranha (que aparenta e alguém bate à porta. ( TOC TOC)\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n(Nome do jogador): Meus olhos doem !\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: É porque você nunca os usou, pronto para começarmos?\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n(Nome do jogador): onde estamos?\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: A pergunta não é onde mas quando. você acha\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: Matrix é uma realidade simulada, criada por máquinas sencientes"
+				+ " para subjugar a população humana, enquanto o calor e a atividade elétrica "
+				+ "de seus corpos são usados ​como fonte de energia.\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: Estamos a muito tempo à procura de você, finalmente encontramos"
+				+ " o escolhido, que nos ajudará a acabar com a Matrix de uma vez por todas e "
+				+ "para isso precisamos começar a te preparar para isso, por favor me acompanhe que vou"
+				+ " te apresentar ao seu treinador.\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nMorpheus: Dentro da Matrix podemos alterar qualquer coisa em nós mesmos, seja intelectualmente"
+				+ " ou fisicamente, você quer ter super força? você terá, ou talvez super velocidade? você terá. "
+				+ "Este é Tank, um dos nossos modificadores, ele vai te ajudar a aprimorar todas suas habilidades "
+				+ "e adquirir novas, fique a vontade para escolher.\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nTank: Prazer grande escolhido, vamos ao que interessa?\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nTank: temos as seguintes habilidades que podemos fazer update, fique a vontade para escolher "
+				+ "uma para  aprimorar, mas essas modificações não podem ser feitas em qualquer um, por isso preciso"
+				+ " que você faça o seguinte :\n", TimeUnit.MILLISECONDS, timer);
+		//DESAFIOOOOOOOOOOOOOOOO 4
+		
+		//MINIGAME
+		
 	}
 
-	// Fun��o para mostrar
+	// Função para mostrar
 	static void instrucao() throws InterruptedException {
-		escreva("Instru��es", TimeUnit.MILLISECONDS, timer);
-		escreva("O jogo � tem como base o filme matrix, ter� multiplas escolhas, Completar o c�digo, ent�o aproveite, \n O * indica uma a��o do personagem."
+		escreva("Instruções", TimeUnit.MILLISECONDS, timer);
+		escreva("O jogo é tem como base o filme matrix, terá multiplas escolhas, Completar o código, então aproveite, \n O * indica uma ação do personagem."
 				+ "\n e Siga o coelho.. ", TimeUnit.MILLISECONDS, timer);
 	}
 
-	// Fun��o para mostrar cr�ditos
+	// Função para mostrar créditos
 	static void creditos() throws InterruptedException {
-		escreva("\nCr�ditos\n\n", TimeUnit.MILLISECONDS, timer);
-		escreva("O jogo foi feito pelos integrantes do Grupo 9 da Turma A, de TADS Senac, \nOs integrantes s�o: \nFelipe Ortiz, \nJulia Mangabeira, \nMelqui Vieira, \nRafael Ramos e Roberto Jos�.\n\n",TimeUnit.MILLISECONDS, timer);
+		escreva("\nCréditos\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("O jogo foi feito pelos integrantes do Grupo 9 da Turma A, de TADS Senac, \nOs integrantes são: \nFelipe Ortiz, \nJulia Mangabeira, \nMelqui Vieira, \nRafael Ramos e Roberto José.\n\n",TimeUnit.MILLISECONDS, timer);
 	}
 
-	// Fun��o para mostrar sobre
+	// Função para mostrar sobre
 	static void sobreMatrix() throws InterruptedException {
 		escreva("Sobre", TimeUnit.MILLISECONDS, timer);
 	}
@@ -57,8 +138,8 @@ public class jogo {
 
 		// Menu - Estrutura
 		do {
-			escreva("Bem vindo(a) a Inside The Matrix \n\nEscolha uma das op��es abaixo:\n" + "1 - Jogar\n"
-					+ "2 - Instru��es/Regras\n" + "3 - O que � Matrix?\n" + "4 - Cr�ditos\n" + "5 - Sair\n",
+			escreva("Bem vindo(a) a Inside The Matrix \n\nEscolha uma das opções abaixo:\n" + "1 - Jogar\n"
+					+ "2 - Instruções/Regras\n" + "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair\n",
 					TimeUnit.MILLISECONDS, 15);
 
 			switch (leia()) {
@@ -79,12 +160,12 @@ public class jogo {
 				creditos();
 				break;
 			case 5:
-				escreva("Encerrando o jogo... at� mais!", TimeUnit.MILLISECONDS, timer);
+				escreva("Encerrando o jogo... até mais!", TimeUnit.MILLISECONDS, timer);
 				rodar = false;
 				break;
 
 			default:
-				escreva("Valor inv�lido!!", TimeUnit.MILLISECONDS, timer);
+				escreva("Valor inválido!!", TimeUnit.MILLISECONDS, timer);
 				break;
 			}
 
