@@ -8,7 +8,10 @@ import javax.swing.UIManager;
 
 public class jogo {
 
-	static int timer = 45;
+	// Variável para delay no texto
+	static int timer = 50;
+
+	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
 
 	static int leia() {
@@ -26,11 +29,33 @@ public class jogo {
 
 	// Função para jogar
 	static boolean jogar() throws InterruptedException {
+
+		// Janela de diálogo para colocar JOptionPane
+		final JDialog dialog = new JDialog();
+
+		// Criar ícone com a imagem do coelho
+		ImageIcon coelho = new ImageIcon("images/coelho.png");
+
+		// Criar ícone com a imagem de matrix
+		ImageIcon matrix = new ImageIcon("images/matrix.gif");
+
+		// Criar ícone com a imagem da carta
+		ImageIcon carta = new ImageIcon("images/carta.png");
+
+		// Criar ícone com a imagem dafolha
+		ImageIcon folha = new ImageIcon("images/folha.png");
+
+		// String para receber nome do jogador
+		String nome;
+
+		// Int para receber escolha do jogador
+		int escolha = 1;
+
 		escreva("\n\nOlá jogador. Bem-vindo(a) a Inside the Matrix.\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
-		String nome = entrada.next();
+		nome = entrada.next();
 
 		escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS, timer);
 
@@ -50,25 +75,24 @@ public class jogo {
 		escreva("...", TimeUnit.MILLISECONDS, 300);
 		escreva("\n\nDepois de um dia cansativo de trabalho...", TimeUnit.MILLISECONDS, timer);
 		escreva("\n\n*Você chega em casa e liga seu computador*\n\n", TimeUnit.MILLISECONDS, timer);
-		
-		escreva(nome+": Ah! Não posso esquecer de terminar aquela aplicação em Java que eu estava desenvolvendo", TimeUnit.MILLISECONDS, timer);
 
-		// Criar ícone com a imagem do coelho
-		ImageIcon coelho = new ImageIcon("images/coelho.png");
+		escreva(nome + ": Ah! Não posso esquecer de terminar aquela aplicação em Java que eu estava desenvolvendo\n",
+				TimeUnit.MILLISECONDS, timer);
+		escreva(nome + ": Será muito impotante para meu portifólio\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("*Você começa a desenvolver sua nova aplicação*\n\n", TimeUnit.MILLISECONDS, timer);
 
-		// Criar ícone com a imagem de mtarix
-		ImageIcon matrix = new ImageIcon("images/matrix.gif");
+		escreva("Até então, parecia ser só mais um fim de tarde como qualquer outro", TimeUnit.MILLISECONDS, timer);
+		escreva("...", TimeUnit.MILLISECONDS, 100);
 
-		// Janela de diálogo para colocar JOptionPane
-		final JDialog dialog = new JDialog();
+		escreva("\n\nMas algo inesperado acontece:\n\n", TimeUnit.MILLISECONDS, timer);
 
 		// Fixar JDialog na frente de todas as janelas
 		dialog.setAlwaysOnTop(true);
 
-		escreva("...", TimeUnit.MILLISECONDS, 500);
+		escreva("...", TimeUnit.MILLISECONDS, 600);
 
 		// Trocar texto no botão
-		UIManager.put("OptionPane.okButtonText", "Espera!?... O que é isso? ");
+		UIManager.put("OptionPane.okButtonText", "Espera!?... O que é isso?? ");
 
 		// Mostrar JOptionPane matrix
 		JOptionPane.showMessageDialog(dialog, "", "CUIDADO, " + nome.toUpperCase() + "! RISCO DE VÍRUS!!",
@@ -76,30 +100,69 @@ public class jogo {
 
 		// Trocar texto no botão
 		UIManager.put("OptionPane.okButtonText", "O que está acontecendo????");
-		escreva("\n", TimeUnit.MILLISECONDS, 500);
+		escreva("\n", TimeUnit.MILLISECONDS, 600);
 		escreva("...", TimeUnit.MILLISECONDS, 500);
+
 		// Mostrar JOptionPane coelho
 		JOptionPane.showMessageDialog(dialog, "Siga ocoelho branco!!!",
 				"CUIDADO, " + nome.toUpperCase() + "! RISCO DE VÍRUS!!", JOptionPane.WARNING_MESSAGE, coelho);
-
-		escreva("\n\nAlguns minutos depois\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva(nome + ": Espera", TimeUnit.MILLISECONDS, timer);
 		escreva("...", TimeUnit.MILLISECONDS, 400);
+		escreva("\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva(nome + ": O que acabou ", TimeUnit.MILLISECONDS, timer);
+		escreva("de-de-de...", TimeUnit.MILLISECONDS, 200);
+		escreva(" acontecer? O que foi isso?\n\n", TimeUnit.MILLISECONDS, timer);
+
+		escreva(nome + ": Será que fui hackeado?\n\n", TimeUnit.MILLISECONDS, timer);
+
+		escreva("\nAlgum tempo depois", TimeUnit.MILLISECONDS, timer);
+		escreva("...", TimeUnit.MILLISECONDS, 500);
 		escreva("\n\nAlguém bate à sua porta:", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\n*Toc*", TimeUnit.MILLISECONDS, 100);
 		escreva("\n*Toc*\n", TimeUnit.MILLISECONDS, 100);
 
-		escreva("\n*Você se levanta e vai atender*\n \nEstranhamente, não há ninguém mas uma carta foi deixada ao chão. \n"
+		escreva("\n*Você se levanta e vai até a porta atender*\n \nEstranhamente, não há ninguém, mas uma carta foi deixada ao chão. \n"
 				+ "\nVocê abre a carta e há apenas um endereço completamente embaralhado e uma foto de um coelho\n",
 				TimeUnit.MILLISECONDS, timer);
 
-		escreva("Escolha do jogador: O que você deseja fazer?\n", TimeUnit.MILLISECONDS, timer);
+		escreva(nome + ": Ué?! não tem ninguém...\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n*Antes de fechar a porta você vê uma carta no chão*\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva(nome + ": Que estranho... Por que alguém deixaria uma carta jogada no chão assim?\n\n",
+				TimeUnit.MILLISECONDS, timer);
+
+		// Validador de resposta
+		do {
+			escreva("Digite 1 para pegar a carta\n\n", TimeUnit.MILLISECONDS, timer);
+			escolha = leia();
+
+			if (escolha != 1) {
+				escreva("\nValor inválido!\n", TimeUnit.MILLISECONDS, timer);
+			}
+		} while (escolha != 1);
+
+		escreva("...", TimeUnit.MILLISECONDS, 500);
+
+		// Mostrar JOptionPane carta
+
+		UIManager.put("OptionPane.okButtonText", "Abrir carta");
+		JOptionPane.showMessageDialog(dialog, "", "", JOptionPane.WARNING_MESSAGE, carta);
+
+		// Mostrar JOptionPane folha
+
+		UIManager.put("OptionPane.okButtonText", "O que isso significa?");
+		JOptionPane.showMessageDialog(dialog, "", "", JOptionPane.WARNING_MESSAGE, folha);
+		escreva(nome + ": O que isso significa? \n\n", TimeUnit.MILLISECONDS, timer);
+
+		escreva(nome + ": Me parece que este endereço está embaralhado\n\n", TimeUnit.MILLISECONDS, timer);
+
+		escreva("\n\n ///DESAFIO 1///\n\n", TimeUnit.MILLISECONDS, timer);
+
+		escreva(nome + ": Agora que sei o endereço correto, o que devo fazer?\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\n1 - Ir do endereço indicado", TimeUnit.MILLISECONDS, timer);
 		escreva("\n2 - Fingir que isso nunca aconteceu, e rasgar a carta.\n", TimeUnit.MILLISECONDS, timer);
-
-		// variavel para receber o nome do drink
-		String drink;
 
 		switch (leia()) {
 		case 2:
@@ -121,32 +184,41 @@ public class jogo {
 				+ "\nAparentemente pouco movimentado, a música é agradável.", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\n\n*Você se senta em um banquinho*", TimeUnit.MILLISECONDS, timer);
+		// variavel para receber o nome do drink
+		String drink;
 
-		escreva("\n\nTakêdo, o barman: Olá amigo, gostaria de um drink?\n\n", TimeUnit.MILLISECONDS, timer);
-		escreva(nome + ":", TimeUnit.MILLISECONDS, timer);
-		escreva("\n1 - Não, to de boa", TimeUnit.MILLISECONDS, timer);
-		escreva("\n2 - Opa, claro!\n", TimeUnit.MILLISECONDS, timer);
+		escolha = leia();
+		do {
+			escreva("\n\nTakêdo, o barman: Olá amigo, gostaria de um drink?\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva(nome + ":", TimeUnit.MILLISECONDS, timer);
+			escreva("\n1 - Não, to de boa\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\n2 - Opa, claro!\n", TimeUnit.MILLISECONDS, timer);
+			switch (escolha) {
+			case 1:
+				escreva("Ao olhar ao redor todas as pessoas têm de alguma forma um símbolo de coelho.\n"
+						+ "Com isso você se questiona se o coelho é algum tipo de símbolo de identificação.\n\n",
+						TimeUnit.MILLISECONDS, timer);
 
-		switch (leia()) {
-		case 1:
-			escreva("Ao olhar ao redor todas as pessoas têm de alguma forma um símbolo de coelho, \n"
-					+ "Com isso você se questiona se o coelho é algum tipo de símbolo de identificação.\n\n",
-					TimeUnit.MILLISECONDS, timer);
+				break;
+			case 2:
+				escreva("\n\nTakêdo, o barman: Qual drink você quer? (Digite o nome da sua bebida preferida)\n",
+						TimeUnit.MILLISECONDS, timer);
+				drink = entrada.next();
+				escreva("\n*Você recebe um copo de " + drink + "*\n", TimeUnit.MILLISECONDS, timer);
+				escreva("\nAo pegar o copo, você percebe que estranhamente há um símbolo de coelho no uniforme do barman.\n"
+						+ "Com isso você se questiona se o coelho é algum tipo de símbolo de identificação.\n\n",
+						TimeUnit.MILLISECONDS, timer);
+				break;
 
-			break;
-		case 2:
-			escreva("\n\nTakêdo, o barman: Qual drink você quer? (Digite o nome da sua bebida preferida)\n",
-					TimeUnit.MILLISECONDS, timer);
-			drink = entrada.next();
-			escreva("\n*Você recebe um copo de " + drink + "*\n", TimeUnit.MILLISECONDS, timer);
-			escreva("\nAo pegar o copo, você percebe que estranhamente há um símbolo de coelho no uniforme do barman.\n"
-					+ "Com isso você se questiona se o coelho é algum tipo de símbolo de identificação.\n\n",
-					TimeUnit.MILLISECONDS, timer);
-			break;
+			default:
+				escreva("\nValor inválido!\n", TimeUnit.MILLISECONDS, timer);
 
-		}
+			}
+
+		} while (escolha != 1 && escolha != 2);
+
 		escreva("Algum tempo depois\n", TimeUnit.MILLISECONDS, timer);
-		escreva("...", TimeUnit.MILLISECONDS, 400);
+		escreva("...", TimeUnit.MILLISECONDS, 500);
 
 		escreva("\n\nUma pesssoa estranha senta ao seu lado: \n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n@*%###*: Olá, você se chama " + nome + "?\n\n", TimeUnit.MILLISECONDS, timer);
