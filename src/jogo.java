@@ -525,7 +525,6 @@ public class jogo {
 		escreva(nome + ": mas por que o morpheus e não eu?\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Trinity: Anda! não há  tempo para isso. Tank está rastreando eles. Parece ser um prédio\n",
 				TimeUnit.MILLISECONDS, timer);
-		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
 		escreva("abandonado no centro da cidade. Vamos até lá.\n\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("Chegando ao local\n\n", TimeUnit.MILLISECONDS, timer);
@@ -536,7 +535,7 @@ public class jogo {
 				TimeUnit.MILLISECONDS, timer);
 		escreva("todas vidas existentes dentro e fora da matrix.\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Trinity: " + nome
-				+ "lembra-se do que treinamos antes, seja (variável do tipo de treinamento escolhido pelo usuário)\n",
+				+ " lembre-se do que treinamos antes, seja (variável do tipo de treinamento escolhido pelo usuário)\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
 
