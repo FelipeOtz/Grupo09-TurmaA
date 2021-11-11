@@ -139,6 +139,135 @@ public class jogo {
 
 		// MINIGAME
 
+				
+		// PARTE MELQUI
+		escreva("\n. . . . . . . . . .\nDesafio da Senha 4 Acabou Aki \n Em seguida desafio da habilidade\n"
+				+ ". . . . . . . . . . . . .\n\n", TimeUnit.MILLISECONDS, timer);
+		// DESAFIO 4
+
+		escreva("Tank: agora você está pronto !\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Trinity: Ei Tank, acho que ele ainda não está pronto. Deixa eu ver"
+				+ " do você é capaz. \nO que acha de testar suas novas habilidades comigo?\n", TimeUnit.MILLISECONDS,
+				timer);
+		escreva("\nEscolha: Treinar com a Trinity ou seguir com a história\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Treinar Trinity: \n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nOBS:Treinar com a Trinity vai potencializar suas habilidades ao máximo.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		
+		escreva("Morpheus: (Nome do jogador) Vamos precisar entrar na Matrix novamente para encontrar o Oráculo\n", TimeUnit.MILLISECONDS, timer);
+		escreva("só que temos um pequeno problema: Ninguém, até o momento, conseguiu encontrar a localização\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("dela dentro da Matrix. Você é o escolhido, por isso preciso que você encontre ela, por ", TimeUnit.MILLISECONDS, timer);
+		escreva("\neste computador você conseguirá achar-lá, com isso vamos até ela para saber se você realmente \né nosso escolhido, ", TimeUnit.MILLISECONDS, timer);
+		escreva("aquele que acabará com o sofrimento daqueles dentro da matrix.\n\n\n"
+				+ "", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("**Você se senta em frente ao computador e começa a codificar, faz tudo de forma rápida como\n", TimeUnit.MILLISECONDS, timer);		
+		escreva("se já tivesse visto isso antes. Em meio a tantos códigos, você encontra um arquivo criptografado,\n", TimeUnit.MILLISECONDS, timer);
+		escreva("para descriptografar o arquivo é necessário, que você faça o seguinte:\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nTank: deixa eu te ajudar novato \n\n ///DICA SOBRE o desafio////\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n///DESAFIO 5///\n", TimeUnit.MILLISECONDS, timer);	
+		
+		escreva("Morpheus: sabia que você não ia nos desapontar, essa etapa que estamos é importante para que consigamos\n"
+				+ "vencer a matrix de uma vez por todas.\r\n\n"
+				+ "", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Triniti: Bom trabalho nomedousuario, conseguiu descobrir a localização do oraculo, já  fizemos muito por hoje, vamos\n", TimeUnit.MILLISECONDS, timer);
+		escreva("descansar porque amanhã vai ser um grande dia para todos nós.\n\n"
+				+ "", TimeUnit.MILLISECONDS, timer);
+	
+		escreva("** Você vai dormir **\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nNo dia seguinte…\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		
+		escreva("Você abre olho e sente que há algo de errado com o seu corpo, ao se levantar e olhar no espelho,\n", TimeUnit.MILLISECONDS, timer);
+		escreva("percebe que seu rosto está se desfazendo e se espanta com isso. Você ouve a Trinity gritando de\n", TimeUnit.MILLISECONDS, timer);
+		escreva("longe e cada vez ficando mais alto, como se estivesse se aproximando.\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("De repente você abre o olho novamente, Trinity está na sua frente, e percebe que tudo não\n", TimeUnit.MILLISECONDS, timer);
+		escreva("se passava de um pesadelo.\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Junto a Triniti, você vai ao comando central da nave e se depara com o Tank, manuseando uma grande \n", TimeUnit.MILLISECONDS, timer);
+		escreva("máquina cheia de cabos.\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Tank: sente-se, fiquem a vontade, estou preparando a máquina para levá los de volta ao paraiso.\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("**Tank coloca um capacete estranho em você**\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("****Após os preparos, Tank liga a máquina e você começa a adormecer***\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("***você abre o olho e percebe que está de volta à Matrix***\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Ao entrar na matrix Morpheus e Nomedousuario se surpreende com uma casa cheia de crianças,\n", TimeUnit.MILLISECONDS, timer);
+		escreva("onde essas crianças não tinham brilho no olhar que geralmente as crianças têm, todas pareciam\n", TimeUnit.MILLISECONDS, timer);
+		escreva("cansadas e descontentes com sua vida.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Um garoto se aproxima de você, logo de cara você percebe que ele não é igual aos outros, a fisionomia\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("do seu rosto é serena e então ele pega uma colher e sem dizer uma palavra e nem mexer um dedo,\n ", TimeUnit.MILLISECONDS, timer);
+		escreva("de repente ele a entorta.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Garoto: você sabe fazer isso ?\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Nomedousuario: Não, nunca tentei.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Garoto: basta você pensar que a colher não é real e modificá-la da forma que quiser\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		System.err.println("///DESAFIO ENTORTAR COLHER/// \n\n");
+		
+		escreva("Garoto: Viu? Nada daquilo que você pensa que é real é real.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		
+		escreva("Garoto: Me siga, sei quem você está procurando….\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Ao chegar na cozinha da casa, você encontra uma senhora fazendo um chá, sua\n", TimeUnit.MILLISECONDS, timer);
+		escreva("aparência é simples e humilde.", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Senhora: senta-se garoto, já conversamos primeiro irei terminar de fazer o meu chá…\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Senhora: diga me garoto, o que realmente você quer  ?\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Nomedousuario: eu realmente sou aquele que todos dizem, o escolhido, aquele que acabará matrix ?\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Oraculo: eu não sei, você se sente preparado para isso ?\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Nomedousuario: você não sabe ou não quer dizer ?\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Oraculo: ninguém pode ver além daquilo que não compreende. \n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Nomedousuario: então é hora de eu descobrir algumas verdades..\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Oraculo: não se esqueça que muito em breve o agente Smith terá o poder de prender todos dentro da matrix.\n\n", TimeUnit.MILLISECONDS, timer);
+	
+		escreva("Nomedousuario: quem é o agente smith ?\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		
+		escreva("Oráculo: ele é o sentinela senciente, que é responsável pela proteção da matrix, e fará de tudo para que\n", TimeUnit.MILLISECONDS, timer);
+		escreva("ninguém saia dela, você deve pará lo antes que não haja nada mais que seja real\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Oraculo: de um jeito ou de outro, essa guerra terá um fim nesta noite, e o futuro dos dois mundos\n", TimeUnit.MILLISECONDS, timer);
+		escreva(" mundos (real e matrix) estará em suas mãos.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Você sai da casa e percebe que Morpheus não está lá.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Trinity:ainda bem que te achei, pensamos que você também havia sido sequestrado.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Nomedousuario: Como assim ? quem foi sequestrado ?\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		
+		escreva("Trinity: enquanto você estava conversando com o Oráculo, Os sentinelas estavam aqui e para eles\n", TimeUnit.MILLISECONDS, timer);
+		escreva("não desconfiarem que você estava por perto, Morpheus lutou com eles,  mas ele não resistiu e os\n", TimeUnit.MILLISECONDS, timer);
+		escreva("sentinelas levaram ele.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("nomedeusuário: mas por que o morpheus e não eu?\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Trinity: Anda! não há  tempo para isso. Tank está rastreando eles. Parece ser um prédio\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
+		escreva("abandonado no centro da cidade. Vamos até lá.\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Chegando ao local\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("**Você vê morpheus acorrentado em uma mesa***\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Agente Smith: estava te esperando, finalmente teremos esse momento tão aguardado por todos.\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Morpheus: Nomedousuario não se distraia com ele, lembra- se que este é um momento importante para\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("todas vidas existentes dentro e fora da matrix.\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Trinity: Nomedousuario lembra-se do que treinamos antes, seja (variável do tipo de treinamento escolhido pelo usuário)\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
+			
+		
+		
+		
 	}
 
 	// Função para mostrar
