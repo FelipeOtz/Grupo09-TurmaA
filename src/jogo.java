@@ -125,8 +125,7 @@ public class jogo {
 		escreva("\n*Toc*", TimeUnit.MILLISECONDS, 100);
 		escreva("\n*Toc*\n", TimeUnit.MILLISECONDS, 100);
 
-		escreva("\n*Você se levanta e vai até a porta atender*\n \nEstranhamente, não há ninguém, mas uma carta foi deixada ao chão. \n"
-				+ "\nVocê abre a carta e há apenas um endereço completamente embaralhado e uma foto de um coelho\n",
+		escreva("\n*Você se levanta e vai até a porta atender*/n",
 				TimeUnit.MILLISECONDS, timer);
 
 		escreva(nome + ": Ué?! não tem ninguém...\n\n", TimeUnit.MILLISECONDS, timer);
