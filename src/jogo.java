@@ -133,7 +133,7 @@ public class jogo {
 		escreva("\nTank: Prazer grande escolhido, vamos ao que interessa?\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nTank: temos as seguintes habilidades que podemos fazer update, fique a vontade para escolher "
 				+ "uma para  aprimorar, mas essas modificações\n"
-				+ " não podem ser feitas em qualquer um, por isso preciso"
+				+ "não podem ser feitas em qualquer um, por isso preciso"
 				+ " que você faça o seguinte :\n", TimeUnit.MILLISECONDS, timer);
 		// DESAFIOOOOOOOOOOOOOOOO 4
 
