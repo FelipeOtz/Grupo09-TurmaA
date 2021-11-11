@@ -35,7 +35,8 @@ public class jogo {
 	// Função para mostrar
 	static void instrucao() throws InterruptedException {
 		escreva("Instruções", TimeUnit.MILLISECONDS, timer);
-
+		escreva("O jogo é tem como base o filme matrix, terá multiplas escolhas, Completar o código, então aproveite, \n O * indica uma ação do personagem."
+				+ "\n e Siga o coelho.. ", TimeUnit.MILLISECONDS, timer);
 	}
 
 	// Função para mostrar créditos
