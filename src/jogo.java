@@ -14,12 +14,14 @@ public class jogo {
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
 
+	// Função para leitura de dados
 	static int leia() {
 
 		int escolha = entrada.nextInt();
 		return escolha;
 	}
 
+	// Função para Escrever na tela
 	static void escreva(String texto, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
 		for (char caractere : texto.toCharArray()) {
 			System.out.print(caractere);
@@ -153,6 +155,8 @@ public class jogo {
 
 		UIManager.put("OptionPane.okButtonText", "O que isso significa?");
 		JOptionPane.showMessageDialog(dialog, "", "", JOptionPane.WARNING_MESSAGE, folha);
+		
+		escreva("\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": O que isso significa? \n\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva(nome + ": Me parece que este endereço está embaralhado\n\n", TimeUnit.MILLISECONDS, timer);
@@ -536,7 +540,7 @@ public class jogo {
 
 	}
 
-	// Função para mostrar
+	// Função para mostrar instruções
 	static void instrucao() throws InterruptedException {
 		escreva("Instruções", TimeUnit.MILLISECONDS, timer);
 		escreva("O jogo é tem como base o filme matrix, terá multiplas escolhas, Completar o código, então aproveite, \n O * indica uma ação do personagem."
@@ -555,6 +559,7 @@ public class jogo {
 		escreva("Sobre", TimeUnit.MILLISECONDS, timer);
 	}
 
+	// Função para Menu
 	public static void main(String[] args) throws InterruptedException {
 		// Menu
 
@@ -562,9 +567,11 @@ public class jogo {
 
 		// Menu - Estrutura
 		do {
-			escreva("Bem vindo(a) a Inside The Matrix \n\nEscolha uma das opções abaixo:\n" + "1 - Jogar\n"
+			escreva("Bem vindo(a) a Inside The Matrix \n\n",
+					TimeUnit.MILLISECONDS, 30);
+			escreva("Escolha uma das opções abaixo:\n" + "1 - Jogar\n"
 					+ "2 - Instruções/Regras\n" + "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair\n",
-					TimeUnit.MILLISECONDS, 15);
+					TimeUnit.MILLISECONDS, 10);
 
 			switch (leia()) {
 
