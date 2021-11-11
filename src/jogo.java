@@ -125,10 +125,12 @@ public class jogo {
 		escreva("\n*Toc*", TimeUnit.MILLISECONDS, 100);
 		escreva("\n*Toc*\n", TimeUnit.MILLISECONDS, 100);
 
-		escreva("\n*Você se levanta e vai até a porta atender*/n",
+		escreva("\n*Você se levanta e vai até a porta para atender*\n",
 				TimeUnit.MILLISECONDS, timer);
 
-		escreva(nome + ": Ué?! não tem ninguém...\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva(nome + ": Ué?! não tem ninguém...\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n*Você olha para os lados e não vê ninguém*",
+				TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Antes de fechar a porta você vê uma carta no chão*\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": Que estranho... Por que alguém deixaria uma carta jogada no chão assim?\n\n",
 				TimeUnit.MILLISECONDS, timer);
@@ -181,21 +183,24 @@ public class jogo {
 		case 1:
 			break;
 		}
-		escreva("\n\n*Você vai até o local*\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n\n*Você vai até o local*\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("...", TimeUnit.MILLISECONDS, 300);
 
-		escreva("\nChegando lá, você se depara com um bar. "
+		escreva("\n\nChegando lá, você se depara com um bar. "
 				+ "\nAparentemente pouco movimentado, a música é agradável.", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\n\n*Você se senta em um banquinho*", TimeUnit.MILLISECONDS, timer);
 		// variavel para receber o nome do drink
 		String drink;
 
-		escolha = leia();
+		
 		do {
 			escreva("\n\nTakêdo, o barman: Olá amigo, gostaria de um drink?\n\n", TimeUnit.MILLISECONDS, timer);
 			escreva(nome + ":", TimeUnit.MILLISECONDS, timer);
 			escreva("\n1 - Não, to de boa\n", TimeUnit.MILLISECONDS, timer);
-			escreva("\n2 - Opa, claro!\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\n2 - Opa, claro!\n\n", TimeUnit.MILLISECONDS, timer);
+			escolha = leia();
 			switch (escolha) {
 			case 1:
 				escreva("Ao olhar ao redor todas as pessoas têm de alguma forma um símbolo de coelho.\n"
