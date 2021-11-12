@@ -13,49 +13,41 @@ public class jogo {
 
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
-	
+
 	// Variavel Global de agente
-	
+
 	static int agentes = 0;
-	
+
 	// Verificar agentes
 
-	static boolean verAgente (int agentes) throws InterruptedException {
-		
-		
-	
-	if (agentes < 3) {
-		
-		
-		escreva("\n\nCuidado!\n"
-		+agentes+" agentes estão atrás de você!"
-				+ "\nSe chegar a 3 acabará o jogo", TimeUnit.MILLISECONDS, timer);
-		return true;
-		
-	}else {
-		final JDialog dialog = new JDialog();
+	static boolean verAgente(int agentes) throws InterruptedException {
 
-		// Criar ícone com a imagem do smith
-		ImageIcon smith = new ImageIcon("images/smith.png");
-		UIManager.put("OptionPane.okButtonText", "O agente smith está na sua cola ");
-		dialog.setAlwaysOnTop(true);
-		JOptionPane.showMessageDialog(dialog, "", "Game Over",
-				JOptionPane.WARNING_MESSAGE, smith);
-		
-		escreva("\n\nVocê chegou a "+agentes
-				+ "\nUm grupo de agentes encontra você e te executa"
-				+ "\nInfelizmente o jogo acabou para você\n"
-				+ "\nDê seu melhor da próxima", TimeUnit.MILLISECONDS, timer);
-		return false;
-		
+		if (agentes < 3) {
+
+			escreva("\n\nCuidado!\n" + agentes + " agentes estão atrás de você!" + "\nCehgando a 3 acabará o jogo\n\n",
+					TimeUnit.MILLISECONDS, timer);
+			return true;
+
+		} else {
+			
+			escreva("...", TimeUnit.MILLISECONDS, 400);
+			final JDialog dialog = new JDialog();
+
+			// Criar ícone com a imagem do smith
+			ImageIcon smith = new ImageIcon("images/smith.png");
+			UIManager.put("OptionPane.okButtonText", "calma, o que?");
+			dialog.setAlwaysOnTop(true);
+			JOptionPane.showMessageDialog(dialog, "Um grupo de agentes encontra você e te executa", "", JOptionPane.WARNING_MESSAGE, smith);
+
+			escreva("\n\nVocê chegou a " + agentes +" agentes\n"
+					+ "\nInfelizmente o jogo acabou para você\n" + "\nDê seu melhor da próxima\n\n", TimeUnit.MILLISECONDS,
+					timer);
+			return false;
+
+		}
+
 	}
 
-		
-		
-		
-	}  
-	
-	
 	// Função para leitura de dados
 	static int leia() {
 
@@ -70,25 +62,21 @@ public class jogo {
 			unit.sleep(tempo_mensagem);
 		}
 	}
-	
-	
-	
 
 	// Desafio
 	static void desafio01() {
-		
-	}
-		
 
-	static void desafio02() {
-		
-		
+	}
+
+	static void desafio02() throws InterruptedException {
+
 		String r1, r2;
 		boolean liberado = false;
-		
-		System.out.print("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n");
+
+		System.out.print(
+				"\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n");
 		// NO QUADRADO NÃO SUBSTITUIR O PRINT
-		System.out.print("\n ________________________________________________________");	
+		System.out.print("\n ________________________________________________________");
 		System.out.print("\n|1    public static void main(String[] args) {           |");
 		System.out.print("\n|2    int nome = " + "Trinity" + ";                                |");
 		System.out.print("\n|3    boolean rosto;                                     |\n"
@@ -102,23 +90,29 @@ public class jogo {
 		System.out.print("\n\n\n");
 
 		do {
-		System.out.print("1 - Qual o Comando faltante na linha 7 ?\nR: ");
-		r1 = entrada.next();
-		System.out.print("2 - Qual o Comando faltante na linha 8 ?\nR: ");
-		r2 = entrada.next();
-		
-		if (r1.equalsIgnoreCase("nome") && (r2.equalsIgnoreCase("true"))) {
-			System.out.println("\nMuito Bem, você acertou");			
-			liberado = true;
-		} else {
-			System.out.println("\n\nINCORRETO! + mais um agente estará sua procura\n\nTotal de Agentes à sua procura: __");
-			liberado = false;
-		}
-		
-		}while (!liberado);
-		
+			System.out.print("1 - Qual o Comando faltante na linha 7 ?\nR: ");
+			r1 = entrada.next();
+			System.out.print("2 - Qual o Comando faltante na linha 8 ?\nR: ");
+			r2 = entrada.next();
+
+			if (r1.equalsIgnoreCase("nome") && (r2.equalsIgnoreCase("true"))) {
+				System.out.println("\nMuito Bem, você acertou");
+				liberado = true;
+			} else {
+				System.out.println(
+						"\n\nINCORRETO!");
+				liberado = false;
+				agentes++;
+
+				if (!verAgente(agentes)) {
+					return;
+					
+				}
+			}
+
+		} while (!liberado);
+
 	}
-	
 
 	static void desafio03() {
 
@@ -140,9 +134,8 @@ public class jogo {
 
 	}
 
-
 	// Função para jogar
-	static boolean jogar() throws InterruptedException {
+	static void jogar() throws InterruptedException {
 
 		// Janela de diálogo para colocar JOptionPane
 		final JDialog dialog = new JDialog();
@@ -166,6 +159,11 @@ public class jogo {
 		int escolha = 1;
 
 		escreva("\n\nOlá jogador. Bem-vindo(a) a Inside the Matrix.\n", TimeUnit.MILLISECONDS, timer);
+		
+		desafio02();
+		if (agentes == 3) {
+			return;
+		}
 
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
@@ -455,7 +453,7 @@ public class jogo {
 			escreva("Você acorda em sua cama, aparentemente, só mais um dia normal como os outros.",
 					TimeUnit.MILLISECONDS, timer);
 			creditos();
-			return true;
+			return;
 		case 2:
 			escreva("\n*Você se sente tonto e começa adormecer lentamente*\n", TimeUnit.MILLISECONDS, timer);
 			break;
@@ -485,7 +483,8 @@ public class jogo {
 				+ "para isso precisamos começar a te preparar para isso, por favor\n" + "me acompanhe que vou"
 				+ " te apresentar ao seu treinador.\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: Dentro da Matrix podemos alterar qualquer coisa em nós mesmos, sejaintelectualmente"
-				+ "\nou fisicamente, você quer ter super força?" + "você terá, ou talvez super velocidade? você terá.\n "
+				+ "\nou fisicamente, você quer ter super força?"
+				+ "você terá, ou talvez super velocidade? você terá.\n "
 				+ "Este é Tank, um dosnossos modificadores, ele vai te ajudar a aprimorar todas suas \n"
 				+ "habilidades " + "e adquirir novas, fique a vontade para escolher.\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nTank: Prazer grande escolhido, vamos ao que interessa?\n", TimeUnit.MILLISECONDS, timer);
@@ -651,7 +650,7 @@ public class jogo {
 				TimeUnit.MILLISECONDS, timer);
 		escreva("Jogando", TimeUnit.MILLISECONDS, timer);
 
-		return false;
+		return;
 
 	}
 
