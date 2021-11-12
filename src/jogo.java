@@ -33,6 +33,14 @@ public class jogo {
 		return true;
 		
 	}else {
+		final JDialog dialog = new JDialog();
+
+		// Criar ícone com a imagem do coelho
+		ImageIcon coelho = new ImageIcon("images/coelho.png");
+		UIManager.put("OptionPane.okButtonText", "Espera!?... O que é isso?? ");
+		dialog.setAlwaysOnTop(true);
+		JOptionPane.showMessageDialog(dialog, "", "CUIDADO,! RISCO DE VÍRUS!!",
+				JOptionPane.WARNING_MESSAGE, coelho);
 		
 		escreva("\n\nVocê chegou a "+agentes
 				+ "\nUm grupo de agentes encontra você e te executa"
@@ -68,6 +76,13 @@ public class jogo {
 
 	// Desafio
 	static void desafio01() {
+		
+	}
+		
+
+	static void desafio02() {
+		
+		
 		String r1, r2;
 		boolean liberado = false;
 		
@@ -88,9 +103,9 @@ public class jogo {
 
 		do {
 		System.out.print("1 - Qual o Comando faltante na linha 7 ?\nR: ");
-		r1 = leia();
+		r1 = entrada.next();
 		System.out.print("2 - Qual o Comando faltante na linha 8 ?\nR: ");
-		r2 = leia();
+		r2 = entrada.next();
 		
 		if (r1.equalsIgnoreCase("nome") && (r2.equalsIgnoreCase("true"))) {
 			System.out.println("\nMuito Bem, você acertou");			
@@ -103,10 +118,7 @@ public class jogo {
 		}while (!liberado);
 		
 	}
-
-	static void desafio02() {
-
-	}
+	
 
 	static void desafio03() {
 
