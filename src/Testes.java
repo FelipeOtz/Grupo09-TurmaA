@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 
 public class Testes {
-	public static void main(String[] args) {
+	public static void main(String[] args) {/*
 		Scanner leitor = new Scanner(System.in);
 		System.out.println("uoifhoufyhiaustyiuoastyfitguasiuhgads8tasy8tda");
 		int x;
@@ -70,32 +70,37 @@ public class Testes {
 		}
 
 		leitor.close();
-		
+		*/
 		// DESAFIO 01
 		
+		
+		Scanner leitor = new Scanner(System.in);
+		String r1, r2;
+		
+		
+		
 		System.out.println("\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n");
-		System.out.println(" _______________________________________________________");	
-		System.out.println("|    public static void main(String[] args) {           |");
-		System.out.println("|    int name = " + "Trinity" + ";                                |");
-		System.out.println("|    boolean rosto;                                     |\n"
-				+ "|                                                       |\n"
-				+ "|                                                       |\n"
-				+ "|                                                       |");
-		System.out.println("|    System.out.println(______);                        |");
-		System.out.println("|    rosto =_____;                                      |" +
+		System.out.println(" ________________________________________________________");	
+		System.out.println("|1    public static void main(String[] args) {           |");
+		System.out.println("|2    int name = " + "Trinity" + ";                                |");
+		System.out.println("|3    boolean rosto;                                     |\n"
+				+ "|4                                                       |\n"
+				+ "|5                                                       |\n"
+				+ "|6                                                       |");
+		System.out.println("|7    System.out.println(______);                        |");
+		System.out.println("|8    rosto =_____;                                      |" +
 		 "                                                       |");
-		System.out.println("|                                                       |");
-		System.out.println("|_______________________________________________________|");
+		System.out.println("|9                                                       |");
+		System.out.println("|________________________________________________________|");
 		System.out.println("\n\n");
-		System.out.println("Qual o Comando faltante na primeira linha?");
-		System.out.print("R: ");
-		System.out.println("Qual o Comando faltante na segunda linha?");
-		System.out.print("R: ");
 		
+		System.out.print("Qual o Comando faltante na linha 7 ?\nR: ");
+		r1 = leitor.next();
 		
+		System.out.print("Qual o Comando faltante na linha 8 ?\nR: ");
+		r2 = leitor.next();
 		
-		
-		
+		System.out.println("88 Fingers Louie");
 		
 		
 		

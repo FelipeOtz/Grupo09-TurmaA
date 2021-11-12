@@ -68,7 +68,40 @@ public class jogo {
 
 	// Desafio
 	static void desafio01() {
+		String r1, r2;
+		boolean liberado = false;
+		
+		System.out.print("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n");
+		// NO QUADRADO NÃO SUBSTITUIR O PRINT
+		System.out.print("\n ________________________________________________________");	
+		System.out.print("\n|1    public static void main(String[] args) {           |");
+		System.out.print("\n|2    int nome = " + "Trinity" + ";                                |");
+		System.out.print("\n|3    boolean rosto;                                     |\n"
+				+ "|4                                                       |\n"
+				+ "|5                                                       |\n"
+				+ "|6                                                       |");
+		System.out.print("\n|7    System.out.println(______);                        |");
+		System.out.print("\n|8    rosto =_____;                                      |");
+		System.out.print("\n|9                                                       |");
+		System.out.print("\n|________________________________________________________|");
+		System.out.print("\n\n\n");
 
+		do {
+		System.out.print("1 - Qual o Comando faltante na linha 7 ?\nR: ");
+		r1 = leia();
+		System.out.print("2 - Qual o Comando faltante na linha 8 ?\nR: ");
+		r2 = leia();
+		
+		if (r1.equalsIgnoreCase("nome") && (r2.equalsIgnoreCase("true"))) {
+			System.out.println("\nMuito Bem, você acertou");			
+			liberado = true;
+		} else {
+			System.out.println("\n\nINCORRETO! + mais um agente estará sua procura\n\nTotal de Agentes à sua procura: __");
+			liberado = false;
+		}
+		
+		}while (!liberado);
+		
 	}
 
 	static void desafio02() {
