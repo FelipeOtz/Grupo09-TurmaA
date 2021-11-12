@@ -13,49 +13,39 @@ public class jogo {
 
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
-	
+
 	// Variavel Global de agente
-	
+
 	static int agentes = 0;
-	
+
 	// Verificar agentes
 
-	static boolean verAgente (int agentes) throws InterruptedException {
-		
-		
-	
-	if (agentes < 3) {
-		
-		
-		escreva("\n\nCuidado!\n"
-		+agentes+" agentes estão atrás de você!"
-				+ "\nSe chegar a 3 acabará o jogo", TimeUnit.MILLISECONDS, timer);
-		return true;
-		
-	}else {
-		final JDialog dialog = new JDialog();
+	static boolean verAgente(int agentes) throws InterruptedException {
 
-		// Criar ícone com a imagem do smith
-		ImageIcon smith = new ImageIcon("images/smith.png");
-		UIManager.put("OptionPane.okButtonText", "O agente smith está na sua cola ");
-		dialog.setAlwaysOnTop(true);
-		JOptionPane.showMessageDialog(dialog, "", "Game Over",
-				JOptionPane.WARNING_MESSAGE, smith);
-		
-		escreva("\n\nVocê chegou a "+agentes
-				+ "\nUm grupo de agentes encontra você e te executa"
-				+ "\nInfelizmente o jogo acabou para você\n"
-				+ "\nDê seu melhor da próxima", TimeUnit.MILLISECONDS, timer);
-		return false;
-		
+		if (agentes < 3) {
+
+			escreva("\n\nCuidado!\n" + agentes + " agentes estão atrás de você!" + "\nSe chegar a 3 acabará o jogo",
+					TimeUnit.MILLISECONDS, timer);
+			return true;
+
+		} else {
+			final JDialog dialog = new JDialog();
+
+			// Criar ícone com a imagem do smith
+			ImageIcon smith = new ImageIcon("images/smith.png");
+			UIManager.put("OptionPane.okButtonText", "O agente smith está na sua cola ");
+			dialog.setAlwaysOnTop(true);
+			JOptionPane.showMessageDialog(dialog, "", "Game Over", JOptionPane.WARNING_MESSAGE, smith);
+
+			escreva("\n\nVocê chegou a " + agentes + "\nUm grupo de agentes encontra você e te executa"
+					+ "\nInfelizmente o jogo acabou para você\n" + "\nDê seu melhor da próxima", TimeUnit.MILLISECONDS,
+					timer);
+			return false;
+
+		}
+
 	}
 
-		
-		
-		
-	}  
-	
-	
 	// Função para leitura de dados
 	static int leia() {
 
@@ -70,25 +60,20 @@ public class jogo {
 			unit.sleep(tempo_mensagem);
 		}
 	}
-	
-	
-	
 
 	// Desafio
 	static void desafio01() {
 		
 	}
-		
-
 	static void desafio02() {
-		
-		
+
 		String r1, r2;
 		boolean liberado = false;
-		
-		System.out.print("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n");
+
+		System.out.print(
+				"\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n");
 		// NO QUADRADO NÃO SUBSTITUIR O PRINT
-		System.out.print("\n ________________________________________________________");	
+		System.out.print("\n ________________________________________________________");
 		System.out.print("\n|1    public static void main(String[] args) {           |");
 		System.out.print("\n|2    int nome = " + "Trinity" + ";                                |");
 		System.out.print("\n|3    boolean rosto;                                     |\n"
@@ -102,23 +87,23 @@ public class jogo {
 		System.out.print("\n\n\n");
 
 		do {
-		System.out.print("1 - Qual o Comando faltante na linha 7 ?\nR: ");
-		r1 = entrada.next();
-		System.out.print("2 - Qual o Comando faltante na linha 8 ?\nR: ");
-		r2 = entrada.next();
-		
-		if (r1.equalsIgnoreCase("nome") && (r2.equalsIgnoreCase("true"))) {
-			System.out.println("\nMuito Bem, você acertou");			
-			liberado = true;
-		} else {
-			System.out.println("\n\nINCORRETO! + mais um agente estará sua procura\n\nTotal de Agentes à sua procura: __");
-			liberado = false;
-		}
-		
-		}while (!liberado);
-		
+			System.out.print("1 - Qual o Comando faltante na linha 7 ?\nR: ");
+			r1 = entrada.next();
+			System.out.print("2 - Qual o Comando faltante na linha 8 ?\nR: ");
+			r2 = entrada.next();
+
+			if (r1.equalsIgnoreCase("nome") && (r2.equalsIgnoreCase("true"))) {
+				System.out.println("\nMuito Bem, você acertou");
+				liberado = true;
+			} else {
+				System.out.println(
+						"\n\nINCORRETO! + mais um agente estará sua procura\n\nTotal de Agentes à sua procura: __");
+				liberado = false;
+			}
+
+		} while (!liberado);
+
 	}
-	
 
 	static void desafio03() {
 
@@ -133,13 +118,50 @@ public class jogo {
 	}
 
 	static void desafio06() {
+		Scanner entrada = new Scanner(System.in);
 
+		int laco;
+
+		System.out.print(
+				"O Garoto pode entortar a colher porque tem a habilidade de telecinesia em seu nível máximo (100)");
+		System.out.println(
+				"Para adquirir essa habilidade (que agora está em zero) você deve usar um determinado laço de repetição");
+		System.out.println(
+				"Dentro das alternativas abaixo escolha o laço de repetição mais apropriado para esta situação");
+		do {
+
+			System.out.println("1 - While");
+			System.out.println("2 - Do - While");
+			System.out.println("3 - For");
+			System.out.println("4 - Enhanced-For");
+
+			System.out.println("Digite a opção correta ");
+			laco = entrada.nextInt();
+
+			switch (laco) {
+			case 1:
+				System.out.println(
+						"Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente ");
+				break;
+			case 2:
+				System.out.println(
+						"Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente");
+				break;
+			case 3:
+				System.out.println("Escolha correta, você conseguiu entortar a colher !");
+				break;
+			case 4:
+				System.out.println(
+						"Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente");
+			}
+		} while (laco != 3);
+		System.out.println("Parabéns");
 	}
+	
 
 	static void desafio07() {
 
 	}
-
 
 	// Função para jogar
 	static boolean jogar() throws InterruptedException {
