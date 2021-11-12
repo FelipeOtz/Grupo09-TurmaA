@@ -345,39 +345,39 @@ public class jogo {
 
 		switch (leia()) {
 		case 1:
-			escreva("\n\n@*%###*: Ótimo era ", TimeUnit.MILLISECONDS, timer);
+			escreva("\n\n@*%#*#*: Ótimo era ", TimeUnit.MILLISECONDS, timer);
 			break;
 		case 2:
-			escreva("\n\n@*%###*: Não precisa mentir para mim.", TimeUnit.MILLISECONDS, timer);
+			escreva("\n\n$@*%##*: Não precisa mentir para mim.", TimeUnit.MILLISECONDS, timer);
 			escreva("\n Era ", TimeUnit.MILLISECONDS, timer);
 			break;
 		}
 		escreva("você mesmo que estava procurando \n\n", TimeUnit.MILLISECONDS, timer);
 
-		escreva("@*%###*: Você não consegue ver meu rosto, né?\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("!@*%##¨*: Você não consegue ver meu rosto, né?\n\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva(nome + ": Não, de algum jeito não enxergo seu rosto,\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": Minha vista está toda embaçada. Como você fez isso?\n\n", TimeUnit.MILLISECONDS, timer);
 
-		escreva("@*%###*: Não é algo tão simples de explicar\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("@*%#!%*: Não é algo tão simples de explicar\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": Não importa, quero saber o que está acontecendo! \n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": Foi você que hackeou meu computador né? \n\n", TimeUnit.MILLISECONDS, timer);
 
-		escreva("@*%###*: Sim fui eu\n", TimeUnit.MILLISECONDS, timer);
-		escreva("@*%###*: Mas preciso que você se acalme\n", TimeUnit.MILLISECONDS, timer);
-		escreva("@*%###*: Eu sei muito sobre você. Estamos te observando há muito tempo\n\n", TimeUnit.MILLISECONDS,
+		escreva("$#*%$!@*: Sim fui eu\n", TimeUnit.MILLISECONDS, timer);
+		escreva("@*¨$#@*: Mas preciso que você se acalme\n", TimeUnit.MILLISECONDS, timer);
+		escreva("@*%@!#*: Eu sei muito sobre você. Estamos te observando há muito tempo\n\n", TimeUnit.MILLISECONDS,
 				timer);
 		escreva(nome + ": Como assim estamos? Você e mais quem?\n\n", TimeUnit.MILLISECONDS, timer);
-		escreva("@*%###*: Sei que está confuso. E sei que você está tentando “sair da caverna”,\n",
+		escreva("¨&@!*%%#$*: Sei que está confuso. E sei que você está tentando “sair da caverna”,\n",
 				TimeUnit.MILLISECONDS, timer);
-		escreva("@*%###*: Está procurando coisas que ninguém mais vê\n", TimeUnit.MILLISECONDS, timer);
+		escreva("#*%@#$¨*: Está procurando coisas que ninguém mais vê\n", TimeUnit.MILLISECONDS, timer);
 
-		escreva("@*%###*: Se quiser descobrir a verdade, venha comigo!\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("$@@*!#*: Se quiser descobrir a verdade, venha comigo!\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": Me diga pelo menos por que não consigo ver seu rosto\n\n\n", TimeUnit.MILLISECONDS, timer);
 
 		// Desafioooooooooooooooooooooooooooo
 
-		escreva("\n\n\n@*%###*: Antes que eu me esqueça meu nome é Trinity\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n\n\n!*%@#!*: Antes que eu me esqueça meu nome é Trinity\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Trinity*: Agora que sabe quem sou eu, tenho que te apresentar a uma pessoa \n\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("*Trinity se levante e vai até a porta*\n\n", TimeUnit.MILLISECONDS, timer);
@@ -484,14 +484,14 @@ public class jogo {
 				+ " o escolhido, que nos ajudará a acabar \n" + "com a Matrix de uma vez por todas e "
 				+ "para isso precisamos começar a te preparar para isso, por favor\n" + "me acompanhe que vou"
 				+ " te apresentar ao seu treinador.\n", TimeUnit.MILLISECONDS, timer);
-		escreva("\nMorpheus: Dentro da Matrix podemos alterar qualquer coisa em nós mesmos, seja intelectualmente"
-				+ " ou fisicamente, você quer ter super força?\n" + "você terá, ou talvez super velocidade? você terá. "
-				+ "Este é Tank, um dos nossos modificadores, ele vai te ajudar a aprimorar todas suas \n"
+		escreva("\nMorpheus: Dentro da Matrix podemos alterar qualquer coisa em nós mesmos, sejaintelectualmente"
+				+ "\nou fisicamente, você quer ter super força?" + "você terá, ou talvez super velocidade? você terá.\n "
+				+ "Este é Tank, um dosnossos modificadores, ele vai te ajudar a aprimorar todas suas \n"
 				+ "habilidades " + "e adquirir novas, fique a vontade para escolher.\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nTank: Prazer grande escolhido, vamos ao que interessa?\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nTank: temos as seguintes habilidades que podemos fazer update, fique a vontade para escolher "
-				+ "uma para  aprimorar, mas essas modificações\n"
-				+ "não podem ser feitas em qualquer um, por isso preciso" + " que você faça o seguinte :\n",
+				+ "uma para\naprimorar, mas essas modificações"
+				+ "não podem ser feitas em qualquer um, por\nisso preciso" + " que você faça o seguinte :\n",
 				TimeUnit.MILLISECONDS, timer);
 		// DESAFIOOOOOOOOOOOOOOOO 4
 
