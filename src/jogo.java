@@ -35,7 +35,7 @@ public class jogo {
 
 			// Criar ícone com a imagem do smith
 			ImageIcon smith = new ImageIcon("images/smith.png");
-			UIManager.put("OptionPane.okButtonText", "calma, o que?");
+			UIManager.put("OptionPane.okButtonText", "...");
 			dialog.setAlwaysOnTop(true);
 			JOptionPane.showMessageDialog(dialog, "Um grupo de agentes encontra você e te executa", "", JOptionPane.WARNING_MESSAGE, smith);
 
