@@ -13,7 +13,41 @@ public class jogo {
 
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
+	
+	// Variavel Global de agente
+	
+	static int agentes = 0;
+	
+	// Verificar agentes
 
+	static boolean verAgente (int agentes) throws InterruptedException {
+		
+		
+	
+	if (agentes < 3) {
+		
+		
+		escreva("\n\nCuidado!\n"
+		+agentes+" agentes estão atrás de você!"
+				+ "\nSe chegar a 3 acabará o jogo", TimeUnit.MILLISECONDS, timer);
+		return true;
+		
+	}else {
+		
+		escreva("\n\nVocê chegou a "+agentes
+				+ "\nUm grupo de agentes encontra você e te executa"
+				+ "\nInfelizmente o jogo acabou para você\n"
+				+ "\nDê seu melhor da próxima", TimeUnit.MILLISECONDS, timer);
+		return false;
+		
+	}
+
+		
+		
+		
+	}  
+	
+	
 	// Função para leitura de dados
 	static int leia() {
 
@@ -28,6 +62,39 @@ public class jogo {
 			unit.sleep(tempo_mensagem);
 		}
 	}
+	
+	
+	
+
+	// Desafio
+	static void desafio01() {
+
+	}
+
+	static void desafio02() {
+
+	}
+
+	static void desafio03() {
+
+	}
+
+	static void desafio04() {
+
+	}
+
+	static void desafio05() {
+
+	}
+
+	static void desafio06() {
+
+	}
+
+	static void desafio07() {
+
+	}
+
 
 	// Função para jogar
 	static boolean jogar() throws InterruptedException {
@@ -125,12 +192,10 @@ public class jogo {
 		escreva("\n*Toc*", TimeUnit.MILLISECONDS, 100);
 		escreva("\n*Toc*\n", TimeUnit.MILLISECONDS, 100);
 
-		escreva("\n*Você se levanta e vai até a porta para atender*\n",
-				TimeUnit.MILLISECONDS, timer);
+		escreva("\n*Você se levanta e vai até a porta para atender*\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva(nome + ": Ué?! não tem ninguém...\n", TimeUnit.MILLISECONDS, timer);
-		escreva("\n*Você olha para os lados e não vê ninguém*",
-				TimeUnit.MILLISECONDS, timer);
+		escreva("\n*Você olha para os lados e não vê ninguém*", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Antes de fechar a porta você vê uma carta no chão*\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": Que estranho... Por que alguém deixaria uma carta jogada no chão assim?\n\n",
 				TimeUnit.MILLISECONDS, timer);
@@ -156,7 +221,7 @@ public class jogo {
 
 		UIManager.put("OptionPane.okButtonText", "O que isso significa?");
 		JOptionPane.showMessageDialog(dialog, "", "", JOptionPane.WARNING_MESSAGE, folha);
-		
+
 		escreva("\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": O que isso significa? \n\n", TimeUnit.MILLISECONDS, timer);
 
@@ -184,7 +249,7 @@ public class jogo {
 			break;
 		}
 		escreva("\n\n*Você vai até o local*\n\n", TimeUnit.MILLISECONDS, timer);
-		
+
 		escreva("...", TimeUnit.MILLISECONDS, 300);
 
 		escreva("\n\nChegando lá, você se depara com um bar. "
@@ -194,7 +259,6 @@ public class jogo {
 		// variavel para receber o nome do drink
 		String drink;
 
-		
 		do {
 			escreva("\n\nTakêdo, o barman: Olá amigo, gostaria de um drink?\n\n", TimeUnit.MILLISECONDS, timer);
 			escreva(nome + ":", TimeUnit.MILLISECONDS, timer);
@@ -303,8 +367,8 @@ public class jogo {
 		escreva("\n*Ao adentrar a sala, você percebe que tem mais alguém na sala "
 				+ "com você, porém\n essa pessoa está virada de costas para você,\r\n"
 				+ "aos poucos você começa a se aproximar e percebe "
-				+ "caracteristcas da\n pessoa, se trata de um homem negro, calvo, " + "alto, usando óculos escuro.* \r\n",
-				TimeUnit.MILLISECONDS, timer);
+				+ "caracteristcas da\n pessoa, se trata de um homem negro, calvo, "
+				+ "alto, usando óculos escuro.* \r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Ele então vira e se apresenta a você*\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nPersonagem desconhecido: Finalmente!!! Você não "
 				+ "precisa se apresentar, eu já sei tudo sobre você.\r\n", TimeUnit.MILLISECONDS, timer);
@@ -361,8 +425,8 @@ public class jogo {
 				+ "ela, se assusta com tudo\nque está vendo e cai de sua cápsula.\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Você desmaia novamente*\n", TimeUnit.MILLISECONDS, timer);
 		escreva("...", TimeUnit.MILLISECONDS, 300);
-		escreva("\nNo dia seguinte você acorda em uma uma estrutura "
-				+ "metálica estranha, e alguém bate na porta.\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nNo dia seguinte você acorda em uma uma estrutura " + "metálica estranha, e alguém bate na porta.\n",
+				TimeUnit.MILLISECONDS, timer);
 		escreva("*TOK TOK*", TimeUnit.MILLISECONDS, timer);
 		escreva("\n" + nome + ": Meus olhos doem !\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: É porque você nunca os usou, pronto para começarmos?\n", TimeUnit.MILLISECONDS, timer);
@@ -426,7 +490,8 @@ public class jogo {
 		escreva("Morpheus: sabia que você não ia nos desapontar, essa etapa que estamos é importante para que consigamos\n"
 				+ "vencer a matrix de uma vez por todas.\r\n\n" + "", TimeUnit.MILLISECONDS, timer);
 
-		escreva("Triniti: Bom trabalho, " + nome + " conseguiu descobrir a localização do oraculo, já  fizemos muito por hoje,\n vamos\n",
+		escreva("Triniti: Bom trabalho, " + nome
+				+ " conseguiu descobrir a localização do oraculo, já  fizemos muito por hoje,\n vamos\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("descansar porque amanhã vai ser um grande dia para todos nós.\n\n" + "", TimeUnit.MILLISECONDS, timer);
 
@@ -572,11 +637,9 @@ public class jogo {
 
 		// Menu - Estrutura
 		do {
-			escreva("Bem vindo(a) a Inside The Matrix \n\n",
-					TimeUnit.MILLISECONDS, 30);
-			escreva("Escolha uma das opções abaixo:\n" + "1 - Jogar\n"
-					+ "2 - Instruções/Regras\n" + "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair\n",
-					TimeUnit.MILLISECONDS, 10);
+			escreva("Bem vindo(a) a Inside The Matrix \n\n", TimeUnit.MILLISECONDS, 30);
+			escreva("Escolha uma das opções abaixo:\n" + "1 - Jogar\n" + "2 - Instruções/Regras\n"
+					+ "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair\n", TimeUnit.MILLISECONDS, 10);
 
 			switch (leia()) {
 
