@@ -373,7 +373,7 @@ public class jogo {
 		escreva("#*%@#$¨*: Está procurando coisas que ninguém mais vê\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("$@@*!#*: Se quiser descobrir a verdade, venha comigo!\n\n", TimeUnit.MILLISECONDS, timer);
-		escreva(nome + ": Me diga pelo menos por que não consigo ver seu rosto\n\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva(nome + ": Me diga pelo menos por que não consigo ver seu rosto\n", TimeUnit.MILLISECONDS, timer);
 
 		// Desafioooooooooooooooooooooooooooo
 
