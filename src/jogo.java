@@ -9,7 +9,7 @@ import javax.swing.UIManager;
 public class jogo {
 
 	// Variável para delay no texto
-	static int timer = 50;
+	static int timer = 15;
 
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
@@ -252,7 +252,7 @@ public class jogo {
 
 		escreva("@*%###*: Não é algo tão simples de explicar\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": Não importa, quero saber o que está acontecendo! \n", TimeUnit.MILLISECONDS, timer);
-		escreva(nome + ": Foi você que hackeu meu computador né? \n\n", TimeUnit.MILLISECONDS, timer);
+		escreva(nome + ": Foi você que hackeou meu computador né? \n\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("@*%###*: Sim fui eu\n", TimeUnit.MILLISECONDS, timer);
 		escreva("@*%###*: Mas preciso que você se acalme\n", TimeUnit.MILLISECONDS, timer);
@@ -301,38 +301,38 @@ public class jogo {
 		escreva("\nTrinity: Vou te dar só uma dica, seja sincero.\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*trinity abre a porta*\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Ao adentrar a sala, você percebe que tem mais alguém na sala "
-				+ "com você, porém essa pessoa está virada de costas para você,\r\n"
+				+ "com você, porém\n essa pessoa está virada de costas para você,\r\n"
 				+ "aos poucos você começa a se aproximar e percebe "
-				+ "caracteristcas da pessoa, se trata de um homem negro, calvo, " + "alto, usando óculos escuro.* \r\n",
+				+ "caracteristcas da\n pessoa, se trata de um homem negro, calvo, " + "alto, usando óculos escuro.* \r\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Ele então vira e se apresenta a você*\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nPersonagem desconhecido: Finalmente!!! Você não "
 				+ "precisa se apresentar, eu já sei tudo sobre você.\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nPersonagem desconhecido: Primeiramente meu nome "
-				+ "é Morpheus, por favor, sente-se aqui, agora você tem " + "uma decisão a fazer.\r\n",
+				+ "é Morpheus, por favor, sente-se aqui, agora \n você tem " + "uma decisão a fazer.\r\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: você deve estar se sentindo como a Aline, "
-				+ "escorregando pela toca do coelho. você é um homem que aceita o que vê, pois pensa estar\nsonhando, "
+				+ "escorregando pela toca do coelho.\nvocê é um homem que aceita o que vê, pois pensa estar\nsonhando, "
 				+ "ironicamente você está longe da verdade. Você acredita em destino?\r\n", TimeUnit.MILLISECONDS,
 				timer);
 		escreva("\n" + nome + ": não aceita a ideia de não estar " + "no controle das coisas. \n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: sei que dentro de você, você sente que há "
-				+ "algo de errado no mundo, e de fato há, vivemos em uma matrix.\n", TimeUnit.MILLISECONDS, timer);
+				+ "algo de errado\nno mundo, e de fato há, vivemos em uma matrix.\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nvocê a vê em todos os lugares e em tudo que você faz, "
 				+ "é o mundo que impede que você veja a verdade.\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n" + nome + ": Que verdade ?\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: que você é um escravo da matrix, como todo "
-				+ "mundo você nasceu em uma prisão que não pode sentir, " + "ver ou tocar.\n"
-				+ "infelizmente não posso \nexplicar o que " + "realmente é matrix. é preciso que veja por si mesmo:\n",
+				+ "mundo você nasceu em uma\nprisão que não pode sentir, " + "ver ou tocar.\n"
+				+ "infelizmente não posso explicar o que " + "realmente é matrix.\né preciso que veja por si mesmo:\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("\n*morpheus fecha as suas mãos e ergue seu braço em sua "
 				+ "direção(aparentando estar segurando algo)*\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: você tem sua última escolha, em minha mão tenho"
-				+ " duas pílulas, se você tomar a pílula azul você vai voltar a sua vida normal"
-				+ "\ne esquecerá de tudo isso. \n", TimeUnit.MILLISECONDS, timer);
+				+ " duas pílulas, se você tomar \n a pílula azul você vai voltar a sua vida normal"
+				+ "e esquecerá de tudo isso. \n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: Antes de continuar, preciso que você "
-				+ "resolva o seguinte desafio, para saber se você está pronto para decidir " + "o rumo da sua vida.",
+				+ "resolva o seguinte desafio, para saber \n se você está pronto para decidir " + "o rumo da sua vida.",
 				TimeUnit.MILLISECONDS, timer);
 		// DESAFIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO 3
 
@@ -355,13 +355,15 @@ public class jogo {
 		}
 
 		escreva("\nDe repente você acorda e sente o seu corpo todo dolorido, como se nunca tivesse usado ele,"
-				+ " então nota que em seu corpo\n" + "há vários cabos que estão conectados "
-				+ "a uma máquina, ao olhar ao redor vê outras\n", TimeUnit.MILLISECONDS, timer);
+				+ " então\nnota que em seu corpo" + "há vários cabos que estão conectados "
+				+ "a uma máquina, ao olhar\nao redor vê outras\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\ncápsulas igual a sua, há inúmeros humanos conectados a "
-				+ "ela, se assusta com tudo que está vendo e cai de sua cápsula.\n", TimeUnit.MILLISECONDS, timer);
+				+ "ela, se assusta com tudo\nque está vendo e cai de sua cápsula.\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Você desmaia novamente*\n", TimeUnit.MILLISECONDS, timer);
-		escreva("\nNo dia seguinte acorda em uma uma estrutura "
-				+ "metálica estranha (que aparenta e alguém bate à porta. ( TOC TOC)\n", TimeUnit.MILLISECONDS, timer);
+		escreva("...", TimeUnit.MILLISECONDS, 300);
+		escreva("\nNo dia seguinte você acorda em uma uma estrutura "
+				+ "metálica estranha, e alguém bate na porta.\n", TimeUnit.MILLISECONDS, timer);
+		escreva("*TOK TOK*", TimeUnit.MILLISECONDS, timer);
 		escreva("\n" + nome + ": Meus olhos doem !\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: É porque você nunca os usou, pronto para começarmos?\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n" + nome + ": onde estamos?\n", TimeUnit.MILLISECONDS, timer);
@@ -424,7 +426,7 @@ public class jogo {
 		escreva("Morpheus: sabia que você não ia nos desapontar, essa etapa que estamos é importante para que consigamos\n"
 				+ "vencer a matrix de uma vez por todas.\r\n\n" + "", TimeUnit.MILLISECONDS, timer);
 
-		escreva("Triniti: Bom trabalho nomedousuario, conseguiu descobrir a localização do oraculo, já  fizemos muito por hoje, vamos\n",
+		escreva("Triniti: Bom trabalho, " + nome + " conseguiu descobrir a localização do oraculo, já  fizemos muito por hoje,\n vamos\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("descansar porque amanhã vai ser um grande dia para todos nós.\n\n" + "", TimeUnit.MILLISECONDS, timer);
 
@@ -511,7 +513,7 @@ public class jogo {
 
 		escreva("Você sai da casa e percebe que Morpheus não está lá.\n\n", TimeUnit.MILLISECONDS, timer);
 
-		escreva("Trinity:ainda bem que te achei, pensamos que você também havia sido sequestrado.\n\n",
+		escreva("Trinity: ainda bem que te achei, pensamos que você também havia sido sequestrado.\n\n",
 				TimeUnit.MILLISECONDS, timer);
 
 		escreva(nome + ": Como assim ? quem foi sequestrado ?\n\n", TimeUnit.MILLISECONDS, timer);
