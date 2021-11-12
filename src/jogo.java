@@ -35,12 +35,12 @@ public class jogo {
 	}else {
 		final JDialog dialog = new JDialog();
 
-		// Criar ícone com a imagem do coelho
-		ImageIcon coelho = new ImageIcon("images/coelho.png");
-		UIManager.put("OptionPane.okButtonText", "Espera!?... O que é isso?? ");
+		// Criar ícone com a imagem do smith
+		ImageIcon smith = new ImageIcon("images/smith.png");
+		UIManager.put("OptionPane.okButtonText", "O agente smith está na sua cola ");
 		dialog.setAlwaysOnTop(true);
-		JOptionPane.showMessageDialog(dialog, "", "CUIDADO,! RISCO DE VÍRUS!!",
-				JOptionPane.WARNING_MESSAGE, coelho);
+		JOptionPane.showMessageDialog(dialog, "", "Game Over",
+				JOptionPane.WARNING_MESSAGE, smith);
 		
 		escreva("\n\nVocê chegou a "+agentes
 				+ "\nUm grupo de agentes encontra você e te executa"
