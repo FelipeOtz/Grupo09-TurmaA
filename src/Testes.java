@@ -70,6 +70,35 @@ public class Testes {
 		}
 
 		leitor.close();
+		
+		// DESAFIO 01
+		
+		System.out.println("\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n");
+		System.out.println(" _______________________________________________________");	
+		System.out.println("|    public static void main(String[] args) {           |");
+		System.out.println("|    int name = " + "Trinity" + ";                                |");
+		System.out.println("|    boolean rosto;                                     |\n"
+				+ "|                                                       |\n"
+				+ "|                                                       |\n"
+				+ "|                                                       |");
+		System.out.println("|    System.out.println(______);                        |");
+		System.out.println("|    rosto =_____;                                      |" +
+		 "                                                       |");
+		System.out.println("|                                                       |");
+		System.out.println("|_______________________________________________________|");
+		System.out.println("\n\n");
+		System.out.println("Qual o Comando faltante na primeira linha?");
+		System.out.print("R: ");
+		System.out.println("Qual o Comando faltante na segunda linha?");
+		System.out.print("R: ");
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 }
