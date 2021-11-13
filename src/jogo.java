@@ -75,10 +75,12 @@ public class jogo {
 
 		escreva("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n",
 				TimeUnit.MILLISECONDS, timer);
+		escreva("\n\n/* Para passar por este desafio você deve acertar as duas perguntas*/\n",
+				TimeUnit.MILLISECONDS, timer);
 		// NO QUADRADO NÃO SUBSTITUIR O PRINT
 		System.out.print("\n ________________________________________________________");
 		System.out.print("\n|1    public static void main(String[] args) {           |");
-		System.out.print("\n|2    int nome = " + "Trinity" + ";                                |");
+		System.out.print("\n|2    String nome = " + "Trinity" + ";                                |");
 		System.out.print("\n|3    boolean rosto;                                     |\n"
 				+ "|4                                                       |\n"
 				+ "|5                                                       |\n"
