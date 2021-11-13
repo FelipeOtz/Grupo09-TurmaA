@@ -702,7 +702,19 @@ public class jogo {
 
 	// Função para mostrar sobre
 	static void sobreMatrix() throws InterruptedException {
-		escreva("Sobre", TimeUnit.MILLISECONDS, timer);
+		escreva("\nO jogo se passa em um futuro onde as maquinas dominaram o mundo e escravizaram a raça humana sem que eles soubessem,\nDeixando eles "
+				+ "presos dentro de uma matrix.\n"
+				+ "Matrix é uma realidade simulada, criada por máquinas sencientes para subjugar a população humana, enquanto o calor\ne a atividade"
+				+ " elétrica de seus corpos são usados"
+				+ " ​como fonte de energia. O Escolhido, também conhecido\ncomo o Programa Prime, é uma característica sistêmica da Matrix, "
+				+ "na qual um código especial é carregado\npor um ser humano selecionado aleatoriamente, esse código lhe dará vastas habilidades "
+				+ "sobre-humanas ao\nseu avatar dentro da Matrix, além de alguns poderes extraordinários no mundo real. O código mencionado tem a função"
+				+ " de\nanexar a pessoaque o transporta à todas as anomalias (humanos que estão rejeitando a Matrix) dentro da Matrix,\nessencialmente "
+				+ "fazendo dela uma \"Anomalia Integral\",\na soma de todas as anomalias. Os poderes do Escolhido, que são derivados da Fonte e dados de "
+				+ "propósito pelas\nMáquinas para tornar seu papel como um/uma Messias crível, se manifestam no seu personagem enquanto ele é introduzido \nna Matrix,"
+				+ " o incluem: consciência extra-sensorial de mudanças dentro de o código da Matrix\nforça, velocidade e resistência super-humanas e inigualáveis; "
+				+ "o poder de voo; invulnerabilidade prática a danos físicos;\nclarividência telecinese, e, eventualmente, se torna poderoso o suficiente para "
+				+ "manipular a vontade quase\nqualquer aspecto da Matrix.\n\n", TimeUnit.MILLISECONDS, timer);
 	}
 
 	// Função para Menu
