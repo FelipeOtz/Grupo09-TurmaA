@@ -115,9 +115,70 @@ public class jogo {
 
 	}
 
-	static void desafio03() {
+	static void desafio03(String nome) throws InterruptedException {
+		escreva("\nMorpheus: Quando eu era jovem, eu desenvolvi um código e preciso saber se você é digno para resolvê-lo \n"
+				+ "Morpheus: A Matrix tem formato circular, o código que eu desenvolvi é para calcular seu tamanho é esse: \n",
+				TimeUnit.MILLISECONDS, timer);
+
+		escreva("\nDica 1 : A área de um Circulo é calculada através da fórmula:  (A = π r²)\n", TimeUnit.MILLISECONDS,
+				timer);
+
+		escreva("\nMorpheus: Hoje, eu sei que esse código pode ser melhorado de duas formas: Saberia dizer como?? \n"
+				+ "1- Sim \n" + "2- Não\n", TimeUnit.MILLISECONDS, timer);
+
+		int respostaSelecionada = 0;
+		String resposta = "";
+		boolean rodar = true;
+
+		respostaSelecionada = leia();
+
+		do {
+
+			while (respostaSelecionada != 1 && respostaSelecionada != 2) {
+				escreva("\nEscolha 1 para Sim, ou 2 para não.", TimeUnit.MILLISECONDS, timer);
+				respostaSelecionada = entrada.nextInt();
+			}
+			if (respostaSelecionada == 1) {
+
+			} else {
+				escreva("\nExplicação: O número de PI é ≅3,14. Em java, temos uma função que retorna este valor...\n"
+						+ "Também temos uma função para fazer potenciação. ", TimeUnit.MILLISECONDS, timer);
+			}
+			escreva("\nPara concluir esse desafio, você terá que acertar as duas perguntas!\nMas cuidado, se você errar"
+					+ "uma pergunta, o agente virá atrás de você.\n ", TimeUnit.MILLISECONDS, timer );
+			escreva("\n1 - Qual função da classe Math pode substituir o valor de PI?\n", TimeUnit.MILLISECONDS, timer);
+			resposta = entrada.next();
+			if (resposta.equalsIgnoreCase("Math.pi")) {
+				escreva("\nNada mal hein, " + nome + "!\n", TimeUnit.MILLISECONDS, timer);
+			} else {
+				escreva("\n\nINCORRETO! ", TimeUnit.MILLISECONDS, timer);
+				
+				agentes++;
+				if (!verAgente(agentes)) {
+					return;
+				}
+			
+			}
+			escreva("\n2 - Qual função da classe Math pode substituir o valor raio * raio (raio² ou raio ^2)\n\n", TimeUnit.MILLISECONDS, timer);
+			resposta = entrada.next();
+			if(resposta.equalsIgnoreCase("Math.pow")) {
+				escreva(nome + ", parabéns, você concluiu o desafio! ",TimeUnit.MILLISECONDS, timer);
+				rodar = false;
+			}
+			else {
+				escreva("\n\n INCORRETO! ", TimeUnit.MILLISECONDS, timer);
+				agentes++;
+				if (!verAgente(agentes)) {
+					return;
+				}
+			
+			}
+		}
+
+		while (rodar);
 
 	}
+	
 
 	static void desafio04() {
 
@@ -161,10 +222,7 @@ public class jogo {
 
 		escreva("\n\nOlá jogador. Bem-vindo(a) a Inside the Matrix.\n", TimeUnit.MILLISECONDS, timer);
 
-		desafio02();
-		if (agentes == 3) {
-			return;
-		}
+		
 
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
@@ -394,7 +452,12 @@ public class jogo {
 		escreva("$@@*!#*: Se quiser descobrir a verdade, venha comigo!\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva(nome + ": Me diga pelo menos por que não consigo ver seu rosto\n", TimeUnit.MILLISECONDS, timer);
 
-		// Desafioooooooooooooooooooooooooooo
+		// Desafio 2
+		
+		desafio02();
+		if (agentes == 3) {
+			return;
+		}
 
 		escreva("\n!*%@#!*: Antes que eu me esqueça meu nome é Trinity\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Trinity*: Agora que sabe quem sou eu, tenho que te apresentar a uma pessoa \n\n",
@@ -469,7 +532,11 @@ public class jogo {
 		escreva("\nMorpheus: Antes de continuar, preciso que você "
 				+ "resolva o seguinte desafio, para saber \n se você está pronto para decidir " + "o rumo da sua vida.",
 				TimeUnit.MILLISECONDS, timer);
-		// DESAFIOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO 3
+		// DESAFIO 3
+		desafio03(nome);
+		if (agentes == 3) {
+			return;
+		}
 		
 		do {
 		
