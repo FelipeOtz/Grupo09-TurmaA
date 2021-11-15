@@ -105,7 +105,66 @@ public class jogo {
 
 	}
 
-	static void desafio03() {
+	static void desafio03(String nome) throws InterruptedException {
+
+		escreva("\nMorpheus: Quando eu era jovem, eu desenvolvi um código e preciso saber se você é digno para resolvê-lo \n"
+				+ "Morpheus: A Matrix tem formato circular, o código que eu desenvolvi é para calcular seu tamanho é esse: \n",
+				TimeUnit.MILLISECONDS, timer);
+
+		escreva("\nDica 1 : A área de um Circulo é calculada através da fórmula:  (A = π r²)\n", TimeUnit.MILLISECONDS,
+				timer);
+
+		escreva("\nMorpheus: Hoje, eu sei que esse código pode ser melhorado de duas formas: Saberia dizer como?? \n"
+				+ "1- Sim \n" + "2- Não\n", TimeUnit.MILLISECONDS, timer);
+
+		int respostaSelecionada = 0;
+		String resposta = "";
+		boolean rodar = true;
+
+		respostaSelecionada = leia();
+
+		do {
+
+			while (respostaSelecionada != 1 && respostaSelecionada != 2) {
+				escreva("\nEscolha 1 para Sim, ou 2 para não.", TimeUnit.MILLISECONDS, timer);
+				respostaSelecionada = entrada.nextInt();
+			}
+			if (respostaSelecionada == 1) {
+
+			} else {
+				escreva("\nExplicação: O número de PI é ≅3,14. Em java, temos uma função que retorna este valor...\n"
+						+ "Também temos uma função para fazer potenciação. ", TimeUnit.MILLISECONDS, timer);
+			}
+			escreva("\n1 - Qual função da classe Math pode substituir o valor de PI?\n", TimeUnit.MILLISECONDS, timer);
+			resposta = entrada.next();
+			if (resposta.equalsIgnoreCase("Math.pi")) {
+				escreva("\nNada mal hein, " + nome + "!\n", TimeUnit.MILLISECONDS, timer);
+			} else {
+				escreva("\n\nINCORRETO! ", TimeUnit.MILLISECONDS, timer);
+
+				agentes++;
+				if (!verAgente(agentes)) {
+					return;
+				}
+
+			}
+			escreva("\n2 - Qual função da classe Math pode substituir o valor raio * raio (raio² ou raio ^2)\n\n",
+					TimeUnit.MILLISECONDS, timer);
+			resposta = entrada.next();
+			if (resposta.equalsIgnoreCase("Math.pow")) {
+				escreva(nome + ", parabéns, você concluiu o desafio! ", TimeUnit.MILLISECONDS, timer);
+				rodar = false;
+			} else {
+				escreva("\n\n INCORRETO! ", TimeUnit.MILLISECONDS, timer);
+				agentes++;
+				if (!verAgente(agentes)) {
+					return;
+				}
+
+			}
+		}
+
+		while (rodar);
 
 	}
 
