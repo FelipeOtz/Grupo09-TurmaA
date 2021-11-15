@@ -66,8 +66,35 @@ public class copia {
 	}
 
 	// Desafio
-	static void desafio01() {
+	static void desafio01() throws InterruptedException {
+		int ordem;
+		
+		System.out.println(
+				"Levando em consideração a informação abaixo, qual a ordem do vetor é a correta para mostrar o endereço ?");
 
+		System.out.println("0 - endereço.add (Jurubatuba)");
+		System.out.println("1 - endereço.add (São Paulo)");
+		System.out.println("2 - endereço.add(04696-000)");
+		System.out.println("3 - endereço.add(4003)");
+		System.out.println("4 - endereço.add(Av Eng.Eusébio Stevaux");
+		System.out.println("5 - endereço.add(SP)\n");
+
+		escreva("Digite a orgem correta: ", TimeUnit.MILLISECONDS, timer);
+		ordem = entrada.nextInt();
+
+		if (ordem == 430152) {
+			escreva("Parabéns passou de fase", TimeUnit.MILLISECONDS, timer);
+
+		} else {
+
+			escreva("Você errou, os agentes estão atrás de você, tome cuidado.", TimeUnit.MILLISECONDS, timer);
+			agentes++;
+			if (!verAgente(agentes)) {
+				return;
+
+			}
+		}
+		
 	}
 
 	static void desafio02() throws InterruptedException {
@@ -291,12 +318,13 @@ public class copia {
 		
 		// Senha criptografada
 		String senhaCriptografada = "L*%b";
-
+		
 		escreva("\n\nOlá jogador. Bem-vindo(a) a Inside the Matrix.\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
+		
 
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
@@ -404,8 +432,14 @@ public class copia {
 		escreva(nome + ": O que isso significa? \n\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva(nome + ": Me parece que este endereço está embaralhado\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		//Desafio 01
+		
+		desafio01();
+		if (agentes == 3) {
+			return;
+		}
 
-		escreva("\n\n ///DESAFIO 1///\n\n", TimeUnit.MILLISECONDS, timer);
 
 		do {
 			escreva(nome + ": Agora que sei o endereço correto, o que devo fazer?\n", TimeUnit.MILLISECONDS, timer);
@@ -604,7 +638,7 @@ public class copia {
 				TimeUnit.MILLISECONDS, timer);
 		// DESAFIO 3
 
-		desafio03(nome = "");
+		desafio03(nome);
 		if (agentes == 3) {
 			return;
 		}
