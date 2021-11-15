@@ -63,8 +63,37 @@ public class jogo {
 
 	// Desafio
 	static void desafio01() {
-		
+		int ordem;
+
+		Scanner entrada = new Scanner(System.in);
+
+		escreva("Levando em consideração a informação abaixo, qual a ordem do vetor é a correta para mostrar o endereço ? \n",
+				TimeUnit.MILLISECONDS, timer);
+
+		escreva("0 - endereço.add (Jurubatuba)", TimeUnit.MILLISECONDS, timer);
+		escreva("1 - endereço.add (São Paulo)", TimeUnit.MILLISECONDS, timer);
+		escreva("2 - endereço.add(04696-000)", TimeUnit.MILLISECONDS, timer);
+		escreva("3 - endereço.add(4003)", TimeUnit.MILLISECONDS, timer);
+		escreva("4 - endereço.add(Av Eng.Eusébio Stevaux", TimeUnit.MILLISECONDS, timer);
+		escreva("5 - endereço.add(SP)\n", TimeUnit.MILLISECONDS, timer);
+
+		escreva("Digite a opção correta: ", TimeUnit.MILLISECONDS, timer);
+		ordem = entrada.nextInt();
+
+		if (ordem == 3) {
+			escreva("Parabéns " + nome + "passou de fase", TimeUnit.MILLISECONDS, timer);
+
+		} else {
+
+			escreva("Você errou, os agentes estão atrás de você, tome cuidado.", TimeUnit.MILLISECONDS, timer);
+			agentes++;
+			if (!verAgente(agentes)) {
+
+			}
+		}
+
 	}
+
 	static void desafio02() {
 
 		String r1, r2;
@@ -118,46 +147,37 @@ public class jogo {
 	}
 
 	static void desafio06() {
-		Scanner entrada = new Scanner(System.in);
-
 		int laco;
 
-		System.out.print(
-				"O Garoto pode entortar a colher porque tem a habilidade de telecinesia em seu nível máximo (100)");
-		System.out.println(
-				"Para adquirir essa habilidade (que agora está em zero) você deve usar um determinado laço de repetição");
-		System.out.println(
-				"Dentro das alternativas abaixo escolha o laço de repetição mais apropriado para esta situação");
+		escreva("O Garoto pode entortar a colher porque tem a habilidade de telecinesia em seu nível máximo (100)");
+		escreva("Para adquirir essa habilidade (que agora está em zero) você deve usar um determinado laço de repetição");
+		escreva("Dentro das alternativas abaixo escolha o laço de repetição mais apropriado para esta situação");
 		do {
 
-			System.out.println("1 - While");
-			System.out.println("2 - Do - While");
-			System.out.println("3 - For");
-			System.out.println("4 - Enhanced-For");
+			escreva("1 - While");
+			escreva("2 - Do - While");
+			escreva("3 - For");
+			escreva("4 - Enhanced-For");
 
-			System.out.println("Digite a opção correta ");
+			escreva("Digite a opção correta ");
 			laco = entrada.nextInt();
 
 			switch (laco) {
 			case 1:
-				System.out.println(
-						"Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente ");
+				escreva("Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente ");
 				break;
 			case 2:
-				System.out.println(
-						"Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente");
+				escreva("Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente");
 				break;
 			case 3:
-				System.out.println("Escolha correta, você conseguiu entortar a colher !");
+				escreva("Escolha correta, você conseguiu entortar a colher !");
 				break;
 			case 4:
-				System.out.println(
-						"Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente");
+				escreva("Laço de repetição errado, tome cuidado os agentes estão atras de você, tente novamente");
 			}
 		} while (laco != 3);
-		System.out.println("Parabéns");
+		escreva("Parabéns");
 	}
-	
 
 	static void desafio07() {
 
