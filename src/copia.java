@@ -11,7 +11,7 @@ import javax.swing.UIManager;
 public class copia {
 
 	// Variável para delay no texto
-	static int timer = 0;
+	static int timer = 1;
 
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
