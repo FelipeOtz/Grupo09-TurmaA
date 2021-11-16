@@ -248,7 +248,7 @@ public class jogo {
 			Collections.shuffle(alternativas);
 
 			// Vetor de alternativas que correesponde as respostas
-			String vetorAlternativas[] = { "a", "b", "c", "d" };
+			String vetorAlternativas[] = { "1", "2", "3", "4" };
 
 			// Variável auxiliar para jogar na constante posteriormente
 			String respostaCorreta = "";
@@ -267,8 +267,8 @@ public class jogo {
 			escreva("Qual linha deve ser colocada aqui para completar o código e gerar uma senha aleatória "
 					+ "de 4 de dígitos: \n", TimeUnit.MILLISECONDS, timer);
 
-			System.out.println("a) " + alternativas.get(0) + "\nb) " + alternativas.get(1) + "\nc) "
-					+ alternativas.get(2) + "\nd) " + alternativas.get(3) + "\n");
+			System.out.println("1) " + alternativas.get(0) + "\n2) " + alternativas.get(1) + "\n3) "
+					+ alternativas.get(2) + "\n4) " + alternativas.get(3) + "\n");
 
 			String respostaSelecionada = entrada.next();
 
@@ -288,13 +288,13 @@ public class jogo {
 
 	static void desafio05(String nome) throws InterruptedException {
 				
-		System.out.print("___________________________________________");
+		System.out.print("___________________________________________\n");
 		System.out.print("String endereco = \"Atlanta\";     \r\n"
 						+ "		\r\n"
 						+ "int stringLength = endereco.length();\r\n"
 						+ "		\r\n"
-						+ "System.out.println(stringLength);");
-		System.out.print("___________________________________________");
+						+ "System.out.println(stringLength);\n");
+		System.out.print("___________________________________________\n");
 					 
 				
 
@@ -310,7 +310,7 @@ public class jogo {
 				do {
 					Collections.shuffle(alternativas);
 
-					String vetorAlternativas[] = { "a", "b", "c"};
+					String vetorAlternativas[] = { "1", "2", "3", "4"};
 
 					String respostaCorreta = "";
 
@@ -323,10 +323,10 @@ public class jogo {
 
 					escreva("De acordo com o código acima, o que ele retornará?\n", TimeUnit.MILLISECONDS, timer);
 
-					System.out.println("a) " + alternativas.get(0) + 
-							"\nb) " + alternativas.get(1) + 
-							"\nc) " + alternativas.get(2) + 
-							"\nd) " + alternativas.get(3) + "\n");
+					System.out.println("1) " + alternativas.get(0) + 
+							"\n2) " + alternativas.get(1) + 
+							"\n3) " + alternativas.get(2) + 
+							"\n4) " + alternativas.get(3) + "\n");
 
 					String respostaSelecionada = entrada.next();
 
@@ -335,6 +335,11 @@ public class jogo {
 						acertou = true;
 					} else {
 						escreva ("Errou!", TimeUnit.MILLISECONDS, timer);
+						agentes++;
+						if (!verAgente(agentes)) {
+							return;
+						}
+						
 						
 					}
 				} while (acertou == false);
@@ -382,10 +387,6 @@ public class jogo {
 
 		nome = entrada.next();
 		
-		desafio05(nome);
-		if (agentes == 3) {
-			return;
-		}
 
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
@@ -804,6 +805,7 @@ public class jogo {
 				timer);
 		escreva("\nTank: deixa eu te ajudar novato \n\n ///DICA SOBRE o desafio////\n", TimeUnit.MILLISECONDS, timer);
 
+		// DESAFIO 5
 		
 		desafio05(nome);
 		if (agentes == 3) {
