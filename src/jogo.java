@@ -67,24 +67,28 @@ public class jogo {
 
 	// Desafio
 	static void desafio01() throws InterruptedException {
-		int ordem;
+		boolean liberado = false;
 		
-		System.out.println(
-				"Levando em consideração a informação abaixo, qual a ordem do vetor é a correta para mostrar o endereço ?");
+		do {		
+		
+		int ordem;
+		escreva("Levando em consideração a informação abaixo, qual a ordem do vetor é a correta para mostrar o endereço? \n\n", TimeUnit.MILLISECONDS, timer);
 
-		System.out.println("0 - endereço.add(Jurubatuba)");
-		System.out.println("1 - endereço.add(São Paulo)");
-		System.out.println("2 - endereço.add(04696-000)");
-		System.out.println("3 - endereço.add(4003)");
-		System.out.println("4 - endereço.add(Av Eng.Eusébio Stevaux");
-		System.out.println("5 - endereço.add(SP)\n");
 
-		escreva("Digite a orgem correta: ", TimeUnit.MILLISECONDS, timer);
+		System.out.println("0 - endereço.add(Jurubatuba);");
+		System.out.println("1 - endereço.add(São Paulo);");
+		System.out.println("2 - endereço.add(04696-000);");
+		System.out.println("3 - endereço.add(4003);");
+		System.out.println("4 - endereço.add(Av Eng.Eusébio Stevaux);");
+		System.out.println("5 - endereço.add(SP);\n");
+
+		escreva("\nDigite a ordem correta:\n", TimeUnit.MILLISECONDS, timer);
 		ordem = entrada.nextInt();
+	
 
 		if (ordem == 430152) {
-			escreva("Parabéns passou de fase", TimeUnit.MILLISECONDS, timer);
-
+			escreva("Parabéns você ", TimeUnit.MILLISECONDS, timer);
+			liberado = true;
 		} else {
 
 			escreva("Você errou, os agentes estão atrás de você, tome cuidado.", TimeUnit.MILLISECONDS, timer);
@@ -94,6 +98,7 @@ public class jogo {
 
 			}
 		}
+		} while(!liberado);
 		
 	}
 
@@ -103,12 +108,14 @@ public class jogo {
 		boolean liberado = false;
 		escreva("\n\nUse seus conhecimentos em declaração de variáveis para resolver o desafio e\n"
 				+ "ter acesso ao nome e rosto da personagem: ", TimeUnit.MILLISECONDS, timer);
-		escreva("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n",//TEXTO EXPLICATIVO
+		escreva("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n", // TEXTO
+																													// EXPLICATIVO
 				TimeUnit.MILLISECONDS, timer);
 		// NO QUADRADO NÃO SUBSTITUIR O PRINT
 		System.out.print("\n ________________________________________________________");
 		System.out.print("\n|1    public static void main(String[] args) {           |");
-		System.out.print("\n|2    int nome = " + "\"" + "Trinity" + "\"" + ";                              |");//ERRO CORRIGIDO
+		System.out.print("\n|2    int nome = " + "\"" + "Trinity" + "\"" + ";                              |");// ERRO
+																												// CORRIGIDO
 		System.out.print("\n|3    boolean rosto;                                     |\n"
 				+ "|4                                                       |\n"
 				+ "|5                                                       |\n"
@@ -260,15 +267,13 @@ public class jogo {
 			escreva("Qual linha deve ser colocada aqui para completar o código e gerar uma senha aleatória "
 					+ "de 4 de dígitos: \n", TimeUnit.MILLISECONDS, timer);
 
-			System.out.println("a) " + alternativas.get(0) + 
-					"\nb) " + alternativas.get(1) + 
-					"\nc) " + alternativas.get(2) + 
-					"\nd) " + alternativas.get(3) + "\n");
+			System.out.println("a) " + alternativas.get(0) + "\nb) " + alternativas.get(1) + "\nc) "
+					+ alternativas.get(2) + "\nd) " + alternativas.get(3) + "\n");
 
 			String respostaSelecionada = entrada.next();
 
 			if (respostaCorreta.equals(respostaSelecionada)) {
-				escreva("\nBoaaa! Resposta correta, "+nome, TimeUnit.MILLISECONDS, timer);
+				escreva("\nBoaaa! Resposta correta, " + nome, TimeUnit.MILLISECONDS, timer);
 				acertou = true;
 			} else {
 				escreva("Errou!", TimeUnit.MILLISECONDS, timer);
@@ -278,7 +283,7 @@ public class jogo {
 				}
 			}
 		} while (acertou == false);
-		
+
 	}
 
 	static void desafio05() {
@@ -316,16 +321,15 @@ public class jogo {
 
 		// Int para receber escolha do jogador
 		int escolha = 1;
-		
+
 		// Senha criptografada
 		String senhaCriptografada = "L*%b";
-		
+
 		escreva("\n\nOlá jogador. Bem-vindo(a) a Inside the Matrix.\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
-		
 
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
@@ -433,14 +437,15 @@ public class jogo {
 		escreva(nome + ": O que isso significa? \n\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva(nome + ": Me parece que este endereço está embaralhado\n\n", TimeUnit.MILLISECONDS, timer);
-		
-		//Desafio 01
-		
+
+		// Desafio 01
+
 		desafio01();
 		if (agentes == 3) {
 			return;
 		}
-
+		
+		escreva("\n\n", TimeUnit.MILLISECONDS, timer);
 
 		do {
 			escreva(nome + ": Agora que sei o endereço correto, o que devo fazer?\n", TimeUnit.MILLISECONDS, timer);
