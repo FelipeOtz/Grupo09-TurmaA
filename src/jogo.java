@@ -72,8 +72,8 @@ public class jogo {
 		System.out.println(
 				"Levando em consideração a informação abaixo, qual a ordem do vetor é a correta para mostrar o endereço ?");
 
-		System.out.println("0 - endereço.add (Jurubatuba)");
-		System.out.println("1 - endereço.add (São Paulo)");
+		System.out.println("0 - endereço.add(Jurubatuba)");
+		System.out.println("1 - endereço.add(São Paulo)");
 		System.out.println("2 - endereço.add(04696-000)");
 		System.out.println("3 - endereço.add(4003)");
 		System.out.println("4 - endereço.add(Av Eng.Eusébio Stevaux");
