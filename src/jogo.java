@@ -346,7 +346,7 @@ public class jogo {
 				
 			}
 	
-		static void desafio06(int escolha) throws InterruptedException {
+		static void desafio06() throws InterruptedException {
 			int laco;
 			
 			escreva("\nPara entortar a colher, e copiar a habilidade do garoto, resolva este desafio de repetição.\r\n", TimeUnit.MILLISECONDS, timer);
@@ -355,6 +355,7 @@ public class jogo {
 			escreva("\nDentro das alternativas abaixo escolha o laço de repetição mais apropriado para esta situação\n", TimeUnit.MILLISECONDS, timer);
 			
 			do {
+				
 				escreva("1 - While\n", TimeUnit.MILLISECONDS, timer);
 				escreva("2 - Do-While\n", TimeUnit.MILLISECONDS, timer);
 				escreva("3 - For\n", TimeUnit.MILLISECONDS, timer);
@@ -362,7 +363,11 @@ public class jogo {
 				
 				escreva("\nDigite a opção correta: ", TimeUnit.MILLISECONDS, timer);
 				laco = entrada.nextInt();
-				
+				while (laco < 1 || laco >4) {
+					escreva("\nOPÇÃO INCORRETA\n", TimeUnit.MILLISECONDS, timer);
+					escreva("\nDigite a opção correta: \n", TimeUnit.MILLISECONDS, timer);
+					laco = entrada.nextInt();
+				}
 				switch (laco) {
 				case 3:
 					escreva("\nEscolha correta, você conseguiu entortar a colher!\n", TimeUnit.MILLISECONDS, timer);
@@ -417,6 +422,11 @@ public class jogo {
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
+		
+		desafio06();
+		if (agentes == 3) {
+			return;
+		}
 		
 
 		do {
