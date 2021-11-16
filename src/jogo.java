@@ -345,10 +345,41 @@ public class jogo {
 				} while (acertou == false);
 				
 			}
+	
+		static void desafio06(int escolha) throws InterruptedException {
+			int laco;
+			
+			escreva("\nPara entortar a colher, e copiar a habilidade do garoto, resolva este desafio de repetição.\r\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\nO Garoto pode entortar a colher porque tem a habilidade de telecinesia em seu nível máximo (100)\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\nPara adquirir essa habilidade (que agora está em zero) você deve usar um determinado laço de repetição\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\nDentro das alternativas abaixo escolha o laço de repetição mais apropriado para esta situação\n", TimeUnit.MILLISECONDS, timer);
+			
+			do {
+				escreva("1 - While\n", TimeUnit.MILLISECONDS, timer);
+				escreva("2 - Do-While\n", TimeUnit.MILLISECONDS, timer);
+				escreva("3 - For\n", TimeUnit.MILLISECONDS, timer);
+				escreva("4 - Enhanced-For\n", TimeUnit.MILLISECONDS, timer);
+				
+				escreva("\nDigite a opção correta: ", TimeUnit.MILLISECONDS, timer);
+				laco = entrada.nextInt();
+				
+				switch (laco) {
+				case 3:
+					escreva("\nEscolha correta, você conseguiu entortar a colher!\n", TimeUnit.MILLISECONDS, timer);
+					escreva("\nParabéns", TimeUnit.MILLISECONDS, timer);
+					break;
+				default:
+					escreva("\nLaço de repetição errado\n", TimeUnit.MILLISECONDS, timer);
+						agentes++;
+						if(!verAgente(agentes)) {
+							return;
+						}
+						break;
+					}
+			} while (laco != 3);
+		}
 
-	static void desafio06() {
-
-	}
+	
 
 	static void desafio07() {
 
@@ -863,6 +894,25 @@ public class jogo {
 				TimeUnit.MILLISECONDS, timer);
 
 		System.err.println("///DESAFIO ENTORTAR COLHER/// \n\n");
+		do {
+			escreva("\n" + nome + ", que tal saber saber mais sobre o que é Psicocinesi", TimeUnit.MILLISECONDS,
+					timer);
+
+			escreva("\n2 - Sim.", TimeUnit.MILLISECONDS, timer);
+			escreva("\n1 - Não, seguir com desafio.\n", TimeUnit.MILLISECONDS, timer);
+			escolha = leia();
+			switch (escolha) {
+			case 2:
+				Psicocinese();
+				break;
+			case 1:
+				break;
+
+			default:
+				escreva("\nVALOR INVALIDO!\n", TimeUnit.MILLISECONDS, timer);
+
+			}
+		} while (!(escolha <= 2));
 
 		escreva("Garoto: Viu? Nada daquilo que você pensa que é real é real.\n\n", TimeUnit.MILLISECONDS, timer);
 
@@ -932,6 +982,15 @@ public class jogo {
 
 		return;
 
+	}
+	static void Psicocinese() throws InterruptedException {
+		escreva("A psicocinese (movimento mental), telecinesia [...]  descreve o suposto fenômeno ou capacidade de uma pessoa\nmovimentar, "
+				+ "manipular, abalar ou exercer força sobre um sistema físico sem interação física,"
+				+ " apenas usando a mente.\nO termo psicocinese foi criado em 1914 pelo autor "
+				+ "estadunidense Henry Holte popularizado pelo\nparapsicólogo estadunidense  J.B. Rhine nos anos 30."
+				+ " Já o termo telecinesia foi criado em 1890 pelo parapsicólogo\nrusso Alexandre Aksakof.", TimeUnit.MILLISECONDS, timer);
+		
+		
 	}
 
 	// Função para mostrar instruções
