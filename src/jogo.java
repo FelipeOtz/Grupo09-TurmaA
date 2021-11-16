@@ -286,9 +286,60 @@ public class jogo {
 
 	}
 
-	static void desafio05() {
+	static void desafio05(String nome) throws InterruptedException {
+				
+		System.out.print("___________________________________________");
+		System.out.print("String endereco = \"Atlanta\";     \r\n"
+						+ "		\r\n"
+						+ "int stringLength = endereco.length();\r\n"
+						+ "		\r\n"
+						+ "System.out.println(stringLength);");
+		System.out.print("___________________________________________");
+					 
+				
 
-	}
+				ArrayList<String> alternativas = new ArrayList<String>();
+
+				alternativas.add("Número de caracteres do endereço"); // originalmente a
+				alternativas.add("Nome do endereço"); // originalmente b
+				alternativas.add("Tipo da variável do endereço"); // originalmente c
+				alternativas.add("Número do endereço"); // originalmente d
+				
+				boolean acertou = false;
+
+				do {
+					Collections.shuffle(alternativas);
+
+					String vetorAlternativas[] = { "a", "b", "c"};
+
+					String respostaCorreta = "";
+
+					for (int i = 0; i < alternativas.size(); i++) {
+						if (alternativas.get(i) == "Número de caracteres do endereço") {
+							respostaCorreta = vetorAlternativas[i];
+							break;
+						}
+					}
+
+					escreva("De acordo com o código acima, o que ele retornará?\n", TimeUnit.MILLISECONDS, timer);
+
+					System.out.println("a) " + alternativas.get(0) + 
+							"\nb) " + alternativas.get(1) + 
+							"\nc) " + alternativas.get(2) + 
+							"\nd) " + alternativas.get(3) + "\n");
+
+					String respostaSelecionada = entrada.next();
+
+					if (respostaCorreta.equals(respostaSelecionada)) {
+						escreva("\nBoaaa! Resposta correta,"+ nome, TimeUnit.MILLISECONDS, timer);
+						acertou = true;
+					} else {
+						escreva ("Errou!", TimeUnit.MILLISECONDS, timer);
+						
+					}
+				} while (acertou == false);
+				
+			}
 
 	static void desafio06() {
 
@@ -330,6 +381,11 @@ public class jogo {
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
+		
+		desafio05(nome);
+		if (agentes == 3) {
+			return;
+		}
 
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
@@ -747,8 +803,13 @@ public class jogo {
 		escreva("para descriptografar o arquivo é necessário, que você faça o seguinte:\n", TimeUnit.MILLISECONDS,
 				timer);
 		escreva("\nTank: deixa eu te ajudar novato \n\n ///DICA SOBRE o desafio////\n", TimeUnit.MILLISECONDS, timer);
-		escreva("\n///DESAFIO 5///\n", TimeUnit.MILLISECONDS, timer);
 
+		
+		desafio05(nome);
+		if (agentes == 3) {
+			return;
+		}
+		
 		escreva("Morpheus: sabia que você não ia nos desapontar, essa etapa que estamos é importante para que consigamos\n"
 				+ "vencer a matrix de uma vez por todas.\r\n\n" + "", TimeUnit.MILLISECONDS, timer);
 

@@ -325,7 +325,10 @@ public class copia {
 
 		nome = entrada.next();
 		
-
+		desafio04(nome);
+		if (agentes == 3) {
+			return;
+		}
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
 					timer);
