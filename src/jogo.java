@@ -64,6 +64,45 @@ public class jogo {
 			unit.sleep(tempo_mensagem);
 		}
 	}
+	
+	
+	
+	//Criar senha aleaória
+	static String senhaAleatoria() throws InterruptedException {
+
+		
+		String senha = "";
+
+		String aleatorio[] = new String[20];
+		aleatorio[0] = "@";
+		aleatorio[1] = "2";
+		aleatorio[2] = "5";
+		aleatorio[3] = "B";
+		aleatorio[4] = "d";
+		aleatorio[5] = "6";
+		aleatorio[6] = "G";
+		aleatorio[7] = "9";
+		aleatorio[8] = "7";
+		aleatorio[9] = "j";
+		aleatorio[10] = "%";
+		aleatorio[11] = "&";
+		aleatorio[12] = "9";
+		aleatorio[13] = "6";
+		aleatorio[14] = "F";
+		aleatorio[15] = "*";
+		aleatorio[16] = "L";
+		aleatorio[17] = "Y";
+		aleatorio[18] = "b";
+		aleatorio[19] = "P";
+		for (int i = 0; i < 4; i++) {
+			senha = senha + aleatorio[(int) (Math.random() * 19)];
+			
+		}
+		
+		escreva("\n\nSua senha criptografada é: "+ senha + "\n(Guarde-a você poderá precisar dela depois)" ,TimeUnit.MILLISECONDS,timer);
+		return senha;
+
+	}
 
 	// Desafio
 	static void desafio01() throws InterruptedException {
