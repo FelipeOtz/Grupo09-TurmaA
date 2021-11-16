@@ -101,13 +101,14 @@ public class jogo {
 
 		String r1, r2;
 		boolean liberado = false;
-
-		escreva("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n",
+		escreva("\n\nUse seus conhecimentos em declaração de variáveis para resolver o desafio e\n"
+				+ "ter acesso ao nome e rosto da personagem: ", TimeUnit.MILLISECONDS, timer);
+		escreva("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n",//TEXTO EXPLICATIVO
 				TimeUnit.MILLISECONDS, timer);
 		// NO QUADRADO NÃO SUBSTITUIR O PRINT
 		System.out.print("\n ________________________________________________________");
 		System.out.print("\n|1    public static void main(String[] args) {           |");
-		System.out.print("\n|2    int nome = " + "Trinity" + ";                                |");
+		System.out.print("\n|2    int nome = " + "\"" + "Trinity" + "\"" + ";                              |");//ERRO CORRIGIDO
 		System.out.print("\n|3    boolean rosto;                                     |\n"
 				+ "|4                                                       |\n"
 				+ "|5                                                       |\n"
