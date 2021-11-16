@@ -87,7 +87,7 @@ public class jogo {
 	
 
 		if (ordem == 430152) {
-			escreva("Parabéns você ", TimeUnit.MILLISECONDS, timer);
+			escreva("Parabéns você acertou!!", TimeUnit.MILLISECONDS, timer);
 			liberado = true;
 		} else {
 
@@ -371,7 +371,7 @@ public class jogo {
 				switch (laco) {
 				case 3:
 					escreva("\nEscolha correta, você conseguiu entortar a colher!\n", TimeUnit.MILLISECONDS, timer);
-					escreva("\nParabéns", TimeUnit.MILLISECONDS, timer);
+					escreva("\nParabéns\n", TimeUnit.MILLISECONDS, timer);
 					break;
 				default:
 					escreva("\nLaço de repetição errado\n", TimeUnit.MILLISECONDS, timer);
@@ -423,10 +423,7 @@ public class jogo {
 
 		nome = entrada.next();
 		
-		desafio06();
-		if (agentes == 3) {
-			return;
-		}
+		
 		
 
 		do {
@@ -908,8 +905,8 @@ public class jogo {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o que é Psicocinesi", TimeUnit.MILLISECONDS,
 					timer);
 
-			escreva("\n2 - Sim.", TimeUnit.MILLISECONDS, timer);
-			escreva("\n1 - Não, seguir com desafio.\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\n1 - Não,seguir com desafio.", TimeUnit.MILLISECONDS, timer);
+			escreva("\n2 - Sim.\n", TimeUnit.MILLISECONDS, timer);
 			escolha = leia();
 			switch (escolha) {
 			case 2:
@@ -923,6 +920,11 @@ public class jogo {
 
 			}
 		} while (!(escolha <= 2));
+		
+		desafio06();
+		if (agentes == 3) {
+			return;
+		}
 
 		escreva("Garoto: Viu? Nada daquilo que você pensa que é real é real.\n\n", TimeUnit.MILLISECONDS, timer);
 
