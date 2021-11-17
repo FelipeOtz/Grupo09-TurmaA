@@ -50,6 +50,40 @@ public class copia {
 
 	}
 
+	static String senhaAleatoria(String senha) {
+		
+		String password[] = new String[4];
+		
+		String aleatório[] = new String[20];
+		aleatório[0] = "@";
+		aleatório[1] = "2";
+		aleatório[2] = "5";
+		aleatório[3] = "B";
+		aleatório[4] = "d";
+		aleatório[5] = "6";
+		aleatório[6] = "G";
+		aleatório[7] = "9";
+		aleatório[8] = "10";
+		aleatório[9] = "P";
+		aleatório[10] = "%";
+		aleatório[11] = "&";
+		aleatório[12] = "9";
+		aleatório[13] = "6";
+		aleatório[14] = "F";
+		aleatório[15] = "*";
+		aleatório[16] = "L";
+		aleatório[17] = "Y";
+		aleatório[18] = "b";
+		aleatório[19] = "P";
+
+		for (int i = 0; i < senha.length(); i++) {
+			System.out.print(senha[i]);
+		}
+
+	}
+	
+	
+	
 	// Função para leitura de dados
 	static int leia() {
 

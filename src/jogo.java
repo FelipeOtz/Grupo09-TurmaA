@@ -276,7 +276,7 @@ public class jogo {
 
 		ArrayList<String> alternativas = new ArrayList<String>();
 
-		alternativas.add("senha[i] = aleatorio[(int) (Math.random() * 19)];"); // originalmente a
+		alternativas.add("senha = senha + aleatorio[(int) (Math.random() * 19)];"); // originalmente a
 		alternativas.add("senha[i] = aleatório[0];"); // originalmente b
 		alternativas.add("senha[i] = 0983;"); // originalmente c
 		alternativas.add("senha = 0983;"); // originalmente d
@@ -294,7 +294,7 @@ public class jogo {
 
 			// Encontrar a resposta correta no meio das alternativas embaralhadass
 			for (int i = 0; i < alternativas.size(); i++) {
-				if (alternativas.get(i) == "senha[i] = aleatorio[(int) (Math.random() * 19)];") {
+				if (alternativas.get(i) == "senha = senha + aleatorio[(int) (Math.random() * 19)];") {
 					respostaCorreta = vetorAlternativas[i];
 					break;
 				}
