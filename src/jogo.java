@@ -24,9 +24,9 @@ public class jogo {
 
 	static boolean verAgente(int agentes) throws InterruptedException {
 
-		if (agentes < 3) {
+		if (agentes < 4) {
 
-			escreva("\n\nCuidado!\n" + agentes + " agentes estão atrás de você!" + "\nChegando a 3 acabará o jogo\n\n",
+			escreva("\n\nCuidado!\n" + agentes + " agentes estão atrás de você!" + "\nChegando a 4 acabará o jogo\n\n",
 					TimeUnit.MILLISECONDS, timer);
 			return true;
 
@@ -43,7 +43,7 @@ public class jogo {
 					JOptionPane.WARNING_MESSAGE, smith);
 
 			escreva("\n\nVocê chegou a " + agentes + " agentes\n" + "\nInfelizmente o jogo acabou para você\n"
-					+ "\nDê seu melhor da próxima\n\n", TimeUnit.MILLISECONDS, timer);
+					+ "\nDê seu melhor na próxima\n\n", TimeUnit.MILLISECONDS, timer);
 			return false;
 
 		}
@@ -104,7 +104,7 @@ public class jogo {
 
 	}
 
-	// Desafio
+	// Desafios
 	static void desafio01() throws InterruptedException {
 		boolean liberado = false;
 		
@@ -453,8 +453,6 @@ public class jogo {
 		// Int para receber escolha do jogador
 		int escolha = 1;
 
-		// Senha criptografada
-		String senhaCriptografada = "L*%b";
 
 		escreva("\n\nOlá jogador. Bem-vindo(a) a Inside the Matrix.\n", TimeUnit.MILLISECONDS, timer);
 
