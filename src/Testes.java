@@ -1,7 +1,18 @@
 import java.util.Scanner;
 
 public class Testes {
-
+	
+	// Verifica Senha 
+	static void testeSenha (String senha ) throws InterruptedException {
+		if ((senha).length() != 4){
+		    System.out.println("Ocorreu um erro");
+	    }else {
+	    System.out.println("Senha de 4 Dígitos conforme esperado");
+	     }
+	
+		
+	}
+		
 	// Teste de agentes por Felipe
 	static void testeAgentes(int quant) throws InterruptedException {
 		int cont = 0;
@@ -24,7 +35,7 @@ public class Testes {
 	public static void main(String[] args) throws InterruptedException {
 		//Menu de testes
 		Scanner entrada = new Scanner(System.in);
-		System.out.println("Qual teste deseja fazer?\n" + "1 - Agentes");
+		System.out.println("Qual teste deseja fazer?\n" + "1 - Agentes" + "\n2 - Senha");
 		int escolha = entrada.nextInt();
 		
 		
@@ -36,6 +47,12 @@ public class Testes {
 			int quant = entrada.nextInt();
 			testeAgentes(quant);
 			break;
+			
+		case 2:	
+			System.out.println("Teste de Senha: ");
+			
+			
+			
 		default:
 			
 			System.out.println("Valor inválido!");
