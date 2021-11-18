@@ -280,7 +280,7 @@ public class jogo {
 		alternativas.add("senha[i] = 0983;"); // originalmente c
 		alternativas.add("senha = 0983;"); // originalmente d
 
-		boolean acertou = false;
+		boolean acertou = true;
 
 		do {
 			Collections.shuffle(alternativas);
