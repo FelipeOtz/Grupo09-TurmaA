@@ -174,11 +174,24 @@ public class jogo {
 				escreva("\n\nINCORRETO!", TimeUnit.MILLISECONDS, timer);
 				liberado = false;
 				agentes++;
-
 				if (!verAgente(agentes)) {
 					return;
-
 				}
+				
+				// QUAL O JOGADOR ERROU?
+		    	// AS DUAS:
+		    	if (!(r1.equalsIgnoreCase("nome")) && (!(r2.equalsIgnoreCase("true")))) {				
+		    	escreva("\nQuestão 1 e 2 Incorretas", TimeUnit.MILLISECONDS, timer);
+		    	}
+		    	// A PRIMEIRA
+		    	else if (!(r1.equalsIgnoreCase("nome"))){
+		    		escreva("\nQuestão 1 Incorreta", TimeUnit.MILLISECONDS, timer);
+		    	// A SEGUNDA    
+		    	} else {
+		    		escreva("\nQuestão 2 Incorreta", TimeUnit.MILLISECONDS, timer);
+		    	}
+				
+				
 			}
 
 		} while (!liberado);
