@@ -255,11 +255,11 @@ public class jogo {
 	static void desafio04(String nome) throws InterruptedException {
 
 		escreva("Tank: ao decorrer da sua jornada dentro da matrix, você irá precisar de senhas seguras para"
-				+ "descriptografar e ter acesso a suas informações. Para isso qual linha de código deve ser utilizada aqui:\n",
+				+ "descriptografar e ter acesso\na suas informações. Para isso qual linha de código deve ser utilizada aqui:\n",
 				TimeUnit.MILLISECONDS, timer);
 
 		System.out.println(
-				"		String senha[] = new String[4];\r\n" + "		String aleatório[] = new String[20];\r\n"
+				"		String senha; \r\n" + "		String aleatório[] = new String[20];\r\n"
 						+ "		aleatório[0] = \"@\";\r\n" + "		aleatório[1] = \"2\";\r\n"
 						+ "		aleatório[2] = \"5\";\r\n" + "		aleatório[3] = \"B\";\r\n"
 						+ "		aleatório[4] = \"d\";\r\n" + "		aleatório[5] = \"6\";\r\n"
@@ -271,12 +271,11 @@ public class jogo {
 						+ "		aleatório[16] = \"L\";\r\n" + "		aleatório[17] = \"Y\";\r\n"
 						+ "		aleatório[18] = \"b\";\r\n" + "		aleatório[19] = \"P\";\r\n");
 
-		System.out.println("for (int i = 0; i < senha.length; i++) {\r\n" + "	___________________________\r\n"
-				+ "	System.out.print(senha[i]);\r\n" + "}\r\n");
+		System.out.println("for (int i = 0; i < senha.length; i++) {\r\n" + "	___________________________\r\n");
 
 		ArrayList<String> alternativas = new ArrayList<String>();
 
-		alternativas.add("senha[i] = aleatorio[(int) (Math.random() * 19)];"); // originalmente a
+		alternativas.add("senha = senha + aleatorio[(int) (Math.random() * 19)];;"); // originalmente a
 		alternativas.add("senha[i] = aleatório[0];"); // originalmente b
 		alternativas.add("senha[i] = 0983;"); // originalmente c
 		alternativas.add("senha = 0983;"); // originalmente d
@@ -878,7 +877,7 @@ public class jogo {
 				TimeUnit.MILLISECONDS, timer);
 		escreva("para descriptografar o arquivo é necessário, que você faça o seguinte:\n", TimeUnit.MILLISECONDS,
 				timer);
-		escreva("\nTank: deixa eu te ajudar novato \n\n ///DICA SOBRE o desafio////\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nTank: deixa eu te ajudar novato \n", TimeUnit.MILLISECONDS, timer);
 
 		// DESAFIO 5
 		
