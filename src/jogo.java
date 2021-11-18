@@ -431,6 +431,8 @@ public class jogo {
 	// Função para jogar
 	static void jogar() throws InterruptedException {
 
+		agentes = 0;
+		
 		// Janela de diálogo para colocar JOptionPane
 		final JDialog dialog = new JDialog();
 
@@ -572,7 +574,7 @@ public class jogo {
 		// Desafio 01
 
 		desafio01();
-		if (agentes == 3) {
+		if (agentes == 4) {
 			return;
 		}
 		
@@ -696,7 +698,7 @@ public class jogo {
 		// Desafio 2
 
 		desafio02();
-		if (agentes == 3) {
+		if (agentes == 4) {
 			return;
 		}
 
@@ -776,7 +778,7 @@ public class jogo {
 		// DESAFIO 3
 
 		desafio03(nome);
-		if (agentes == 3) {
+		if (agentes == 4) {
 			return;
 		}
 
@@ -839,7 +841,7 @@ public class jogo {
 		// DESAFIO 4
 
 		desafio04(nome);
-		if (agentes == 3) {
+		if (agentes == 4) {
 			return;
 		}
 
@@ -882,7 +884,7 @@ public class jogo {
 		// DESAFIO 5
 		
 		desafio05(nome);
-		if (agentes == 3) {
+		if (agentes == 4) {
 			return;
 		}
 		
@@ -958,7 +960,7 @@ public class jogo {
 		} while (!(escolha <= 2));
 		
 		desafio06();
-		if (agentes == 3) {
+		if (agentes == 4) {
 			return;
 		}
 
