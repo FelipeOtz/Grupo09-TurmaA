@@ -11,7 +11,7 @@ import javax.swing.UIManager;
 public class jogo {
 
 	// Variável para delay no texto
-	static int timer = 1;
+	static int timer = 10;
 
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
@@ -20,7 +20,6 @@ public class jogo {
 
 	static int agentes = 0;
 
-	
 	// Verificar agentes
 	static boolean verAgente(int agentes) throws InterruptedException {
 
@@ -64,13 +63,10 @@ public class jogo {
 			unit.sleep(tempo_mensagem);
 		}
 	}
-	
-	
-	
-	//Criar senha aleaória
+
+	// Criar senha aleaória
 	static String senhaAleatoria() throws InterruptedException {
 
-		
 		String senha = "";
 
 		String aleatorio[] = new String[20];
@@ -96,10 +92,11 @@ public class jogo {
 		aleatorio[19] = "P";
 		for (int i = 0; i < 4; i++) {
 			senha = senha + aleatorio[(int) (Math.random() * 19)];
-			
+
 		}
-		
-		escreva("\n\nSua senha criptografada é: "+ senha + "\n(Guarde-a você poderá precisar dela depois)" ,TimeUnit.MILLISECONDS,timer);
+
+		escreva("\n\nSua senha criptografada é: " + senha + "\n(Guarde-a você poderá precisar dela depois)",
+				TimeUnit.MILLISECONDS, timer);
 		return senha;
 
 	}
@@ -107,38 +104,37 @@ public class jogo {
 	// Desafios
 	static void desafio01() throws InterruptedException {
 		boolean liberado = false;
-		
-		do {		
-		
-		int ordem;
-		escreva("Levando em consideração a informação abaixo, qual a ordem do vetor é a correta para mostrar o endereço? \n\n", TimeUnit.MILLISECONDS, timer);
 
+		do {
 
-		System.out.println("0 - endereço.add(Jurubatuba);");
-		System.out.println("1 - endereço.add(São Paulo);");
-		System.out.println("2 - endereço.add(04696-000);");
-		System.out.println("3 - endereço.add(4003);");
-		System.out.println("4 - endereço.add(Av Eng.Eusébio Stevaux);");
-		System.out.println("5 - endereço.add(SP);\n");
+			int ordem;
+			escreva("Levando em consideração a informação abaixo, qual a ordem da arraylist é a correta para mostrar o endereço? \n\n",
+					TimeUnit.MILLISECONDS, timer);
 
-		escreva("\nDigite a ordem correta:\n", TimeUnit.MILLISECONDS, timer);
-		ordem = entrada.nextInt();
-	
+			System.out.println("0 - endereço.add(Jurubatuba);");
+			System.out.println("1 - endereço.add(São Paulo);");
+			System.out.println("2 - endereço.add(04696-000);");
+			System.out.println("3 - endereço.add(4003);");
+			System.out.println("4 - endereço.add(Av Eng.Eusébio Stevaux);");
+			System.out.println("5 - endereço.add(SP);\n");
 
-		if (ordem == 430152) {
-			escreva("Parabéns você acertou!!", TimeUnit.MILLISECONDS, timer);
-			liberado = true;
-		} else {
+			escreva("\nDigite a ordem correta:\n", TimeUnit.MILLISECONDS, timer);
+			ordem = entrada.nextInt();
 
-			escreva("Você errou, os agentes estão atrás de você, tome cuidado.", TimeUnit.MILLISECONDS, timer);
-			agentes++;
-			if (!verAgente(agentes)) {
-				return;
+			if (ordem == 430152) {
+				escreva("Parabéns você acertou!!", TimeUnit.MILLISECONDS, timer);
+				liberado = true;
+			} else {
 
+				escreva("Você errou, os agentes estão atrás de você, tome cuidado.", TimeUnit.MILLISECONDS, timer);
+				agentes++;
+				if (!verAgente(agentes)) {
+					return;
+
+				}
 			}
-		}
-		} while(!liberado);
-		
+		} while (!liberado);
+
 	}
 
 	static void desafio02() throws InterruptedException {
@@ -258,18 +254,17 @@ public class jogo {
 				+ "descriptografar e ter acesso\na suas informações. Para isso qual linha de código deve ser utilizada aqui:\n",
 				TimeUnit.MILLISECONDS, timer);
 
-		System.out.println(
-				"		String senha; \r\n" + "		String aleatório[] = new String[20];\r\n"
-						+ "		aleatório[0] = \"@\";\r\n" + "		aleatório[1] = \"2\";\r\n"
-						+ "		aleatório[2] = \"5\";\r\n" + "		aleatório[3] = \"B\";\r\n"
-						+ "		aleatório[4] = \"d\";\r\n" + "		aleatório[5] = \"6\";\r\n"
-						+ "		aleatório[6] = \"G\";\r\n" + "		aleatório[7] = \"9\";\r\n"
-						+ "		aleatório[8] = \"10\";\r\n" + "		aleatório[9] = \"P\";\r\n"
-						+ "		aleatório[10] = \"%\";\r\n" + "		aleatório[11] = \"&\";\r\n"
-						+ "		aleatório[12] = \"9\";\r\n" + "		aleatório[13] = \"6\";\r\n"
-						+ "		aleatório[14] = \"F\";\r\n" + "		aleatório[15] = \"*\";\r\n"
-						+ "		aleatório[16] = \"L\";\r\n" + "		aleatório[17] = \"Y\";\r\n"
-						+ "		aleatório[18] = \"b\";\r\n" + "		aleatório[19] = \"P\";\r\n");
+		System.out.println("		String senha; \r\n" + "		String aleatório[] = new String[20];\r\n"
+				+ "		aleatório[0] = \"@\";\r\n" + "		aleatório[1] = \"2\";\r\n"
+				+ "		aleatório[2] = \"5\";\r\n" + "		aleatório[3] = \"B\";\r\n"
+				+ "		aleatório[4] = \"d\";\r\n" + "		aleatório[5] = \"6\";\r\n"
+				+ "		aleatório[6] = \"G\";\r\n" + "		aleatório[7] = \"9\";\r\n"
+				+ "		aleatório[8] = \"10\";\r\n" + "		aleatório[9] = \"P\";\r\n"
+				+ "		aleatório[10] = \"%\";\r\n" + "		aleatório[11] = \"&\";\r\n"
+				+ "		aleatório[12] = \"9\";\r\n" + "		aleatório[13] = \"6\";\r\n"
+				+ "		aleatório[14] = \"F\";\r\n" + "		aleatório[15] = \"*\";\r\n"
+				+ "		aleatório[16] = \"L\";\r\n" + "		aleatório[17] = \"Y\";\r\n"
+				+ "		aleatório[18] = \"b\";\r\n" + "		aleatório[19] = \"P\";\r\n");
 
 		System.out.println("for (int i = 0; i < senha.length; i++) {\r\n" + "	___________________________\r\n");
 
@@ -325,118 +320,109 @@ public class jogo {
 	}
 
 	static void desafio05(String nome) throws InterruptedException {
-				
+
 		System.out.print("___________________________________________\n");
-		System.out.print("String endereco = \"Atlanta\";     \r\n"
-						+ "		\r\n"
-						+ "int stringLength = endereco.length();\r\n"
-						+ "		\r\n"
-						+ "System.out.println(stringLength);\n");
+		System.out.print("String endereco = \"Atlanta\";     \r\n" + "		\r\n"
+				+ "int stringLength = endereco.length();\r\n" + "		\r\n" + "System.out.println(stringLength);\n");
 		System.out.print("___________________________________________\n");
-					 
-				
 
-				ArrayList<String> alternativas = new ArrayList<String>();
+		ArrayList<String> alternativas = new ArrayList<String>();
 
-				alternativas.add("Número de caracteres do endereço"); // originalmente a
-				alternativas.add("Nome do endereço"); // originalmente b
-				alternativas.add("Tipo da variável do endereço"); // originalmente c
-				alternativas.add("Número do endereço"); // originalmente d
-				
-				boolean acertou = false;
+		alternativas.add("Número de caracteres do endereço"); // originalmente a
+		alternativas.add("Nome do endereço"); // originalmente b
+		alternativas.add("Tipo da variável do endereço"); // originalmente c
+		alternativas.add("Número do endereço"); // originalmente d
 
-				do {
-					Collections.shuffle(alternativas);
+		boolean acertou = false;
 
-					String vetorAlternativas[] = { "1", "2", "3", "4"};
+		do {
+			Collections.shuffle(alternativas);
 
-					String respostaCorreta = "";
+			String vetorAlternativas[] = { "1", "2", "3", "4" };
 
-					for (int i = 0; i < alternativas.size(); i++) {
-						if (alternativas.get(i) == "Número de caracteres do endereço") {
-							respostaCorreta = vetorAlternativas[i];
-							break;
-						}
-					}
+			String respostaCorreta = "";
 
-					escreva("De acordo com o código acima, o que ele retornará?\n", TimeUnit.MILLISECONDS, timer);
-
-					System.out.println("1) " + alternativas.get(0) + 
-							"\n2) " + alternativas.get(1) + 
-							"\n3) " + alternativas.get(2) + 
-							"\n4) " + alternativas.get(3) + "\n");
-
-					String respostaSelecionada = entrada.next();
-					while (!(respostaSelecionada.equals("1")||respostaSelecionada.equals("2")
-							||respostaSelecionada.equals("3")||respostaSelecionada.equals("4"))) {
-						
-						escreva("Valor Inválido\n", TimeUnit.MILLISECONDS, timer);
-						
-						escreva("De acordo com o código acima, o que ele retornará?\n", TimeUnit.MILLISECONDS, timer);
-						System.out.println("1) " + alternativas.get(0) + 
-								"\n2) " + alternativas.get(1) + 
-								"\n3) " + alternativas.get(2) + 
-								"\n4) " + alternativas.get(3) + "\n");
-						
-						respostaSelecionada = entrada.next();
-					}
-					
-
-					if (respostaCorreta.equals(respostaSelecionada)) {
-						escreva("\nBoaaa! Resposta correta,"+ nome, TimeUnit.MILLISECONDS, timer);
-						acertou = true;
-					} else {
-						escreva ("Errou!", TimeUnit.MILLISECONDS, timer);
-						agentes++;
-						if (!verAgente(agentes)) {
-							return;
-						}
-						
-						
-					}
-				} while (acertou == false);
-				
-			}
-	
-		static void desafio06() throws InterruptedException {
-			int laco;
-			
-			escreva("\nPara entortar a colher, e copiar a habilidade do garoto, resolva este desafio de repetição.\r\n", TimeUnit.MILLISECONDS, timer);
-			escreva("\nO Garoto pode entortar a colher porque tem a habilidade de telecinesia em seu nível máximo (100)\n", TimeUnit.MILLISECONDS, timer);
-			escreva("\nPara adquirir essa habilidade (que agora está em zero) você deve usar um determinado laço de repetição\n", TimeUnit.MILLISECONDS, timer);
-			escreva("\nDentro das alternativas abaixo escolha o laço de repetição mais apropriado para esta situação\n", TimeUnit.MILLISECONDS, timer);
-			
-			do {
-				
-				escreva("1 - While\n", TimeUnit.MILLISECONDS, timer);
-				escreva("2 - Do-While\n", TimeUnit.MILLISECONDS, timer);
-				escreva("3 - For\n", TimeUnit.MILLISECONDS, timer);
-				escreva("4 - Enhanced-For\n", TimeUnit.MILLISECONDS, timer);
-				
-				escreva("\nDigite a opção correta: ", TimeUnit.MILLISECONDS, timer);
-				laco = entrada.nextInt();
-				while (laco < 1 || laco >4) {
-					escreva("\nOPÇÃO INCORRETA\n", TimeUnit.MILLISECONDS, timer);
-					escreva("\nDigite a opção correta: \n", TimeUnit.MILLISECONDS, timer);
-					laco = entrada.nextInt();
-				}
-				switch (laco) {
-				case 3:
-					escreva("\nEscolha correta, você conseguiu entortar a colher!\n", TimeUnit.MILLISECONDS, timer);
-					escreva("\nParabéns\n", TimeUnit.MILLISECONDS, timer);
+			for (int i = 0; i < alternativas.size(); i++) {
+				if (alternativas.get(i) == "Número de caracteres do endereço") {
+					respostaCorreta = vetorAlternativas[i];
 					break;
-				default:
-					escreva("\nLaço de repetição errado\n", TimeUnit.MILLISECONDS, timer);
-						agentes++;
-						if(!verAgente(agentes)) {
-							return;
-						}
-						break;
-					}
-			} while (laco != 3);
-		}
+				}
+			}
 
-	
+			escreva("De acordo com o código acima, o que ele retornará?\n", TimeUnit.MILLISECONDS, timer);
+
+			System.out.println("1) " + alternativas.get(0) + "\n2) " + alternativas.get(1) + "\n3) "
+					+ alternativas.get(2) + "\n4) " + alternativas.get(3) + "\n");
+
+			String respostaSelecionada = entrada.next();
+			while (!(respostaSelecionada.equals("1") || respostaSelecionada.equals("2")
+					|| respostaSelecionada.equals("3") || respostaSelecionada.equals("4"))) {
+
+				escreva("Valor Inválido\n", TimeUnit.MILLISECONDS, timer);
+
+				escreva("De acordo com o código acima, o que ele retornará?\n", TimeUnit.MILLISECONDS, timer);
+				System.out.println("1) " + alternativas.get(0) + "\n2) " + alternativas.get(1) + "\n3) "
+						+ alternativas.get(2) + "\n4) " + alternativas.get(3) + "\n");
+
+				respostaSelecionada = entrada.next();
+			}
+
+			if (respostaCorreta.equals(respostaSelecionada)) {
+				escreva("\nBoaaa! Resposta correta," + nome, TimeUnit.MILLISECONDS, timer);
+				acertou = true;
+			} else {
+				escreva("Errou!", TimeUnit.MILLISECONDS, timer);
+				agentes++;
+				if (!verAgente(agentes)) {
+					return;
+				}
+
+			}
+		} while (acertou == false);
+
+	}
+
+	static void desafio06() throws InterruptedException {
+		int laco;
+
+		escreva("\nPara entortar a colher, e copiar a habilidade do garoto, resolva este desafio de repetição.\r\n",
+				TimeUnit.MILLISECONDS, timer);
+		escreva("\nO Garoto pode entortar a colher porque tem a habilidade de telecinesia em seu nível máximo (100)\n",
+				TimeUnit.MILLISECONDS, timer);
+		escreva("\nPara adquirir essa habilidade (que agora está em zero) você deve usar um determinado laço de repetição\n",
+				TimeUnit.MILLISECONDS, timer);
+		escreva("\nDentro das alternativas abaixo escolha o laço de repetição mais apropriado para esta situação\n",
+				TimeUnit.MILLISECONDS, timer);
+
+		do {
+
+			escreva("1 - While\n", TimeUnit.MILLISECONDS, timer);
+			escreva("2 - Do-While\n", TimeUnit.MILLISECONDS, timer);
+			escreva("3 - For\n", TimeUnit.MILLISECONDS, timer);
+			escreva("4 - Enhanced-For\n", TimeUnit.MILLISECONDS, timer);
+
+			escreva("\nDigite a opção correta: ", TimeUnit.MILLISECONDS, timer);
+			laco = entrada.nextInt();
+			while (laco < 1 || laco > 4) {
+				escreva("\nOPÇÃO INCORRETA\n", TimeUnit.MILLISECONDS, timer);
+				escreva("\nDigite a opção correta: \n", TimeUnit.MILLISECONDS, timer);
+				laco = entrada.nextInt();
+			}
+			switch (laco) {
+			case 3:
+				escreva("\nEscolha correta, você conseguiu entortar a colher!\n", TimeUnit.MILLISECONDS, timer);
+				escreva("\nParabéns\n", TimeUnit.MILLISECONDS, timer);
+				break;
+			default:
+				escreva("\nLaço de repetição errado\n", TimeUnit.MILLISECONDS, timer);
+				agentes++;
+				if (!verAgente(agentes)) {
+					return;
+				}
+				break;
+			}
+		} while (laco != 3);
+	}
 
 	static void desafio07() {
 
@@ -446,7 +432,7 @@ public class jogo {
 	static void jogar() throws InterruptedException {
 
 		agentes = 0;
-		
+
 		// Janela de diálogo para colocar JOptionPane
 		final JDialog dialog = new JDialog();
 
@@ -468,15 +454,11 @@ public class jogo {
 		// Int para receber escolha do jogador
 		int escolha = 1;
 
-
 		escreva("\n\nOlá jogador. Bem-vindo(a) a Inside the Matrix.\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
-		
-		
-		
 
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
@@ -586,12 +568,12 @@ public class jogo {
 		escreva(nome + ": Me parece que este endereço está embaralhado\n\n", TimeUnit.MILLISECONDS, timer);
 
 		// Desafio 01
-
+		System.err.println("\nDESAFIO 01\n");
 		desafio01();
 		if (agentes == 4) {
 			return;
 		}
-		
+
 		escreva("\n\n", TimeUnit.MILLISECONDS, timer);
 
 		do {
@@ -608,9 +590,8 @@ public class jogo {
 						+ "\nMas o peso na sua consciência vai poder te deixar seguir em frente?",
 						TimeUnit.MILLISECONDS, timer);
 
-				escreva("Game  over", TimeUnit.MILLISECONDS, timer);
-				break;
-			// return 0;
+				escreva("\n\nGame over\n\n", TimeUnit.MILLISECONDS, timer);
+				return;
 
 			case 1:
 				break;
@@ -710,7 +691,8 @@ public class jogo {
 		escreva(nome + ": Me diga pelo menos por que não consigo ver seu rosto\n", TimeUnit.MILLISECONDS, timer);
 
 		// Desafio 2
-
+		
+		System.err.println("\nDESAFIO 02\n");
 		desafio02();
 		if (agentes == 4) {
 			return;
@@ -779,30 +761,36 @@ public class jogo {
 		escreva("\n" + nome + ": Que verdade ?\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: que você é um escravo da matrix, como todo "
 				+ "mundo você nasceu em uma\nprisão que não pode sentir, " + "ver ou tocar.\n"
-				+ "infelizmente não posso explicar o que " + "realmente é matrix.\né preciso que veja por si mesmo:\n\n\n",
-				TimeUnit.MILLISECONDS, timer);
+				+ "infelizmente não posso explicar o que "
+				+ "realmente é matrix.\né preciso que veja por si mesmo:\n\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: Antes de continuar, preciso que você "
 				+ "resolva o seguinte desafio, para saber \n se você está pronto para decidir " + "o rumo da sua vida.",
 				TimeUnit.MILLISECONDS, timer);
 		// DESAFIO 3
 
+		System.err.println("\nDESAFIO 03\n");
 		desafio03(nome);
 		if (agentes == 4) {
 			return;
 		}
 
 		do {
-			escreva("\nMorpheus: "+ nome + ", agora eu preciso que você tome uma decisão", TimeUnit.MILLISECONDS, timer);
-			escreva("\nMorpheus estende as duas mãos, tendo uma pílula vermelha em uma mão, e uma azul em outra", TimeUnit.MILLISECONDS, timer);
-			escreva("\nMorpheus: Esta é sua última chance, seja qual for sua escolha, a partir daqui não terá retorno", TimeUnit.MILLISECONDS, timer);
-			escreva("\nMorpheus: Ao escolher a pílula azul nós paramos por aqui", TimeUnit.MILLISECONDS, timer);
-			escreva("\nMorpheus: Poderá voltar pra casa e fingir que nada aconteceu", TimeUnit.MILLISECONDS, timer);
-			escreva("\nMorpheus: Se escolher a pílula vermelha irei te mostrar o que está por trás de tudo isso, ", TimeUnit.MILLISECONDS, timer);
-			escreva("\nMorpheus: Você vai para o país das maravilhas e vou te mostrar até onde vai a toca do coelho.\n", TimeUnit.MILLISECONDS, timer);
-			
-			escreva("Faça sua escolha: \n", TimeUnit.MILLISECONDS, timer);
-			escreva("1 - tomar pílula Azul.", TimeUnit.MILLISECONDS, timer);
-			escreva(" 2 - Tomar pílula Vermelha.", TimeUnit.MILLISECONDS, timer);
+			escreva("\n\nMorpheus: " + nome + ", agora eu preciso que você tome uma decisão", TimeUnit.MILLISECONDS,
+					timer);
+			escreva("\n\n*Morpheus estende as duas mãos, tendo uma pílula vermelha em uma mão, e uma azul em outra*",
+					TimeUnit.MILLISECONDS, timer);
+			escreva("\n\nMorpheus: Esta é sua última chance, seja qual for sua escolha, a partir daqui não terá retorno",
+					TimeUnit.MILLISECONDS, timer);
+			escreva("\n\nMorpheus: Ao escolher a pílula azul nós paramos por aqui", TimeUnit.MILLISECONDS, timer);
+			escreva("\n\nMorpheus: Poderá voltar pra casa e fingir que nada aconteceu", TimeUnit.MILLISECONDS, timer);
+			escreva("\n\nMorpheus: Se escolher a pílula vermelha irei te mostrar o que está por trás de tudo isso, ",
+					TimeUnit.MILLISECONDS, timer);
+			escreva("\n\nMorpheus: Você vai para o país das maravilhas e vou te mostrar até onde vai a toca do coelho.\n",
+					TimeUnit.MILLISECONDS, timer);
+
+			escreva("\nFaça sua escolha: \n", TimeUnit.MILLISECONDS, timer);
+			escreva("\n1 - tomar pílula Azul.\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\n2 - Tomar pílula Vermelha.\n", TimeUnit.MILLISECONDS, timer);
 
 			escolha = leia();
 			switch (escolha) {
@@ -853,7 +841,7 @@ public class jogo {
 				+ "não podem ser feitas em qualquer um, por\nisso preciso" + " que você faça o seguinte :\n",
 				TimeUnit.MILLISECONDS, timer);
 		// DESAFIO 4
-
+		System.err.println("\nDESAFIO 04\n");
 		desafio04(nome);
 		if (agentes == 4) {
 			return;
@@ -896,12 +884,12 @@ public class jogo {
 		escreva("\nTank: deixa eu te ajudar novato \n", TimeUnit.MILLISECONDS, timer);
 
 		// DESAFIO 5
-		
+		System.err.println("\nDESAFIO 05\n");
 		desafio05(nome);
 		if (agentes == 4) {
 			return;
 		}
-		
+
 		escreva("Morpheus: sabia que você não ia nos desapontar, essa etapa que estamos é importante para que consigamos\n"
 				+ "vencer a matrix de uma vez por todas.\r\n\n" + "", TimeUnit.MILLISECONDS, timer);
 
@@ -952,10 +940,9 @@ public class jogo {
 		escreva("Garoto: basta você pensar que a colher não é real e modificá-la da forma que quiser\n\n",
 				TimeUnit.MILLISECONDS, timer);
 
-		System.err.println("///DESAFIO ENTORTAR COLHER/// \n\n");
+		System.err.println("\nDESAFIO 06\n");
 		do {
-			escreva("\n" + nome + ", que tal saber saber mais sobre o que é Psicocinesi", TimeUnit.MILLISECONDS,
-					timer);
+			escreva("\n" + nome + ", que tal saber saber mais sobre o que é Psicocinesi", TimeUnit.MILLISECONDS, timer);
 
 			escreva("\n1 - Não,seguir com desafio.", TimeUnit.MILLISECONDS, timer);
 			escreva("\n2 - Sim.\n", TimeUnit.MILLISECONDS, timer);
@@ -972,7 +959,7 @@ public class jogo {
 
 			}
 		} while (!(escolha <= 2));
-		
+
 		desafio06();
 		if (agentes == 4) {
 			return;
@@ -1047,21 +1034,28 @@ public class jogo {
 		return;
 
 	}
+
+	// Função para mostrar explicação Psicocinese
 	static void Psicocinese() throws InterruptedException {
 		escreva("A psicocinese (movimento mental), telecinesia [...]  descreve o suposto fenômeno ou capacidade de uma pessoa\nmovimentar, "
 				+ "manipular, abalar ou exercer força sobre um sistema físico sem interação física,"
 				+ " apenas usando a mente.\nO termo psicocinese foi criado em 1914 pelo autor "
 				+ "estadunidense Henry Holte popularizado pelo\nparapsicólogo estadunidense  J.B. Rhine nos anos 30."
-				+ " Já o termo telecinesia foi criado em 1890 pelo parapsicólogo\nrusso Alexandre Aksakof.", TimeUnit.MILLISECONDS, timer);
-		
-		
+				+ " Já o termo telecinesia foi criado em 1890 pelo parapsicólogo\nrusso Alexandre Aksakof.",
+				TimeUnit.MILLISECONDS, timer);
+
 	}
 
 	// Função para mostrar instruções
 	static void instrucao() throws InterruptedException {
-		escreva("Instruções", TimeUnit.MILLISECONDS, timer);
-		escreva("O jogo é tem como base o filme matrix, terá multiplas escolhas, Completar o código, então aproveite, \n O * indica uma ação do personagem."
-				+ "\n e Siga o coelho.. ", TimeUnit.MILLISECONDS, timer);
+		escreva("Instruções\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("O jogo é tem como base o filme matrix, terá multiplas escolhas, Completar o código, então aproveite.\n"
+				+ "jogue o jogo conforme o que for pedido, escolha um dos dados que foram fornecidos na tela, "
+				+ "\nfaça escolhas corretas, pense antes de fazer suas ações, tome cuidado,"
+				+ "\nno nosso jogo há agentes que são como suas vidas, caso você chegue a quatro agentes,"
+				+ "\no game acabará e você voltara ao menu inicial."
+				+ "\nO * indica uma ação do personagem."
+				+ "\n\ne sempre siga o coelho...\n\n", TimeUnit.MILLISECONDS, timer);
 	}
 
 	// Função para mostrar créditos
