@@ -171,7 +171,7 @@ public class jogo {
 				escreva("\nMuito Bem, você acertou", TimeUnit.MILLISECONDS, timer);
 				liberado = true;
 			} else {
-				escreva("\n\nINCORRETO!", TimeUnit.MILLISECONDS, timer);
+
 				liberado = false;
 				agentes++;
 				if (!verAgente(agentes)) {
@@ -181,14 +181,14 @@ public class jogo {
 				// QUAL O JOGADOR ERROU?
 		    	// AS DUAS:
 		    	if (!(r1.equalsIgnoreCase("nome")) && (!(r2.equalsIgnoreCase("true")))) {				
-		    	escreva("\nQuestão 1 e 2 Incorretas", TimeUnit.MILLISECONDS, timer);
+		    	escreva("\nQuestão 1 e 2 Incorretas\n", TimeUnit.MILLISECONDS, timer);
 		    	}
 		    	// A PRIMEIRA
 		    	else if (!(r1.equalsIgnoreCase("nome"))){
-		    		escreva("\nQuestão 1 Incorreta", TimeUnit.MILLISECONDS, timer);
+		    		escreva("\nQuestão 1 Incorreta\n", TimeUnit.MILLISECONDS, timer);
 		    	// A SEGUNDA    
 		    	} else {
-		    		escreva("\nQuestão 2 Incorreta", TimeUnit.MILLISECONDS, timer);
+		    		escreva("\nQuestão 2 Incorreta\n", TimeUnit.MILLISECONDS, timer);
 		    	}
 				
 				
@@ -761,7 +761,7 @@ public class jogo {
 		escreva("\nPersonagem desconhecido: Primeiramente meu nome "
 				+ "é Morpheus, por favor, sente-se aqui, agora \n você tem " + "uma decisão a fazer.\r\n",
 				TimeUnit.MILLISECONDS, timer);
-		escreva("\nMorpheus: você deve estar se sentindo como a Aline, "
+		escreva("\nMorpheus: você deve estar se sentindo como a Alice, "
 				+ "escorregando pela toca do coelho.\nvocê é um homem que aceita o que vê, pois pensa estar\nsonhando, "
 				+ "ironicamente você está longe da verdade. Você acredita em destino?\r\n", TimeUnit.MILLISECONDS,
 				timer);
