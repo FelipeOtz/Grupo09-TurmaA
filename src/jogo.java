@@ -367,6 +367,20 @@ public class jogo {
 							"\n4) " + alternativas.get(3) + "\n");
 
 					String respostaSelecionada = entrada.next();
+					while (!(respostaSelecionada.equals("1")||respostaSelecionada.equals("2")
+							||respostaSelecionada.equals("3")||respostaSelecionada.equals("4"))) {
+						
+						escreva("Valor Inválido\n", TimeUnit.MILLISECONDS, timer);
+						
+						escreva("De acordo com o código acima, o que ele retornará?\n", TimeUnit.MILLISECONDS, timer);
+						System.out.println("1) " + alternativas.get(0) + 
+								"\n2) " + alternativas.get(1) + 
+								"\n3) " + alternativas.get(2) + 
+								"\n4) " + alternativas.get(3) + "\n");
+						
+						respostaSelecionada = entrada.next();
+					}
+					
 
 					if (respostaCorreta.equals(respostaSelecionada)) {
 						escreva("\nBoaaa! Resposta correta,"+ nome, TimeUnit.MILLISECONDS, timer);
