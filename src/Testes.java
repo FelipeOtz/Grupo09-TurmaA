@@ -13,7 +13,7 @@ public class Testes {
 		
 	}
 		
-	// Teste de agentes por Felipe
+	// Teste de agentes
 	static void testeAgentes(int quant) throws InterruptedException {
 		int cont = 0;
 		for (int i = 1; i <= quant; i++) {
