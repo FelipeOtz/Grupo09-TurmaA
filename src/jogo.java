@@ -779,13 +779,8 @@ public class jogo {
 		escreva("\n" + nome + ": Que verdade ?\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: que você é um escravo da matrix, como todo "
 				+ "mundo você nasceu em uma\nprisão que não pode sentir, " + "ver ou tocar.\n"
-				+ "infelizmente não posso explicar o que " + "realmente é matrix.\né preciso que veja por si mesmo:\n",
+				+ "infelizmente não posso explicar o que " + "realmente é matrix.\né preciso que veja por si mesmo:\n\n\n",
 				TimeUnit.MILLISECONDS, timer);
-		escreva("\n*Morpheus fecha as suas mãos e ergue seu braço em sua "
-				+ "direção(aparentando estar segurando algo)*\r\n", TimeUnit.MILLISECONDS, timer);
-		escreva("\nMorpheus: você tem sua última escolha, em minha mão tenho"
-				+ " duas pílulas, se você tomar \n a pílula azul você vai voltar a sua vida normal"
-				+ "e esquecerá de tudo isso. \n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: Antes de continuar, preciso que você "
 				+ "resolva o seguinte desafio, para saber \n se você está pronto para decidir " + "o rumo da sua vida.",
 				TimeUnit.MILLISECONDS, timer);
@@ -797,10 +792,15 @@ public class jogo {
 		}
 
 		do {
-
-			escreva("\nse escolher a pílula vermelha você vai para o país das maravilhas "
-					+ "e vou te mostrar até onde vai a toca do coelho.\n", TimeUnit.MILLISECONDS, timer);
-
+			escreva("\nMorpheus: "+ nome + ", agora eu preciso que você tome uma decisão", TimeUnit.MILLISECONDS, timer);
+			escreva("\nMorpheus estende as duas mãos, tendo uma pílula vermelha em uma mão, e uma azul em outra", TimeUnit.MILLISECONDS, timer);
+			escreva("\nMorpheus: Esta é sua última chance, seja qual for sua escolha, a partir daqui não terá retorno", TimeUnit.MILLISECONDS, timer);
+			escreva("\nMorpheus: Ao escolher a pílula azul nós paramos por aqui", TimeUnit.MILLISECONDS, timer);
+			escreva("\nMorpheus: Poderá voltar pra casa e fingir que nada aconteceu", TimeUnit.MILLISECONDS, timer);
+			escreva("\nMorpheus: Se escolher a pílula vermelha irei te mostrar o que está por trás de tudo isso, ", TimeUnit.MILLISECONDS, timer);
+			escreva("\nMorpheus: Você vai para o país das maravilhas e vou te mostrar até onde vai a toca do coelho.\n", TimeUnit.MILLISECONDS, timer);
+			
+			escreva("Faça sua escolha: \n", TimeUnit.MILLISECONDS, timer);
 			escreva("1 - tomar pílula Azul.", TimeUnit.MILLISECONDS, timer);
 			escreva(" 2 - Tomar pílula Vermelha.", TimeUnit.MILLISECONDS, timer);
 
