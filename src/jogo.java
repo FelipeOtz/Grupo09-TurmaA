@@ -20,11 +20,6 @@ public class jogo {
 
 	static int agentes = 0;
 
-		
-	// Teste Senha
-	static String testeSenha (String senha) throws InterruptedException {		
-	return senha;	
-	}
 	
 	// Verificar agentes
 	static boolean verAgente(int agentes) throws InterruptedException {

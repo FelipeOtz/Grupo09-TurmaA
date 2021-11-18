@@ -50,8 +50,36 @@ public class Testes {
 			
 		case 2:	
 			System.out.println("Teste de Senha: ");
+			String tSenha = "";
+			String aleatorio[] = new String[20];
+			String senhaTeste;	
 			
-			
+			aleatorio[0] = "@";
+			aleatorio[1] = "2";
+			aleatorio[2] = "5";
+			aleatorio[3] = "B";
+			aleatorio[4] = "d";
+			aleatorio[5] = "6";
+			aleatorio[6] = "G";
+			aleatorio[7] = "9";
+			aleatorio[8] = "7";
+			aleatorio[9] = "j";
+			aleatorio[10] = "%";
+			aleatorio[11] = "&";
+			aleatorio[12] = "9";
+			aleatorio[13] = "6";
+			aleatorio[14] = "F";
+			aleatorio[15] = "*";
+			aleatorio[16] = "L";
+			aleatorio[17] = "Y";
+			aleatorio[18] = "b";
+			aleatorio[19] = "P";
+			for (int i = 0; i < 4; i++) {
+				tSenha = tSenha + aleatorio[(int) (Math.random() * 19)];
+			}
+			System.out.println("Senha Gerada: " + tSenha);	
+			testeSenha(tSenha);
+			break;
 			
 		default:
 			
