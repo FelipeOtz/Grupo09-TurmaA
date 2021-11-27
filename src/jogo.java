@@ -870,7 +870,7 @@ public class jogo {
 		escreva("\nTank: Prazer grande escolhido, vamos ao que interessa?\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nTank: temos as seguintes habilidades que podemos fazer update, fique a vontade para escolher "
 				+ "uma para\naprimorar, mas essas modificações"
-				+ "não podem ser feitas em qualquer um, por\nisso preciso" + " que você faça o seguinte :\n",
+				+ "não podem ser feitas em qualquer um, por\nisso preciso" + " que você faça o seguinte:\n",
 				TimeUnit.MILLISECONDS, timer);
 		// DESAFIO 4
 		System.err.println("\nDESAFIO 04\n");
@@ -878,10 +878,12 @@ public class jogo {
 		if (agentes == 4) {
 			return;
 		}
+		
+		senhaAleatoria();
 
 		// MINIGAME
 		
-		escreva("Tank: agora você está pronto !\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\n\nTank: agora você está pronto !\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Trinity: Ei Tank, acho que ele ainda não está pronto. Deixa eu ver"
 				+ " do você é capaz. \nO que acha de testar suas novas habilidades comigo?\n", TimeUnit.MILLISECONDS,
 				timer);
