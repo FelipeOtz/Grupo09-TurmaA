@@ -95,7 +95,7 @@ public class jogo {
 
 		}
 
-		escreva("\n\nSua senha criptografada é: " + senha + "\n(Guarde-a você poderá precisar dela depois)",
+		escreva("\n\nSua senha criptografada é: " + senha + "\n(Guarde-a, você poderá precisar dela depois)\n\n",
 				TimeUnit.MILLISECONDS, timer);
 		return senha;
 
@@ -879,7 +879,7 @@ public class jogo {
 			return;
 		}
 		
-		senhaAleatoria();
+		String senha = senhaAleatoria();
 
 		// MINIGAME
 		
