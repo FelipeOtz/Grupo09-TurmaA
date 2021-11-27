@@ -11,7 +11,7 @@ import javax.swing.UIManager;
 public class jogo {
 
 	// Variável para delay no texto
-	static int timer = 10;
+	static int timer = 1;
 
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
@@ -124,6 +124,10 @@ public class jogo {
 			if (ordem == 430152) {
 				escreva("Parabéns você acertou!!", TimeUnit.MILLISECONDS, timer);
 				liberado = true;
+				//QUANDO O USUÁRIO DIGAR MENOS QUE 6 NUMEROS OU
+				// QUANDO O USUÁRIO DIGITAR MENOS QUE O NÚMERO DESCRITO 
+				// Enumere conforme ordem de endereço ex. 12345
+				
 			} else {
 
 				escreva("Você errou, os agentes estão atrás de você, tome cuidado.", TimeUnit.MILLISECONDS, timer);
@@ -143,14 +147,14 @@ public class jogo {
 		boolean liberado = false;
 		escreva("\n\nUse seus conhecimentos em declaração de variáveis para resolver o desafio e\n"
 				+ "ter acesso ao nome e rosto da personagem: ", TimeUnit.MILLISECONDS, timer);
-		escreva("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n", // TEXTO
-																													// EXPLICATIVO
+		escreva("\n\n/* DICA: UMA VARIÁVEL BOOLEANA DECLARADA SEM VALOR ATRIBUÍDO SE INICIA COM VALOR FALSE */\n", 
+																													
 				TimeUnit.MILLISECONDS, timer);
 		// NO QUADRADO NÃO SUBSTITUIR O PRINT
 		System.out.print("\n ________________________________________________________");
 		System.out.print("\n|1    public static void main(String[] args) {           |");
-		System.out.print("\n|2    int nome = " + "\"" + "Trinity" + "\"" + ";                              |");// ERRO
-																												// CORRIGIDO
+		System.out.print("\n|2    int nome = " + "\"" + "Trinity" + "\"" + ";                              |");
+																												
 		System.out.print("\n|3    boolean rosto;                                     |\n"
 				+ "|4                                                       |\n"
 				+ "|5                                                       |\n"
@@ -179,16 +183,16 @@ public class jogo {
 				}
 				
 				// QUAL O JOGADOR ERROU?
-		    	// AS DUAS:
+		    	//SE ERROU AS DUAS:
 		    	if (!(r1.equalsIgnoreCase("nome")) && (!(r2.equalsIgnoreCase("true")))) {				
-		    	escreva("\nQuestão 1 e 2 Incorretas\n", TimeUnit.MILLISECONDS, timer);
+		    	System.err.println("Questão 1 e 2 Incorretas\n\n");
 		    	}
-		    	// A PRIMEIRA
+		    	//SE ERROU A PRIMEIRA
 		    	else if (!(r1.equalsIgnoreCase("nome"))){
-		    		escreva("\nQuestão 1 Incorreta\n", TimeUnit.MILLISECONDS, timer);
-		    	// A SEGUNDA    
+		    		System.err.println("Questão 1 Incorreta\n\n");
+		    	//SE ERROU A SEGUNDA    
 		    	} else {
-		    		escreva("\nQuestão 2 Incorreta\n", TimeUnit.MILLISECONDS, timer);
+		    		System.err.println("Questão 2 Incorreta\n\n");
 		    	}
 				
 				
@@ -213,51 +217,56 @@ public class jogo {
 		int respostaSelecionada = 0;
 		String resposta = "";
 		boolean rodar = true;
-
+		boolean rodar2 = true;
 		respostaSelecionada = leia();
 
-		do {
 
 			while (respostaSelecionada != 1 && respostaSelecionada != 2) {
 				escreva("\nEscolha 1 para Sim, ou 2 para não.", TimeUnit.MILLISECONDS, timer);
 				respostaSelecionada = entrada.nextInt();
 			}
 			if (respostaSelecionada == 1) {
-
 			} else {
-				escreva("\nExplicação: O número de PI é ≅3,14. Em java, temos uma função que retorna este valor...\n"
-						+ "Também temos uma função para fazer potenciação. ", TimeUnit.MILLISECONDS, timer);
+
+				dica03();
 			}
+			
+			
+			
+			do {	
 			escreva("\n1 - Qual função da classe Math pode substituir o valor de PI?\n", TimeUnit.MILLISECONDS, timer);
 			resposta = entrada.next();
 			if (resposta.equalsIgnoreCase("Math.pi")) {
 				escreva("\nNada mal hein, " + nome + "!\n", TimeUnit.MILLISECONDS, timer);
+				rodar = false;
 			} else {
 				escreva("\n\nINCORRETO! ", TimeUnit.MILLISECONDS, timer);
-
+				
 				agentes++;
 				if (!verAgente(agentes)) {
 					return;
+					}
 				}
-
 			}
+			while (rodar);
+			
+			
+			
+		do {	
 			escreva("\n2 - Qual função da classe Math pode substituir o valor raio * raio (raio² ou raio ^2)\n\n",
 					TimeUnit.MILLISECONDS, timer);
 			resposta = entrada.next();
 			if (resposta.equalsIgnoreCase("Math.pow")) {
 				escreva(nome + ", parabéns, você concluiu o desafio! ", TimeUnit.MILLISECONDS, timer);
-				rodar = false;
+				rodar2 = false;
 			} else {
 				escreva("\n\n INCORRETO! ", TimeUnit.MILLISECONDS, timer);
 				agentes++;
-				if (!verAgente(agentes)) {
+					if (!verAgente(agentes)) {
 					return;
-				}
-
+					}
 			}
-		}
-
-		while (rodar);
+		}while (rodar2);
 
 	}
 
@@ -289,7 +298,8 @@ public class jogo {
 		alternativas.add("senha = 0983;"); // originalmente d
 
 		boolean acertou = false;
-
+		boolean verificaResposta = false;
+		String respostaSelecionada = "";
 		do {
 			Collections.shuffle(alternativas);
 
@@ -309,17 +319,26 @@ public class jogo {
 
 			// Constante com resposta correta
 			// final String respostaCorreta = auxiliar;
-
+		do {
 			escreva("Qual linha deve ser colocada aqui para completar o código e gerar uma senha aleatória "
 					+ "de 4 de dígitos: \n", TimeUnit.MILLISECONDS, timer);
 
 			System.out.println("1) " + alternativas.get(0) + "\n2) " + alternativas.get(1) + "\n3) "
 					+ alternativas.get(2) + "\n4) " + alternativas.get(3) + "\n");
 
-			String respostaSelecionada = entrada.next();
-
+			
+					respostaSelecionada = entrada.next();
+					if (respostaSelecionada.equals("1") || respostaSelecionada.equals("2")
+							|| respostaSelecionada.equals("3") || respostaSelecionada.equals("4") ) {
+						verificaResposta = true;
+						}else {
+						escreva("Entrada Invalida\n", TimeUnit.MILLISECONDS, timer);
+						}
+		}while(!verificaResposta);
+			
+			
 			if (respostaCorreta.equals(respostaSelecionada)) {
-				escreva("\nBoaaa! Resposta correta, " + nome, TimeUnit.MILLISECONDS, timer);
+				escreva("\nBoaaa! Resposta correta, " + nome + "\n", TimeUnit.MILLISECONDS, timer);
 				acertou = true;
 			} else {
 				escreva("Errou!", TimeUnit.MILLISECONDS, timer);
@@ -371,7 +390,7 @@ public class jogo {
 			while (!(respostaSelecionada.equals("1") || respostaSelecionada.equals("2")
 					|| respostaSelecionada.equals("3") || respostaSelecionada.equals("4"))) {
 
-				escreva("Valor Inválido\n", TimeUnit.MILLISECONDS, timer);
+				escreva("Valor Inválido\n\n", TimeUnit.MILLISECONDS, timer);
 
 				escreva("De acordo com o código acima, o que ele retornará?\n", TimeUnit.MILLISECONDS, timer);
 				System.out.println("1) " + alternativas.get(0) + "\n2) " + alternativas.get(1) + "\n3) "
@@ -861,12 +880,7 @@ public class jogo {
 		}
 
 		// MINIGAME
-
-		// PARTE MELQUI
-		escreva("\n. . . . . . . . . .\nDesafio da Senha 4 Acabou Aki \n Em seguida desafio da habilidade\n"
-				+ ". . . . . . . . . . . . .\n\n", TimeUnit.MILLISECONDS, timer);
-		// DESAFIO 4
-
+		
 		escreva("Tank: agora você está pronto !\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Trinity: Ei Tank, acho que ele ainda não está pronto. Deixa eu ver"
 				+ " do você é capaz. \nO que acha de testar suas novas habilidades comigo?\n", TimeUnit.MILLISECONDS,
@@ -1078,6 +1092,18 @@ public class jogo {
 				TimeUnit.MILLISECONDS, timer);
 	}
 
+	// Função dica desafio03
+	static void dica03() throws InterruptedException {
+		System.out.println("DICA APARECE AKI");
+		
+		escreva("No java, a classe Math contém métodos para realizar operações numéricas básicas, como funções\r\n"
+				+ "elementares exponencial, logaritmo, raiz quadrada e trigonométricas.\r\n"
+				+ "Dentre elas, duas podem ser usadas para substituir termos no \r\n"
+				+ "código escrito por Morpheus.\n", TimeUnit.MILLISECONDS, timer);
+	}
+	
+	
+	
 	// Função para mostrar sobre
 	static void sobreMatrix() throws InterruptedException {
 		escreva("\nO jogo se passa em um futuro onde as maquinas dominaram o mundo e escravizaram a raça humana sem que eles soubessem,\nDeixando eles "
