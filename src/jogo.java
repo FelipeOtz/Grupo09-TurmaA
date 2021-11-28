@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -459,6 +460,57 @@ public class jogo {
 	static void desafio07() {
 
 	}
+	
+	//minigames
+	static void minigames1() {
+		
+	}
+	
+	static void minigames2() {
+		int palpite = 0, sorteado, tentativas = 0;
+		boolean acertou = false;
+		
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		Random geradorDeAleatorios = new Random();
+		sorteado = geradorDeAleatorios.nextInt(5) + 1;
+		System.out.println("Para abrir Número entre 1 e 5 sorteados! Tente o seu melhor e Boa sorte.");
+		
+		do {
+			System.out.println("--------");
+			System.out.println("Número de tentativas: " + tentativas);
+			
+			System.out.println("Qual seu palpite? ");
+			palpite = entrada.nextInt();
+			
+			if(palpite == sorteado) {
+				System.out.println("Parabéns, você acertou!");
+				acertou = true;
+				break;
+			}
+			if(palpite < sorteado) {
+				System.out.println("Seu palpite foi menor que o número escolhido");
+			} else if (palpite > sorteado) {
+				System.out.println("Seu Palpite foi maior que o número escolhido");
+			} if (palpite + 1 == sorteado || palpite - 1 == sorteado) {
+				System.out.println("Ta quente!! \n" 
+										+ "Advinhe outro valor. ");
+			}
+			
+			tentativas++;
+			
+			if (tentativas == 5) {
+				System.out.println("GAME OVER! O número escolhido era : " + sorteado);
+			}
+			
+		
+		} while (acertou || tentativas <= 4);
+	}
+	
+	static void minigames3 () {
+		
+	}
 
 	// Função para jogar
 	static void jogar() throws InterruptedException {
@@ -881,7 +933,6 @@ public class jogo {
 		
 		String senha = senhaAleatoria();
 
-		// MINIGAME
 		
 		escreva("\n\nTank: agora você está pronto !\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Trinity: Ei Tank, acho que ele ainda não está pronto. Deixa eu ver"
@@ -891,6 +942,17 @@ public class jogo {
 		escreva("Treinar Trinity: \n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nOBS:Treinar com a Trinity vai potencializar suas habilidades ao máximo.\n\n", TimeUnit.MILLISECONDS,
 				timer);
+		
+		// MINIGAME
+				System.err.println("Mini Game");
+				
+				escreva("escolha qual habilidade queira melhorar:\n", TimeUnit.MILLISECONDS, timer);
+				escreva("\n1 - luta\n", TimeUnit.MILLISECONDS, timer);
+				escreva("\n2 - Inteligência\n", TimeUnit.MILLISECONDS, timer);
+				escreva("\n3 - Agilidade\n", TimeUnit.MILLISECONDS, timer);
+				
+				escolha = leia();
+				menuMiniGame();
 
 		escreva("Morpheus: " + nome + ", vamos precisar entrar na Matrix novamente para encontrar o Oráculo\n",
 				TimeUnit.MILLISECONDS, timer);
@@ -1121,6 +1183,25 @@ public class jogo {
 				+ " o incluem: consciência extra-sensorial de mudanças dentro de o código da Matrix\nforça, velocidade e resistência super-humanas e inigualáveis; "
 				+ "o poder de voo; invulnerabilidade prática a danos físicos;\nclarividência telecinese, e, eventualmente, se torna poderoso o suficiente para "
 				+ "manipular a vontade quase\nqualquer aspecto da Matrix.\n\n", TimeUnit.MILLISECONDS, timer);
+	}
+	
+	
+	//função para menu minigame
+	static int menuMiniGame() throws InterruptedException {
+		int escolha = leia();
+		switch (escolha) {
+		case 1:
+			minigames1();
+			break;
+		case 2:
+			minigames2();
+			break;
+		case 3:
+			minigames3();
+			break;
+
+		}
+		return escolha;
 	}
 
 	// Função para Menu
