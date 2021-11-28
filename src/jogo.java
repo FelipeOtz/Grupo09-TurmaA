@@ -463,10 +463,11 @@ public class jogo {
 	
 	//minigames
 	static void minigames1() {
-		
+		System.out.println("Mini Game 01");
 	}
 	
 	static void minigames2() {
+		System.out.println("Mini Game 02");
 		int palpite = 0, sorteado, tentativas = 0;
 		boolean acertou = false;
 		
@@ -509,7 +510,7 @@ public class jogo {
 	}
 	
 	static void minigames3 () {
-		
+		System.out.println("Mini Game 03");
 	}
 
 	// Função para jogar
@@ -944,15 +945,23 @@ public class jogo {
 				timer);
 		
 		// MINIGAME
+				int p = 0;
+				boolean entradaValida = false;
 				System.err.println("Mini Game");
-				
+				do {
 				escreva("escolha qual habilidade queira melhorar:\n", TimeUnit.MILLISECONDS, timer);
 				escreva("\n1 - luta\n", TimeUnit.MILLISECONDS, timer);
 				escreva("\n2 - Inteligência\n", TimeUnit.MILLISECONDS, timer);
 				escreva("\n3 - Agilidade\n", TimeUnit.MILLISECONDS, timer);
+				p = leia();
+					if (p <0 || p > 3) {
+						System.out.println("Entrada Inválida");
+					}else {
+						entradaValida = true;
+					}
+				}while (!entradaValida); 
 				
-				escolha = leia();
-				menuMiniGame();
+				menuMiniGame(p);
 
 		escreva("Morpheus: " + nome + ", vamos precisar entrar na Matrix novamente para encontrar o Oráculo\n",
 				TimeUnit.MILLISECONDS, timer);
@@ -1187,9 +1196,8 @@ public class jogo {
 	
 	
 	//função para menu minigame
-	static int menuMiniGame() throws InterruptedException {
-		int escolha = leia();
-		switch (escolha) {
+	static void menuMiniGame(int p) throws InterruptedException {
+		switch (p) {
 		case 1:
 			minigames1();
 			break;
@@ -1201,7 +1209,6 @@ public class jogo {
 			break;
 
 		}
-		return escolha;
 	}
 
 	// Função para Menu
