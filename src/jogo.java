@@ -485,16 +485,26 @@ public class jogo {
 		
 		escreva("\n\nO número '0' representa um bug na Matriz\n\n", TimeUnit.MILLISECONDS, timer);
 		
-		int campo[][] = gerarCampo2();
+		// Ggerar campo
+		int campo[][] = gerarCampos(2);
 		
 		mostrarCampo(2, campo);
 		
-		embaralhar(campo);
-		embaralhar(campo);
+		// Embaralhar o campo
 		embaralhar(campo);
 		
 		// Eliminar número aleatório da matriz
 		
+		int numEliminado[] = eliminarNum(2,campo);
+		
+	
+		mostrarCampo(2, campo);	
+
+	}
+
+	static int[] eliminarNum(int i, int[][] campo) {
+		
+		Random random = new Random();
 		int numEliminado[] = new int[4];
 		int cont = 0;
 		int rl = -1, rc = -1;
@@ -507,47 +517,58 @@ public class jogo {
 			}
 		    
 		    campo[rl][rc] = 0;
-		} while (campo[rl][rc] == 0 && cont < 2);
-
-		mostrarCampo(2, campo);
-
+		    
+		} while (campo[rl][rc] == 0 && cont < i);
 		
-
+		return numEliminado;
 	}
-	
 
-	public static void embaralhar(int[][] v) {
+	static void embaralhar(int[][] v) {
 
 		Random random = new Random();
 		int rc, rl;
 
-		for (int l = 0; l < v.length; l++) {
-			for (int c = 0; c < v.length; c++) {
-
+		for (int l = 0; l < (v.length - 1); l++) {
+			for (int c = 0; c < (v[1].length - 1); c++) {
 				// sorteia um índice
 				
 				rl = random.nextInt(v.length); // índice de linha random
-				rc = random.nextInt(v.length); // índice de coluna random
+				rc = random.nextInt(v[1].length); // índice de coluna random
 
 				// troca o conteúdo dos índices da matriz
 				int temp = v[l][c];
 				v[l][c] = v[rl][rc];
 				v[rl][rc] = temp;
-				
-				
 			}
 		}
-		
+	
 	}
+
 	
-	
-	static int[][] gerarCampo2() {
-		int campo[][] = {
-			//    0  1  2
-				{ 1, 2, 3 },  // 0
-				{ 4, 5, 6 },  // 1
-				{ 7, 8, 9 } };// 2
-		return campo;	
+	static int[][] gerarCampos(int dificuldade) {
+		
+		switch (dificuldade) {
+		case 1:
+			System.out.println("1");
+			break;
+		case 2:
+			int campo[][] = {
+					//    0  1  2
+						{ 1, 2, 3 },  // 0
+						{ 4, 5, 6 },  // 1
+						{ 7, 8, 9 } };// 2
+				return campo;
+		case 3:
+			System.out.println("3");
+			break;
+		case 4:
+			System.out.println("4");
+			break;
+
+		default:
+			break;
+		}
+		return null;
 	}
 	
 	static void mostrarCampo(int dificuldade, int campo[][]) {
@@ -734,7 +755,8 @@ public class jogo {
 		escreva("\n\nOlá jogador. Bem-vindo(a) a Inside the Matrix.\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
-
+		
+		desafio07();
 		nome = entrada.next();
 		
 		
