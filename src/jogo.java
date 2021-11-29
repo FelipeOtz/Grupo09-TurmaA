@@ -457,21 +457,72 @@ public class jogo {
 		} while (laco != 3);
 	}
 
-	static void desafio07() {
-			
+	static void desafio07() throws InterruptedException {
 		
-	int campo[][] = gerarCampo();
-	campo = gerarCampo();
+		Random random = new Random();
+
+		
+		
+		if (agentes > 0) {
+			escreva("\n\nParabéns por ter chego tão longe em Enter The Matrix", TimeUnit.MILLISECONDS, timer);
+			
+			escreva("\n\nPor isso... vamos eliminar um agente da sua cola", TimeUnit.MILLISECONDS, timer);
+			
+			System.err.println("-1 Agente");
+			
+			agentes = agentes - 1;
+		}else {
+			escreva("\n\nParabéns por ter chegado até aqui ileso", TimeUnit.MILLISECONDS, timer);
+		}
+		
+		escreva("\n\nPara passar por este desafio, você terá que descobrir qual o número faltante na Matriz...", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\nMas não pense que será tão fácil...", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\nA cada rodada que você acertar, a dificuldade irá aumentar "
+				+ "\ne será gerada uma nova Matriz aletória", TimeUnit.MILLISECONDS, timer);
+
+		
+		escreva("\n\nO número '0' representa um bug na Matriz\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		int campo[][] = gerarCampo2();
+		
+		mostrarCampo(2, campo);
+		
+		embaralhar(campo);
+		embaralhar(campo);
+		embaralhar(campo);
+		
+		// Eliminar número aleatório da matriz
+		
+		int numEliminado[] = new int[4];
+		int cont = 0;
+		int rl = -1, rc = -1;
+		do {
+			rl = random.nextInt(campo.length); // índice de linha random
+		    rc = random.nextInt(campo.length); // índice de coluna random	
+		    numEliminado[cont] = campo[rl][rc];
+		    if (campo[rl][rc] != 0) {
+		    	cont++;
+			}
+		    
+		    campo[rl][rc] = 0;
+		} while (campo[rl][rc] == 0 && cont < 2);
+
+		mostrarCampo(2, campo);
+
+		
 
 	}
 	
+
 	public static void embaralhar(int[][] v) {
 
 		Random random = new Random();
 		int rc, rl;
-		
-		for (int l = 0; l < (v.length - 1); l++) {
-			for (int c = 0; c < (v.length - 1); c++) {
+
+		for (int l = 0; l < v.length; l++) {
+			for (int c = 0; c < v.length; c++) {
 
 				// sorteia um índice
 				
@@ -487,45 +538,49 @@ public class jogo {
 			}
 		}
 		
-		rl = random.nextInt(v.length); // índice de linha random
-		rc = random.nextInt(v.length); // índice de coluna random
-		
-		v[rl][rc] = 0;
-
 	}
 	
 	
-	
-	
-	static int[][] gerarCampo() {
-		
-		Random random = new Random();
-		
+	static int[][] gerarCampo2() {
 		int campo[][] = {
-				// 0 1 2
-				{ 1, 2, 3 }, // 0
-				{ 4, 5, 6 }, // 1
+			//    0  1  2
+				{ 1, 2, 3 },  // 0
+				{ 4, 5, 6 },  // 1
 				{ 7, 8, 9 } };// 2
-		
-		embaralhar(campo);
-		
-		
-
-		
-		System.out.printf(
-				  "+-----------------+\n"
-		 		+ "|  %d  |  %d  |  %d  |\n"
-		 		+ "|-----|-----|-----|\n"
-		 		+ "|  %d  |  %d  |  %d  |\n"
-		 		+ "|-----|-----|-----|\n"
-		 		+ "|  %d  |  %d  |  %d  |\n"
-		 		+ "+-----------------+\n", 
-		 		campo[0][0],campo[0][1],campo[0][2],
-		 		campo[1][0],campo[1][1],campo[1][2],
-		 		campo[2][0],campo[2][1],campo[2][2]);
-		
-		return campo;
+		return campo;	
 	}
+	
+	static void mostrarCampo(int dificuldade, int campo[][]) {
+		switch (dificuldade) {
+		case 1:
+			System.out.println("1");
+			break;
+		case 2:
+			System.out.printf(
+					  "+-----------------+\n"
+			 		+ "|  %d  |  %d  |  %d  |\n"
+			 		+ "|-----|-----|-----|\n"
+			 		+ "|  %d  |  %d  |  %d  |\n"
+			 		+ "|-----|-----|-----|\n"
+			 		+ "|  %d  |  %d  |  %d  |\n"
+			 		+ "+-----------------+\n", 
+			 		campo[0][0],campo[0][1],campo[0][2],
+			 		campo[1][0],campo[1][1],campo[1][2],
+			 		campo[2][0],campo[2][1],campo[2][2]);
+			break;
+		case 3:
+			System.out.println("3");
+			break;
+		case 4:
+			System.out.println("4");
+			break;
+
+		default:
+			break;
+		}
+
+	}
+	
 
 	//minigames
 	static void minigames1() throws InterruptedException {
@@ -681,8 +736,6 @@ public class jogo {
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
-		
-		gerarCampo();
 		
 		
 		do {
