@@ -434,7 +434,7 @@ public class jogo {
 			escreva("3 - For\n", TimeUnit.MILLISECONDS, timer);
 			escreva("4 - Enhanced-For\n", TimeUnit.MILLISECONDS, timer);
 
-			escreva("\nDigite a opção correta: ", TimeUnit.MILLISECONDS, timer);
+			escreva("\nDigite a opção correta: \n", TimeUnit.MILLISECONDS, timer);
 			laco = entrada.nextInt();
 			while (laco < 1 || laco > 4) {
 				escreva("\nOPÇÃO INCORRETA\n", TimeUnit.MILLISECONDS, timer);
@@ -506,14 +506,16 @@ public class jogo {
 		boolean acertou = false;
 		
 		Random geradorDeAleatorios = new Random();
-		sorteado = geradorDeAleatorios.nextInt(5) + 1;
-		escreva("Para abrir o cofre escolha um número entre 1 e 5 sorteados!\n\n", TimeUnit.MILLISECONDS, timer);
+		sorteado = geradorDeAleatorios.nextInt(5) ;
+		escreva("\n\nEste Minigame você aprimorará a suas habilidades de inteligência,\n"
+				+ "Você terá que abrir um cofre, o computador gerará um código aleatório, e você deve acertar este código:\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Para abrir o cofre escolha um número entre 0 e 4 sorteados!\n\n", TimeUnit.MILLISECONDS, timer);
 		
 		do {
 			escreva("--------\n\n", TimeUnit.MILLISECONDS, timer);
-			escreva("Número de tentativas: \n\n" + tentativas, TimeUnit.MILLISECONDS, timer);
+			escreva("Número de tentativas: " + tentativas, TimeUnit.MILLISECONDS, timer);
 			
-			escreva("Qual seu palpite?\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\n\nQual seu palpite?\n\n", TimeUnit.MILLISECONDS, timer);
 			palpite = entrada.nextInt();
 			
 			if(palpite == sorteado) {
@@ -532,7 +534,7 @@ public class jogo {
 			
 			tentativas++;
 			
-			if (tentativas == 5) {
+			if (tentativas == 3) {
 				escreva("GAME OVER! O número escolhido era : \n\n" + sorteado, TimeUnit.MILLISECONDS, timer);
 			}
 			
@@ -613,6 +615,7 @@ public class jogo {
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
+		
 		
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
@@ -723,6 +726,7 @@ public class jogo {
 
 		// Desafio 01
 		System.err.println("\nDESAFIO 01\n");
+		
 		desafio01();
 		if (agentes == 4) {
 			return;
@@ -1210,6 +1214,85 @@ public class jogo {
 		escreva("Trinity: " + nome
 				+ " lembre-se do que treinamos antes, seja (variável do tipo de treinamento escolhido pelo usuário)\n",
 				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\nAgente Smith: As pessoas normalmente sentem medo do desconhecido. Você não compreende a Matrix e por isso quer destruí-la.\n\n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\nAgente Smith: Aqui temos o nosso Paraíso, podemos ter o que quiser e sermos o quem	quisermos.\n\n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva(nome + ": Em troca do paráiso artificial vocês escravisam a humanidade no mundo real para seu benefício próprio,\n"
+				+ "você acha isso justo?\n\n", TimeUnit.MILLISECONDS, timer);	
+		
+		escreva(nome + ": Nós ja sabemos o que irá acontecer, não viemos para conversar\n\n", TimeUnit.MILLISECONDS, timer);	
+		
+		escreva("...", TimeUnit.MILLISECONDS, 300);
+		
+		escreva("\n\n*Você rapidamente se lembra dos seus dias de treinamento*", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\n*Para vencer o Agente Smith você deve ser mais ágil e mais forte que ele*\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		
+		do {
+			escreva("Digite 1 para pegar sua arma\n\n", TimeUnit.MILLISECONDS, timer);
+			escolha = leia();
+
+			if (escolha != 1) {
+				escreva("\n\nValor inválido!\n\n", TimeUnit.MILLISECONDS, timer);
+			}
+		} while (escolha != 1);
+		
+		escreva("\n\n*O agente Smith saca uma Glock e atira em você*", TimeUnit.MILLISECONDS, timer);
+		
+		do {
+			escreva("\n\nDigite 1 para desviar das balas\n\n", TimeUnit.MILLISECONDS, timer);
+			escolha = leia();
+
+			if (escolha != 1) {
+				escreva("\nValor inválido!\n", TimeUnit.MILLISECONDS, timer);
+			}
+		} while (escolha != 1);
+		
+		escreva("...", TimeUnit.MILLISECONDS, 100);
+		ImageIcon desviar = new ImageIcon("images/desviar");
+		UIManager.put("OptionPane.okButtonText", "...");
+		dialog.setAlwaysOnTop(true);
+		JOptionPane.showMessageDialog(dialog, " ", " ", JOptionPane.WARNING_MESSAGE, desviar);
+		
+		escreva("\n\n*Ao desviar, você corre até o agente Smith, impossibilitando que ele tivesse alguma reação*", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\n*Smith larga a arma, e parte para cima de você*", TimeUnit.MILLISECONDS, timer);
+		
+		ImageIcon luta = new ImageIcon("images/luta.gif");
+		
+		UIManager.put("OptionPane.okButtonText", "...");
+		dialog.setAlwaysOnTop(true);
+		JOptionPane.showMessageDialog(dialog, " ", " ", JOptionPane.WARNING_MESSAGE, luta);
+		
+		escreva("...", TimeUnit.MILLISECONDS, 300);
+		
+		
+		escreva("\n\n*Ao final da luta você deixa o agente Smith imóvel*\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		do {
+			escreva("Digite 1 para eliminar o Smith e pegar seu chip de processamento\n\n", TimeUnit.MILLISECONDS, timer);
+			escolha = leia();
+
+			if (escolha != 1) {
+				escreva("\nValor inválido!\n", TimeUnit.MILLISECONDS, timer);
+			}
+		} while (escolha != 1);
+		
+		
+		escreva("Morpheus:  " + nome + ", sabia que você iria derrotá-lo\n\n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\n*Você solta Morpheus*",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\nMorpheus:  " + nome + ", agora você tem a escolha mais importante da sua vida, você irá decidir o destino da humanidade \n",
+				TimeUnit.MILLISECONDS, timer);
+		
 
 		return;
 
