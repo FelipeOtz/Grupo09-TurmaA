@@ -897,7 +897,7 @@ public class jogo {
 			case 1:
 				break;
 			default:
-				escreva("VALOR INVÁLIDO!", TimeUnit.MILLISECONDS, timer);
+				escreva("VALOR INVÁLIDO!\n", TimeUnit.MILLISECONDS, timer);
 				break;
 			}
 		} while (!(escolha <= 2));
@@ -1225,7 +1225,7 @@ public class jogo {
 				TimeUnit.MILLISECONDS, timer);
 		escreva("descansar porque amanhã vai ser um grande dia para todos nós.\n\n" + "", TimeUnit.MILLISECONDS, timer);
 
-		escreva("** Você vai dormir **\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("*Você vai dormir*\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nNo dia seguinte…\n\n", TimeUnit.MILLISECONDS, timer);
 
 		escreva("Você abre olho e sente que há algo de errado com o seu corpo, ao se levantar e olhar no espelho,\n",
@@ -1242,11 +1242,11 @@ public class jogo {
 		escreva("máquina cheia de cabos.\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Tank: sente-se, fiquem a vontade, estou preparando a máquina para levá los de volta ao paraiso.\n\n",
 				TimeUnit.MILLISECONDS, timer);
-		escreva("**Tank coloca um capacete estranho em você**\n\n", TimeUnit.MILLISECONDS, timer);
-		escreva("****Após os preparos, Tank liga a máquina e você começa a adormecer***\n\n", TimeUnit.MILLISECONDS,
+		escreva("*Tank coloca um capacete estranho em você*\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("*Após os preparos, Tank liga a máquina e você começa a adormecer*\n\n", TimeUnit.MILLISECONDS,
 				timer);
 
-		escreva("***você abre o olho e percebe que está de volta à Matrix***\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("*você abre o olho e percebe que está de volta à Matrix*\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Ao entrar na matrix Morpheus e " + nome + " se surpreende com uma casa cheia de crianças,\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("onde essas crianças não tinham brilho no olhar que geralmente as crianças têm, todas pareciam\n",
