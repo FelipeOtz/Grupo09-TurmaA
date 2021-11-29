@@ -462,7 +462,6 @@ public class jogo {
 		Random random = new Random();
 
 		
-		
 		if (agentes > 0) {
 			escreva("\n\nParabéns por ter chego tão longe em Enter The Matrix", TimeUnit.MILLISECONDS, timer);
 			
@@ -496,6 +495,7 @@ public class jogo {
 		// Eliminar número aleatório da matriz
 		
 		int numEliminado[] = eliminarNum(2,campo);
+		
 		
 	
 		mostrarCampo(2, campo);	
@@ -1025,10 +1025,10 @@ public class jogo {
 				escreva("...", TimeUnit.MILLISECONDS, 500);
 				escreva("\n\nFim de Jogo!\n\n\n", TimeUnit.MILLISECONDS, timer);
 				creditos();
+				return;
 
 			default:
 				escreva("VALOR INVALIDO!", TimeUnit.MILLISECONDS, timer);
-				// return true;
 			}
 		} while (!(escolha <= 2));
 
