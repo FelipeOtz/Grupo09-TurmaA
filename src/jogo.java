@@ -462,56 +462,125 @@ public class jogo {
 	}
 	
 	//minigames
-	static void minigames1() {
-		System.out.println("Mini Game 01");
+	static void minigames1() throws InterruptedException {
+		System.out.println("\nMiniGame Luta\n");
+		int contA = 0, contB = 0;
+		
+		do {
+			int morpheusEscolhe = 1 + (int) (Math.random() * 2);
+			int escolhaJogador = 0;
+
+			escreva("Este MiniGame você irá treinar a sua habilidade de luta, para ganhar o MiniGame\n"
+					+ "acerte golpes no Morpheus, o jogo acabará quando alguem fizer 3 pontos.\n\n", TimeUnit.MILLISECONDS, timer);
+
+			escreva("Pra qual lado você ira atacar:\n1 - Esquerda\n2 - Direita\n\n", TimeUnit.MILLISECONDS, timer);
+			escolhaJogador = entrada.nextInt();
+
+			if (escolhaJogador == morpheusEscolhe) {
+				escreva("\nVocê acertou, Ponto pra Você\n\n", TimeUnit.MILLISECONDS, timer);
+
+				contA++;
+			} else {
+				escreva("\nVocê Errou, Ponto para Morpheu\n\n", TimeUnit.MILLISECONDS, timer);
+				contB++;
+			}
+
+			escreva("Você fez " + contA + " pontos\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("Morpheus fez " + contB + " pontos\n\n", TimeUnit.MILLISECONDS, timer);
+
+		} while (contA < 3 && contB < 3);
+
+		if (contA > contB) {
+			escreva("Você Ganhou\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\nVocê fez " + contA + " pontos\n\n", TimeUnit.MILLISECONDS, timer);
+		} else {
+			escreva("Você Perdeu\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\nMorpheus fez " + contB + " pontos\n\n", TimeUnit.MILLISECONDS, timer);
+		}
+
 	}
 	
-	static void minigames2() {
-		System.out.println("Mini Game 02");
+	static void minigames2() throws InterruptedException {
+		escreva("Mini Game 02\n\n", TimeUnit.MILLISECONDS, timer);
 		int palpite = 0, sorteado, tentativas = 0;
 		boolean acertou = false;
 		
-		
-		Scanner entrada = new Scanner(System.in);
-		
 		Random geradorDeAleatorios = new Random();
 		sorteado = geradorDeAleatorios.nextInt(5) + 1;
-		System.out.println("Para abrir Número entre 1 e 5 sorteados! Tente o seu melhor e Boa sorte.");
+		escreva("Para abrir o cofre escolha um número entre 1 e 5 sorteados!\n\n", TimeUnit.MILLISECONDS, timer);
 		
 		do {
-			System.out.println("--------");
-			System.out.println("Número de tentativas: " + tentativas);
+			escreva("--------\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("Número de tentativas: \n\n" + tentativas, TimeUnit.MILLISECONDS, timer);
 			
-			System.out.println("Qual seu palpite? ");
+			escreva("Qual seu palpite?\n\n", TimeUnit.MILLISECONDS, timer);
 			palpite = entrada.nextInt();
 			
 			if(palpite == sorteado) {
-				System.out.println("Parabéns, você acertou!");
+				escreva("Parabéns, você acertou!\n\n", TimeUnit.MILLISECONDS, timer);
 				acertou = true;
 				break;
 			}
 			if(palpite < sorteado) {
-				System.out.println("Seu palpite foi menor que o número escolhido");
+				escreva("Seu palpite foi menor que o número escolhido\n\n", TimeUnit.MILLISECONDS, timer);
 			} else if (palpite > sorteado) {
-				System.out.println("Seu Palpite foi maior que o número escolhido");
+				escreva("Seu Palpite foi maior que o número escolhido\n\n", TimeUnit.MILLISECONDS, timer);
 			} if (palpite + 1 == sorteado || palpite - 1 == sorteado) {
-				System.out.println("Ta quente!! \n" 
-										+ "Advinhe outro valor. ");
+				escreva("Ta quente!! \n" 
+										+ "Advinhe outro valor. \n\n", TimeUnit.MILLISECONDS, timer);
 			}
 			
 			tentativas++;
 			
 			if (tentativas == 5) {
-				System.out.println("GAME OVER! O número escolhido era : " + sorteado);
+				escreva("GAME OVER! O número escolhido era : \n\n" + sorteado, TimeUnit.MILLISECONDS, timer);
 			}
 			
 		
 		} while (acertou || tentativas <= 4);
 	}
 	
-	static void minigames3 () {
-		System.out.println("Mini Game 03");
+	static void minigames3 ()throws InterruptedException {
+		System.out.println("\nMiniGame Agilidade\n");
+	
+		int contA = 0, contB = 0;
+		
+		do {
+			int morpheusEscolhe = 1 + (int) (Math.random() * 2);
+			int escolhaJogador = 0;
+
+			escreva("Este MiniGame você irá treinar a sua habilidade de Agilidade, para ganhar o MiniGame\n"
+					+ "se esquive dos goples do Morpheus, o jogo acabará quando alguem fizer 3 pontos.\n\n", TimeUnit.MILLISECONDS, timer);
+
+			escreva("Pra qual lado você ira esquivar:\n1 - Esquerda\n2 - Direita\n\n", TimeUnit.MILLISECONDS, timer);
+			escolhaJogador = entrada.nextInt();
+
+			if (escolhaJogador == morpheusEscolhe) {
+				escreva("\nVocê esquivou, Ponto pra Você\n\n", TimeUnit.MILLISECONDS, timer);
+
+				contA++;
+			} else {
+				escreva("\nVocê Errou, Ponto para Morpheu\n\n", TimeUnit.MILLISECONDS, timer);
+				contB++;
+			}
+
+			escreva("Você fez " + contA + " pontos\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("Morpheus fez " + contB + " pontos\n\n", TimeUnit.MILLISECONDS, timer);
+
+		} while (contA < 3 && contB < 3);
+
+		if (contA > contB) {
+			escreva("Você Ganhou\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\nVocê fez " + contA + " pontos\n\n", TimeUnit.MILLISECONDS, timer);
+		} else {
+			escreva("Você Perdeu\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("\nMorpheus fez " + contB + " pontos\n\n", TimeUnit.MILLISECONDS, timer);
+		}
+
 	}
+
+
+
 
 	// Função para jogar
 	static void jogar() throws InterruptedException {
@@ -544,7 +613,7 @@ public class jogo {
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
-
+		
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
 					timer);
@@ -849,11 +918,11 @@ public class jogo {
 				+ "infelizmente não posso explicar o que "
 				+ "realmente é matrix.\né preciso que veja por si mesmo:\n\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: Antes de continuar, preciso que você "
-				+ "resolva o seguinte desafio, para saber \n se você está pronto para decidir " + "o rumo da sua vida.",
+				+ "resolva o seguinte desafio, para saber \nse você está pronto para decidir " + "o rumo da sua vida.",
 				TimeUnit.MILLISECONDS, timer);
 		// DESAFIO 3
 
-		System.err.println("\nDESAFIO 03\n");
+		System.err.println("\n\nDESAFIO 03");
 		desafio03(nome);
 		if (agentes == 4) {
 			return;
@@ -914,7 +983,7 @@ public class jogo {
 		escreva("\nMorpheus: Estamos a muito tempo à procura de você, finalmente encontramos"
 				+ " o escolhido, que nos ajudará a acabar \n" + "com a Matrix de uma vez por todas e "
 				+ "para isso precisamos começar a te preparar para isso, por favor\n" + "me acompanhe que vou"
-				+ " te apresentar ao seu treinador.\n", TimeUnit.MILLISECONDS, timer);
+				+ "te apresentar ao seu treinador.\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: Dentro da Matrix podemos alterar qualquer coisa em nós mesmos, sejaintelectualmente"
 				+ "\nou fisicamente, você quer ter super força?"
 				+ "você terá, ou talvez super velocidade? você terá.\n "
@@ -954,7 +1023,7 @@ public class jogo {
 				escreva("\n2 - Inteligência\n", TimeUnit.MILLISECONDS, timer);
 				escreva("\n3 - Agilidade\n", TimeUnit.MILLISECONDS, timer);
 				p = leia();
-					if (p <0 || p > 3) {
+					if (p <1 || p > 3) {
 						System.out.println("Entrada Inválida");
 					}else {
 						entradaValida = true;
@@ -962,7 +1031,18 @@ public class jogo {
 				}while (!entradaValida); 
 				
 				menuMiniGame(p);
+				
+				
+				do {
+					escreva("Digite 1 para Continuar o jogo \n\n", TimeUnit.MILLISECONDS, timer);
+					escolha = leia();
 
+					if (escolha != 1) {
+						escreva("\nValor inválido!\n", TimeUnit.MILLISECONDS, timer);
+					}
+				} while (escolha != 1);
+				
+				
 		escreva("Morpheus: " + nome + ", vamos precisar entrar na Matrix novamente para encontrar o Oráculo\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("só que temos um pequeno problema: Ninguém, até o momento, conseguiu encontrar a localização\n",
