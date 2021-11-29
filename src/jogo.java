@@ -293,7 +293,7 @@ public class jogo {
 
 		ArrayList<String> alternativas = new ArrayList<String>();
 
-		alternativas.add("senha = senha + aleatorio(int) (Math.random() * 19);"); // originalmente a
+		alternativas.add("senha = senha + aleatorio[(int) (Math.random() * 19)]"); // originalmente a
 		alternativas.add("senha[i] = aleatório[0];"); // originalmente b
 		alternativas.add("senha[i] = 0983;"); // originalmente c
 		alternativas.add("senha = 0983;"); // originalmente d
