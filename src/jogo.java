@@ -458,9 +458,75 @@ public class jogo {
 	}
 
 	static void desafio07() {
+			
+		
+	int campo[][] = gerarCampo();
+	campo = gerarCampo();
 
 	}
 	
+	public static void embaralhar(int[][] v) {
+
+		Random random = new Random();
+		int rc, rl;
+		
+		for (int l = 0; l < (v.length - 1); l++) {
+			for (int c = 0; c < (v.length - 1); c++) {
+
+				// sorteia um índice
+				
+				rl = random.nextInt(v.length); // índice de linha random
+				rc = random.nextInt(v.length); // índice de coluna random
+
+				// troca o conteúdo dos índices da matriz
+				int temp = v[l][c];
+				v[l][c] = v[rl][rc];
+				v[rl][rc] = temp;
+				
+				
+			}
+		}
+		
+		rl = random.nextInt(v.length); // índice de linha random
+		rc = random.nextInt(v.length); // índice de coluna random
+		
+		v[rl][rc] = 0;
+
+	}
+	
+	
+	
+	
+	static int[][] gerarCampo() {
+		
+		Random random = new Random();
+		
+		int campo[][] = {
+				// 0 1 2
+				{ 1, 2, 3 }, // 0
+				{ 4, 5, 6 }, // 1
+				{ 7, 8, 9 } };// 2
+		
+		embaralhar(campo);
+		
+		
+
+		
+		System.out.printf(
+				  "+-----------------+\n"
+		 		+ "|  %d  |  %d  |  %d  |\n"
+		 		+ "|-----|-----|-----|\n"
+		 		+ "|  %d  |  %d  |  %d  |\n"
+		 		+ "|-----|-----|-----|\n"
+		 		+ "|  %d  |  %d  |  %d  |\n"
+		 		+ "+-----------------+\n", 
+		 		campo[0][0],campo[0][1],campo[0][2],
+		 		campo[1][0],campo[1][1],campo[1][2],
+		 		campo[2][0],campo[2][1],campo[2][2]);
+		
+		return campo;
+	}
+
 	//minigames
 	static void minigames1() throws InterruptedException {
 		System.out.println("\nMiniGame Luta\n");
@@ -615,6 +681,8 @@ public class jogo {
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 
 		nome = entrada.next();
+		
+		gerarCampo();
 		
 		
 		do {
@@ -1275,7 +1343,7 @@ public class jogo {
 		escreva("\n\n*Ao final da luta você deixa o agente Smith imóvel*\n\n", TimeUnit.MILLISECONDS, timer);
 		
 		do {
-			escreva("Digite 1 para eliminar o Smith e pegar seu chip de processamento\n\n", TimeUnit.MILLISECONDS, timer);
+			escreva("Digite 1 para eliminar o Smith e pegar seu chip de processamento\n", TimeUnit.MILLISECONDS, timer);
 			escolha = leia();
 
 			if (escolha != 1) {
@@ -1284,14 +1352,42 @@ public class jogo {
 		} while (escolha != 1);
 		
 		
-		escreva("Morpheus:  " + nome + ", sabia que você iria derrotá-lo\n\n",
+		escreva("\nMorpheus:  " + nome + ", sabia que você iria derrotá-lo",
 				TimeUnit.MILLISECONDS, timer);
 		
 		escreva("\n\n*Você solta Morpheus*",
 				TimeUnit.MILLISECONDS, timer);
 		
-		escreva("\n\nMorpheus:  " + nome + ", agora você tem a escolha mais importante da sua vida, você irá decidir o destino da humanidade \n",
+		escreva("\n\nMorpheus:  " + nome + ", agora você tem a escolha mais importante da sua vida, você irá decidir o destino da humanidade",
 				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\nMorpheus: Com este chip você pode infectar a Matrix com um vírus, libertando todos dentro dela.",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\nMorpheus:Por outro lado, você pode deixar todos no \"Paraíso\" artificial",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n\nMorpheus:Escolha com sabedoria",
+				TimeUnit.MILLISECONDS, timer);
+		
+		
+		escreva("\n\n*Você pega o chip*\n",
+				TimeUnit.MILLISECONDS, timer);
+	
+		
+		escreva("\nPara desbloquear o chip você precisa da senha que foi apresentada a você anteriormente\n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		
+		String escolhaSenha;
+		do {
+			escreva("\nDigite a senha:",
+					TimeUnit.MILLISECONDS, timer);
+			escolhaSenha = entrada.next();
+			if (escolhaSenha == senha) {
+				escreva("\nSenha inválida!\n", TimeUnit.MILLISECONDS, timer);
+			}
+		} while (escolhaSenha != senha);
 		
 
 		return;
