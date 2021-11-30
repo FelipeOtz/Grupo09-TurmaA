@@ -1464,10 +1464,12 @@ public class jogo {
 			escreva("\nDigite a senha:",
 					TimeUnit.MILLISECONDS, timer);
 			escolhaSenha = entrada.next();
-			if (escolhaSenha == senha) {
+			
+			if (!escolhaSenha.equals(senha)) {
 				escreva("\nSenha inválida!\n", TimeUnit.MILLISECONDS, timer);
 			}
-		} while (escolhaSenha != senha);
+			
+		} while (!escolhaSenha.equals(senha));
 		
 
 		return;
