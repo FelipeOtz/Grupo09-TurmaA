@@ -757,7 +757,7 @@ public class jogo {
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 		
 		desafio07();
-		nome = entrada.next();
+		nome = entrada.nextLine();
 		
 		
 		do {
@@ -917,18 +917,19 @@ public class jogo {
 			escreva(nome + ":", TimeUnit.MILLISECONDS, timer);
 			escreva("\n1 - Não, to de boa\n", TimeUnit.MILLISECONDS, timer);
 			escreva("\n2 - Opa, claro!\n\n", TimeUnit.MILLISECONDS, timer);
+			
 			escolha = leia();
+			
 			switch (escolha) {
 			case 1:
 				escreva("Ao olhar ao redor todas as pessoas têm de alguma forma um símbolo de coelho.\n"
 						+ "Com isso você se questiona se o coelho é algum tipo de símbolo de identificação.\n\n",
 						TimeUnit.MILLISECONDS, timer);
-
 				break;
 			case 2:
 				escreva("\n\nTakêdo, o barman: Qual drink você quer? (Digite o nome da sua bebida preferida)\n",
 						TimeUnit.MILLISECONDS, timer);
-				drink = entrada.next();
+				drink = entrada.nextLine();
 				escreva("\n*Você recebe um copo de " + drink + "*\n", TimeUnit.MILLISECONDS, timer);
 				escreva("\nAo pegar o copo, você percebe que estranhamente há um símbolo de coelho no uniforme do barman.\n"
 						+ "Com isso você se questiona se o coelho é algum tipo de símbolo de identificação.\n\n",
@@ -1501,7 +1502,6 @@ public class jogo {
 
 	// Função dica desafio03
 	static void dica03() throws InterruptedException {
-		System.out.println("DICA APARECE AKI");
 		
 		escreva("No java, a classe Math contém métodos para realizar operações numéricas básicas, como funções\r\n"
 				+ "elementares exponencial, logaritmo, raiz quadrada e trigonométricas.\r\n"
