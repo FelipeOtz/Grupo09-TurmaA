@@ -312,7 +312,7 @@ public class jogo {
 
 			// Encontrar a resposta correta no meio das alternativas embaralhadass
 			for (int i = 0; i < alternativas.size(); i++) {
-				if (alternativas.get(i) == "senha = senha + aleatorio(int) (Math.random() * 19);") {
+				if (alternativas.get(i) == "senha = senha + aleatorio[(int) (Math.random() * 19)]") {
 					respostaCorreta = vetorAlternativas[i];
 					break;
 				}
