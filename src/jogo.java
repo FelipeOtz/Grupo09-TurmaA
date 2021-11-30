@@ -756,9 +756,11 @@ public class jogo {
 
 		escreva("\nAntes de continuar, poderia me dizer seu nome?\n", TimeUnit.MILLISECONDS, timer);
 		
-		desafio07();
+		
+		entrada.nextLine();
 		nome = entrada.nextLine();
 		
+		desafio07();
 		
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
@@ -775,7 +777,7 @@ public class jogo {
 				break;
 
 			default:
-				escreva("\nVALOR INVALIDO!\n", TimeUnit.MILLISECONDS, timer);
+				escreva("\nValor Inválido!\n", TimeUnit.MILLISECONDS, timer);
 
 			}
 
@@ -897,7 +899,7 @@ public class jogo {
 			case 1:
 				break;
 			default:
-				escreva("VALOR INVÁLIDO!\n", TimeUnit.MILLISECONDS, timer);
+				escreva("Valor Inválido!\n", TimeUnit.MILLISECONDS, timer);
 				break;
 			}
 		} while (!(escolha <= 2));
@@ -929,7 +931,9 @@ public class jogo {
 			case 2:
 				escreva("\n\nTakêdo, o barman: Qual drink você quer? (Digite o nome da sua bebida preferida)\n",
 						TimeUnit.MILLISECONDS, timer);
+				entrada.nextLine();
 				drink = entrada.nextLine();
+				
 				escreva("\n*Você recebe um copo de " + drink + "*\n", TimeUnit.MILLISECONDS, timer);
 				escreva("\nAo pegar o copo, você percebe que estranhamente há um símbolo de coelho no uniforme do barman.\n"
 						+ "Com isso você se questiona se o coelho é algum tipo de símbolo de identificação.\n\n",
@@ -965,7 +969,7 @@ public class jogo {
 				escreva("\n Era ", TimeUnit.MILLISECONDS, timer);
 				break;
 			default:
-				escreva("VALOR INVÁLIDO!", TimeUnit.MILLISECONDS, timer);
+				escreva("Valor Inválido!", TimeUnit.MILLISECONDS, timer);
 			}
 
 		} while (!(escolha <= 2));
@@ -1029,7 +1033,7 @@ public class jogo {
 				return;
 
 			default:
-				escreva("VALOR INVALIDO!", TimeUnit.MILLISECONDS, timer);
+				escreva("Valor Inválido!", TimeUnit.MILLISECONDS, timer);
 			}
 		} while (!(escolha <= 2));
 
@@ -1040,15 +1044,15 @@ public class jogo {
 		escreva("\nTrinity: Vou te dar só uma dica, seja sincero.\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Trinity abre a porta*\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Ao adentrar a sala, você percebe que tem mais alguém na sala "
-				+ "com você, porém\n essa pessoa está virada de costas para você,\r\n"
+				+ "com você, porém\nessa pessoa está virada de costas para você,\r\n"
 				+ "aos poucos você começa a se aproximar e percebe "
-				+ "caracteristcas da\n pessoa, se trata de um homem negro, calvo, "
+				+ "caracteristcas da\npessoa, se trata de um homem negro, calvo, "
 				+ "alto, usando óculos escuro.* \r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\n*Ele então vira e se apresenta a você*\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nPersonagem desconhecido: Finalmente!!! Você não "
 				+ "precisa se apresentar, eu já sei tudo sobre você.\r\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nPersonagem desconhecido: Primeiramente meu nome "
-				+ "é Morpheus, por favor, sente-se aqui, agora \n você tem " + "uma decisão a fazer.\r\n",
+				+ "é Morpheus, por favor, sente-se aqui, agora \nvocê tem " + "uma decisão a fazer.\r\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("\nMorpheus: você deve estar se sentindo como a Alice, "
 				+ "escorregando pela toca do coelho.\nvocê é um homem que aceita o que vê, pois pensa estar\nsonhando, "
@@ -1106,7 +1110,7 @@ public class jogo {
 				break;
 
 			default:
-				escreva("VALOR INVÁLIDO!", TimeUnit.MILLISECONDS, timer);
+				escreva("Valor Inválido!", TimeUnit.MILLISECONDS, timer);
 			}
 
 		} while (!(escolha <= 2));
@@ -1132,9 +1136,9 @@ public class jogo {
 				+ " o escolhido, que nos ajudará a acabar \n" + "com a Matrix de uma vez por todas e "
 				+ "para isso precisamos começar a te preparar para isso, por favor\n" + "me acompanhe que vou"
 				+ "te apresentar ao seu treinador.\n", TimeUnit.MILLISECONDS, timer);
-		escreva("\nMorpheus: Dentro da Matrix podemos alterar qualquer coisa em nós mesmos, sejaintelectualmente"
+		escreva("\nMorpheus: Dentro da Matrix podemos alterar qualquer coisa em nós mesmos, seja intelectualmente"
 				+ "\nou fisicamente, você quer ter super força?"
-				+ "você terá, ou talvez super velocidade? você terá.\n "
+				+ "você terá, ou talvez super velocidade? você terá.\n"
 				+ "Este é Tank, um dosnossos modificadores, ele vai te ajudar a aprimorar todas suas \n"
 				+ "habilidades " + "e adquirir novas, fique a vontade para escolher.\n", TimeUnit.MILLISECONDS, timer);
 		escreva("\nTank: Prazer grande escolhido, vamos ao que interessa?\n", TimeUnit.MILLISECONDS, timer);
@@ -1200,14 +1204,14 @@ public class jogo {
 				TimeUnit.MILLISECONDS, timer);
 		escreva("\neste computador você conseguirá achar-lá, com isso vamos até ela para saber se você realmente \né nosso escolhido, ",
 				TimeUnit.MILLISECONDS, timer);
-		escreva("aquele que acabará com o sofrimento daqueles dentro da matrix.\n\n\n" + "", TimeUnit.MILLISECONDS,
+		escreva("aquele que acabará com o sofrimento daqueles dentro da matrix.\n\n" + "", TimeUnit.MILLISECONDS,
 				timer);
 
-		escreva("**Você se senta em frente ao computador e começa a codificar, faz tudo de forma rápida como\n",
+		escreva("Você se senta em frente ao computador e começa a codificar, faz tudo de forma rápida como\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("se já tivesse visto isso antes. Em meio a tantos códigos, você encontra um arquivo criptografado,\n",
 				TimeUnit.MILLISECONDS, timer);
-		escreva("para descriptografar o arquivo é necessário, que você faça o seguinte:\n", TimeUnit.MILLISECONDS,
+		escreva("para descriptografar o arquivo é necessário, que você faça o seguinte\n", TimeUnit.MILLISECONDS,
 				timer);
 		escreva("\nTank: deixa eu te ajudar novato \n", TimeUnit.MILLISECONDS, timer);
 
@@ -1283,7 +1287,7 @@ public class jogo {
 				break;
 
 			default:
-				escreva("\nVALOR INVALIDO!\n", TimeUnit.MILLISECONDS, timer);
+				escreva("\nValor Inválido!\n", TimeUnit.MILLISECONDS, timer);
 
 			}
 		} while (!(escolha <= 2));
@@ -1301,7 +1305,7 @@ public class jogo {
 				timer);
 		escreva("aparência é simples e humilde.", TimeUnit.MILLISECONDS, timer);
 
-		escreva("Senhora: sente-se garoto, já conversamos primeiro irei terminar de fazer o meu chá…\n\n",
+		escreva("Senhora: sente-se, garoto. Já conversamos primeiro irei terminar de fazer o meu chá…\n\n",
 				TimeUnit.MILLISECONDS, timer);
 		escreva("Senhora: diga me garoto, o que realmente você quer  ?\n\n", TimeUnit.MILLISECONDS, timer);
 
