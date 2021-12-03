@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
@@ -459,7 +460,7 @@ public class jogo {
 
 	static void desafio07() throws InterruptedException {
 		
-		Random random = new Random();
+
 
 		
 		if (agentes > 0) {
@@ -478,39 +479,90 @@ public class jogo {
 		
 		escreva("\n\nMas não pense que será tão fácil...", TimeUnit.MILLISECONDS, timer);
 		
-		escreva("\n\nA cada rodada que você acertar, a dificuldade irá aumentar "
-				+ "\ne será gerada uma nova Matriz aletória", TimeUnit.MILLISECONDS, timer);
+		escreva("\n\nA cada rodada que você jogar será gerada uma nova Matriz aletória", TimeUnit.MILLISECONDS, timer);
 
 		
 		escreva("\n\nO número '0' representa um bug na Matriz\n\n", TimeUnit.MILLISECONDS, timer);
 		
-		// Ggerar campo
-		int campo[][] = gerarCampos(2);
+		escreva("\n\nDesacubra qual número foi eliminado pelo bug\n\n", TimeUnit.MILLISECONDS, timer);
 		
-		mostrarCampo(2, campo);
+		escreva("\n\nMatriz a ser gerada:\n\n", TimeUnit.MILLISECONDS, timer);
 		
-		// Embaralhar o campo
-		embaralhar(campo);
-		
-		// Eliminar número aleatório da matriz
-		
-		int numEliminado[] = eliminarNum(2,campo);
-		
-		
-	
-		mostrarCampo(2, campo);	
+		int escolha[] =  new int[2];
+
+		int numEliminado[];
+		do {
+			
+			escreva("\n\nMatriz :\n\n", TimeUnit.MILLISECONDS, timer);
+			
+			int campo[][] = gerarCampos(2);
+
+			mostrarCampo(2, campo);
+			
+
+			// Ggerar campo
+			
+			
+			escreva("\n\nEmbaralhando Matriz", TimeUnit.MILLISECONDS, timer);
+			escreva("...\n\n", TimeUnit.MILLISECONDS, 500);
+
+			// Embaralhar o campo
+			embaralhar(campo);
+			embaralhar(campo);
+			embaralhar(campo);
+			embaralhar(campo);
+			embaralhar(campo);
+			embaralhar(campo);
+			embaralhar(campo);
+			embaralhar(campo);
+			embaralhar(campo);
+
+			// Eliminar número aleatório da matriz
+			numEliminado = eliminarNum(2, campo);
+			
+			Arrays.sort(numEliminado); 
+			
+
+			escreva("\n\nMatriz embaralhada: \n", TimeUnit.MILLISECONDS, timer);
+			mostrarCampo(2, campo);
+
+			escreva("\n\nQual o primeiro número faltante? (Em ordem numérica crescente)\n\n",
+					TimeUnit.MILLISECONDS, timer);
+			escolha[0] = entrada.nextInt();
+			
+			escreva("\n\nQual o segundo número faltante? (Em ordem numérica crescente)\n\n",
+					TimeUnit.MILLISECONDS, timer);
+			
+			escolha[1] = entrada.nextInt();
+			
+			
+
+			if (escolha[0] == numEliminado[0] && escolha[1] == numEliminado[1]) {
+				escreva("\n\nParabéns, jogador. Você passou pelo o último desafio!\n\n", TimeUnit.MILLISECONDS, timer);
+
+				escreva("...\n\n", TimeUnit.MILLISECONDS, timer);
+			} else {
+
+				escreva("\nResposta errada!...\n\n", TimeUnit.MILLISECONDS, timer);
+				agentes++;	
+				verAgente(agentes);
+
+			}
+		} while (!(escolha[0] == numEliminado[0] && escolha[1] == numEliminado[1]));
 
 	}
 
 	static int[] eliminarNum(int i, int[][] campo) {
 		
 		Random random = new Random();
-		int numEliminado[] = new int[4];
+	
 		int cont = 0;
 		int rl = -1, rc = -1;
+		int numEliminado[] = new int[i];
 		do {
 			rl = random.nextInt(campo.length); // índice de linha random
 		    rc = random.nextInt(campo.length); // índice de coluna random	
+		    
 		    numEliminado[cont] = campo[rl][rc];
 		    if (campo[rl][rc] != 0) {
 		    	cont++;
@@ -760,7 +812,7 @@ public class jogo {
 		entrada.nextLine();
 		nome = entrada.nextLine();
 		
-		desafio07();
+		
 		
 		do {
 			escreva("\n" + nome + ", que tal saber saber mais sobre o jogo e sobre Matrix?", TimeUnit.MILLISECONDS,
@@ -1350,9 +1402,29 @@ public class jogo {
 		escreva(nome + ": mas por que o Morpheus e não eu?\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Trinity: Anda! não há  tempo para isso. Tank está rastreando eles. Parece ser um prédio\n",
 				TimeUnit.MILLISECONDS, timer);
-		escreva("abandonado no centro da cidade. Vamos até lá.\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva(" no centro da cidade. Vamos até lá.\n\n", TimeUnit.MILLISECONDS, timer);
+		
 
-		escreva("Chegando ao local\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Chegando ao local:\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\nVocê vê uma porta\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\nAo tentar abrí-la, percebe que está trancada\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\nHá uma tela ao lado da porta nescessitando de um código de acesso\n", TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\nPara abrir a porta você precisa completar seu último desafio:\n\n", TimeUnit.MILLISECONDS, timer);
+		
+		
+		System.err.println("DESAFIO 07");
+		
+		desafio07();
+		if (agentes == 4) {
+			return;
+		}
+		
+		escreva("Ao abrir a a porta:\n\n", TimeUnit.MILLISECONDS, timer);
+		
 		escreva("*Você vê Morpheus acorrentado em uma mesa*\n\n", TimeUnit.MILLISECONDS, timer);
 		escreva("Agente Smith: estava te esperando, finalmente teremos esse momento tão aguardado por todos.\n\n",
 				TimeUnit.MILLISECONDS, timer);
@@ -1432,6 +1504,9 @@ public class jogo {
 		} while (escolha != 1);
 		
 		
+	
+		
+		
 		escreva("\nMorpheus:  " + nome + ", sabia que você iria derrotá-lo",
 				TimeUnit.MILLISECONDS, timer);
 		
@@ -1461,7 +1536,7 @@ public class jogo {
 		
 		String escolhaSenha;
 		do {
-			escreva("\nDigite a senha:",
+			escreva("\nDigite a senha:\n\n",
 					TimeUnit.MILLISECONDS, timer);
 			escolhaSenha = entrada.next();
 			
@@ -1471,9 +1546,82 @@ public class jogo {
 			
 		} while (!escolhaSenha.equals(senha));
 		
+		escreva("\nSenha correta!!\n", TimeUnit.MILLISECONDS, timer);
 
+		escreva("\nAo desbloquear o chip você percebe que ele tem o potencial de infectar a Matrix\n com um vírus e acabar com ela de uma vez por todas \n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\nAssim, libertando todos dentro da realidade simulada \n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Morpheus:  " + nome + ", chegou a hora, a escolha é somente sua \n\n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("Morpheus: O que deseja fazer? \n\n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n1 - Destruir o Chip e continuar a vida normal dentro da Matrix "
+				+ "\n(Você viverá com o peso na consciência de não ter libertado a todos)\n\n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		escreva("\n2 - Infectar a Matrix com um vírus e destruí-la "
+				+ "\n(libertando a todos)\n\n",
+				TimeUnit.MILLISECONDS, timer);
+		
+		do {
+			
+			escolha = leia();
+			switch (escolha) {
+			case 1:
+				escreva("\n\nVocê destroi o chip e acaba com todas as chances de libertar a humanidade",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("\n\nCom isso caba voltando a sua rotina normal de antes tudo acontecer",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("\n\nSerá que isso tudo valeu mesmo a pena?\n\n",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("...\n\n", TimeUnit.MILLISECONDS, 500);
+				break;
+			case 2:
+				escreva("\n\n*Você infecta o chip com o vírus*",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("\n\nA Matrix, junto com todos dentro dela, vai aos poucos se desfazendo",
+						TimeUnit.MILLISECONDS, timer);
+				escreva("\n\nDepois de um tempo você acorda no mundo real... de volta a nave de Morpheus",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("\n\n*Você vê todos as sua volta saindo de suas cápsulas e vendo o sol pela primeira vez em sentenas anos*",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("\n\nAs máquinas estão hostis e parecem não ter gostado do que aconteceu...",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("\n\nPara acabar com o imperio das máquinas você deverá reestabelecer a humanidade",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("\n\nHá uma grande história para ser escrita daqui para frente\n\n",
+						TimeUnit.MILLISECONDS, timer);
+				
+				escreva("...\n\n", TimeUnit.MILLISECONDS, 500);
+				
+				break;
+
+			default:
+				escreva("\nValor inválido!\n", TimeUnit.MILLISECONDS, timer);
+
+			}
+
+		} while (escolha != 1 && escolha != 2);
+		
+		
+		System.err.println("FIM DE JOGO");
+		
 		return;
-
+		
+		
 	}
 
 	// Função para mostrar explicação Psicocinese
