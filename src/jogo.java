@@ -468,7 +468,7 @@ public class jogo {
 			
 			escreva("\n\nPor isso... vamos eliminar um agente da sua cola", TimeUnit.MILLISECONDS, timer);
 			
-			System.err.println("-1 Agente");
+			System.err.println("\n\n-1 Agente");
 			
 			agentes = agentes - 1;
 		}else {
@@ -486,7 +486,6 @@ public class jogo {
 		
 		escreva("\n\nDesacubra qual número foi eliminado pelo bug\n\n", TimeUnit.MILLISECONDS, timer);
 		
-		escreva("\n\nMatriz a ser gerada:\n\n", TimeUnit.MILLISECONDS, timer);
 		
 		int escolha[] =  new int[2];
 
@@ -1405,9 +1404,9 @@ public class jogo {
 		escreva(" no centro da cidade. Vamos até lá.\n\n", TimeUnit.MILLISECONDS, timer);
 		
 
-		escreva("Chegando ao local:\n\n", TimeUnit.MILLISECONDS, timer);
+		escreva("Chegando ao local:\n", TimeUnit.MILLISECONDS, timer);
 		
-		escreva("\nVocê vê uma porta\n", TimeUnit.MILLISECONDS, timer);
+		escreva("\nVocê vê uma porta de aço\n", TimeUnit.MILLISECONDS, timer);
 		
 		escreva("\nAo tentar abrí-la, percebe que está trancada\n", TimeUnit.MILLISECONDS, timer);
 		
@@ -1438,7 +1437,7 @@ public class jogo {
 		escreva("\n\nAgente Smith: As pessoas normalmente sentem medo do desconhecido. Você não compreende a Matrix e por isso quer destruí-la.\n\n",
 				TimeUnit.MILLISECONDS, timer);
 		
-		escreva("\n\nAgente Smith: Aqui temos o nosso Paraíso, podemos ter o que quiser e sermos o quem	quisermos.\n\n",
+		escreva("\n\nAgente Smith: Aqui temos o nosso Paraíso, podemos ter e ser o que quisermos.\n\n",
 				TimeUnit.MILLISECONDS, timer);
 		
 		escreva(nome + ": Em troca do paráiso artificial vocês escravisam a humanidade no mundo real para seu benefício próprio,\n"
@@ -1474,7 +1473,7 @@ public class jogo {
 		} while (escolha != 1);
 		
 		escreva("...", TimeUnit.MILLISECONDS, 100);
-		ImageIcon desviar = new ImageIcon("images/desviar");
+		ImageIcon desviar = new ImageIcon("images/desviar.gif");
 		UIManager.put("OptionPane.okButtonText", "...");
 		dialog.setAlwaysOnTop(true);
 		JOptionPane.showMessageDialog(dialog, " ", " ", JOptionPane.WARNING_MESSAGE, desviar);
@@ -1617,7 +1616,7 @@ public class jogo {
 		} while (escolha != 1 && escolha != 2);
 		
 		
-		System.err.println("FIM DE JOGO");
+		System.err.println("\nFIM DE JOGO\n\n");
 		
 		return;
 		
@@ -1707,7 +1706,7 @@ public class jogo {
 
 		// Menu - Estrutura
 		do {
-			escreva("Bem vindo(a) a Inside The Matrix \n\n", TimeUnit.MILLISECONDS, 30);
+			escreva("\nBem vindo(a) a Inside The Matrix \n\n", TimeUnit.MILLISECONDS, 30);
 			escreva("Escolha uma das opções abaixo:\n" + "1 - Jogar\n" + "2 - Instruções/Regras\n"
 					+ "3 - O que é Matrix?\n" + "4 - Créditos\n" + "5 - Sair\n", TimeUnit.MILLISECONDS, 10);
 
