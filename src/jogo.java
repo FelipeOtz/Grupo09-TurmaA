@@ -13,7 +13,7 @@ import javax.swing.UIManager;
 public class jogo {
 
 	// Variável para delay no texto
-	static int timer = 1;
+	static int timer = 15;
 
 	// Variável para entrada de dados
 	static Scanner entrada = new Scanner(System.in);
@@ -97,8 +97,7 @@ public class jogo {
 
 		}
 
-		escreva("\n\nSua senha criptografada é: " + senha + "\n(Guarde-a, você poderá precisar dela depois)\n\n",
-				TimeUnit.MILLISECONDS, timer);
+		System.err.println("\n\nSua senha criptografada é: " + senha + "\n(Guarde-a, você poderá precisar dela depois)\n\n");
 		return senha;
 
 	}
@@ -1616,7 +1615,8 @@ public class jogo {
 		} while (escolha != 1 && escolha != 2);
 		
 		
-		System.err.println("\nFIM DE JOGO\n\n");
+		System.err.println("\nFIM DE JOGO");
+		System.err.println("\n\nObrigado por jogar Inside The Matrix!!\n\n");
 		
 		return;
 		
